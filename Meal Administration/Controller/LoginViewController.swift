@@ -12,24 +12,10 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      //  assignBackground()
+       Utilities.assignBackgroundImage(img: "login.png", view: view)
     }
     
-    
-    func assignBackground(){
-        
-        let background = UIImage(named: "logo1.png")
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        self.view.addSubview(imageView)
-        self.view.sendSubviewToBack(imageView)
-        
-    }
+  
     
 
 }

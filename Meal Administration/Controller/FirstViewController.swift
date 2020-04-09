@@ -10,12 +10,13 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        Utilities.assignBackgroundImage(img: "first.png", view: view)
     }
     
-
-
+ 
 }
