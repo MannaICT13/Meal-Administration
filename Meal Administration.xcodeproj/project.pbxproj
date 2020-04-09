@@ -3,18 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */; };
 		2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */; };
-		2AB1E8B3243F121A00A07BBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B2243F121A00A07BBA /* ViewController.swift */; };
 		2AB1E8B6243F121A00A07BBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B4243F121A00A07BBA /* Main.storyboard */; };
 		2AB1E8B8243F122200A07BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B7243F122200A07BBA /* Assets.xcassets */; };
 		2AB1E8BB243F122200A07BBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B9243F122200A07BBA /* LaunchScreen.storyboard */; };
 		2AB1E8C6243F122200A07BBA /* Meal_AdministrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8C5243F122200A07BBA /* Meal_AdministrationTests.swift */; };
 		2AB1E8D1243F122200A07BBA /* Meal_AdministrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8D0243F122200A07BBA /* Meal_AdministrationUITests.swift */; };
+		2AB1E8E1243F131200A07BBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8E0243F131200A07BBA /* LoginViewController.swift */; };
+		2AB1E8E3243F141F00A07BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AB1E8E2243F141F00A07BBA /* GoogleService-Info.plist */; };
+		2AB1E8E5243F444700A07BBA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8E4243F444700A07BBA /* FirstViewController.swift */; };
+		56447B2D891C215BC0A58192 /* Pods_Meal_Administration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F61D66493F85CB0133D08 /* Pods_Meal_Administration.framework */; };
+		C84087D26422DF39FE743072 /* Pods_Meal_Administration_Meal_AdministrationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF9C732D41237D8098F637D /* Pods_Meal_Administration_Meal_AdministrationUITests.framework */; };
+		DBF754E8FBDC05553FC5EEC4 /* Pods_Meal_AdministrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D2F5B9B7B45413AF7DF058 /* Pods_Meal_AdministrationTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015F61D66493F85CB0133D08 /* Pods_Meal_Administration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_Administration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2FF7A8532E30758EBE3B93 /* Pods-Meal Administration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration.debug.xcconfig"; path = "Target Support Files/Pods-Meal Administration/Pods-Meal Administration.debug.xcconfig"; sourceTree = "<group>"; };
+		12B252E0001BF3D19408A3B8 /* Pods-Meal Administration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration.release.xcconfig"; path = "Target Support Files/Pods-Meal Administration/Pods-Meal Administration.release.xcconfig"; sourceTree = "<group>"; };
+		1E856466503410B78CBCDB66 /* Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig"; path = "Target Support Files/Pods-Meal Administration-Meal AdministrationUITests/Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2AB1E8AB243F121A00A07BBA /* Meal Administration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Administration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2AB1E8B2243F121A00A07BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2AB1E8B5243F121A00A07BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AB1E8B7243F122200A07BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AB1E8BA243F122200A07BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		2AB1E8CC243F122200A07BBA /* Meal AdministrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meal AdministrationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1E8D0243F122200A07BBA /* Meal_AdministrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal_AdministrationUITests.swift; sourceTree = "<group>"; };
 		2AB1E8D2243F122200A07BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AB1E8E0243F131200A07BBA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2AB1E8E2243F141F00A07BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2AB1E8E4243F444700A07BBA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		4DF9C732D41237D8098F637D /* Pods_Meal_Administration_Meal_AdministrationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_Administration_Meal_AdministrationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C239392DEABC138C702A1C /* Pods-Meal AdministrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal AdministrationTests.debug.xcconfig"; path = "Target Support Files/Pods-Meal AdministrationTests/Pods-Meal AdministrationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65D2F5B9B7B45413AF7DF058 /* Pods_Meal_AdministrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_AdministrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91A5F3F3B0B8E9924A1816CD /* Pods-Meal Administration-Meal AdministrationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration-Meal AdministrationUITests.debug.xcconfig"; path = "Target Support Files/Pods-Meal Administration-Meal AdministrationUITests/Pods-Meal Administration-Meal AdministrationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7175EE0E1831682F6594E80 /* Pods-Meal AdministrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal AdministrationTests.release.xcconfig"; path = "Target Support Files/Pods-Meal AdministrationTests/Pods-Meal AdministrationTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56447B2D891C215BC0A58192 /* Pods_Meal_Administration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF754E8FBDC05553FC5EEC4 /* Pods_Meal_AdministrationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84087D26422DF39FE743072 /* Pods_Meal_Administration_Meal_AdministrationUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +102,8 @@
 				2AB1E8C4243F122200A07BBA /* Meal AdministrationTests */,
 				2AB1E8CF243F122200A07BBA /* Meal AdministrationUITests */,
 				2AB1E8AC243F121A00A07BBA /* Products */,
+				76F9750CDF0CA7AB1FBA3E39 /* Pods */,
+				5E685E829EECFE34A2902621 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +120,15 @@
 		2AB1E8AD243F121A00A07BBA /* Meal Administration */ = {
 			isa = PBXGroup;
 			children = (
+				2AB1E8DF243F12B200A07BBA /* Model */,
+				2AB1E8DE243F12A400A07BBA /* Controller */,
 				2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */,
 				2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */,
-				2AB1E8B2243F121A00A07BBA /* ViewController.swift */,
 				2AB1E8B4243F121A00A07BBA /* Main.storyboard */,
 				2AB1E8B7243F122200A07BBA /* Assets.xcassets */,
 				2AB1E8B9243F122200A07BBA /* LaunchScreen.storyboard */,
 				2AB1E8BC243F122200A07BBA /* Info.plist */,
+				2AB1E8E2243F141F00A07BBA /* GoogleService-Info.plist */,
 			);
 			path = "Meal Administration";
 			sourceTree = "<group>";
@@ -128,6 +151,45 @@
 			path = "Meal AdministrationUITests";
 			sourceTree = "<group>";
 		};
+		2AB1E8DE243F12A400A07BBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2AB1E8E0243F131200A07BBA /* LoginViewController.swift */,
+				2AB1E8E4243F444700A07BBA /* FirstViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2AB1E8DF243F12B200A07BBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E685E829EECFE34A2902621 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				015F61D66493F85CB0133D08 /* Pods_Meal_Administration.framework */,
+				4DF9C732D41237D8098F637D /* Pods_Meal_Administration_Meal_AdministrationUITests.framework */,
+				65D2F5B9B7B45413AF7DF058 /* Pods_Meal_AdministrationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76F9750CDF0CA7AB1FBA3E39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E2FF7A8532E30758EBE3B93 /* Pods-Meal Administration.debug.xcconfig */,
+				12B252E0001BF3D19408A3B8 /* Pods-Meal Administration.release.xcconfig */,
+				91A5F3F3B0B8E9924A1816CD /* Pods-Meal Administration-Meal AdministrationUITests.debug.xcconfig */,
+				1E856466503410B78CBCDB66 /* Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig */,
+				59C239392DEABC138C702A1C /* Pods-Meal AdministrationTests.debug.xcconfig */,
+				A7175EE0E1831682F6594E80 /* Pods-Meal AdministrationTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AB1E8D5243F122200A07BBA /* Build configuration list for PBXNativeTarget "Meal Administration" */;
 			buildPhases = (
+				3C21675828FB9A78594E288D /* [CP] Check Pods Manifest.lock */,
 				2AB1E8A7243F121A00A07BBA /* Sources */,
 				2AB1E8A8243F121A00A07BBA /* Frameworks */,
 				2AB1E8A9243F121A00A07BBA /* Resources */,
+				C30DCBD283098AAE179A7249 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AB1E8D8243F122200A07BBA /* Build configuration list for PBXNativeTarget "Meal AdministrationTests" */;
 			buildPhases = (
+				A6E31E32C34A710127AED1CC /* [CP] Check Pods Manifest.lock */,
 				2AB1E8BD243F122200A07BBA /* Sources */,
 				2AB1E8BE243F122200A07BBA /* Frameworks */,
 				2AB1E8BF243F122200A07BBA /* Resources */,
@@ -170,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AB1E8DB243F122200A07BBA /* Build configuration list for PBXNativeTarget "Meal AdministrationUITests" */;
 			buildPhases = (
+				BD5AC65132DC0A9ECF52959C /* [CP] Check Pods Manifest.lock */,
 				2AB1E8C8243F122200A07BBA /* Sources */,
 				2AB1E8C9243F122200A07BBA /* Frameworks */,
 				2AB1E8CA243F122200A07BBA /* Resources */,
+				39DABB2B898F692CF949F2C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB1E8BB243F122200A07BBA /* LaunchScreen.storyboard in Resources */,
+				2AB1E8E3243F141F00A07BBA /* GoogleService-Info.plist in Resources */,
 				2AB1E8B8243F122200A07BBA /* Assets.xcassets in Resources */,
 				2AB1E8B6243F121A00A07BBA /* Main.storyboard in Resources */,
 			);
@@ -254,14 +322,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39DABB2B898F692CF949F2C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meal Administration-Meal AdministrationUITests/Pods-Meal Administration-Meal AdministrationUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meal Administration-Meal AdministrationUITests/Pods-Meal Administration-Meal AdministrationUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meal Administration-Meal AdministrationUITests/Pods-Meal Administration-Meal AdministrationUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C21675828FB9A78594E288D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meal Administration-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6E31E32C34A710127AED1CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meal AdministrationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD5AC65132DC0A9ECF52959C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meal Administration-Meal AdministrationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C30DCBD283098AAE179A7249 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meal Administration/Pods-Meal Administration-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meal Administration/Pods-Meal Administration-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meal Administration/Pods-Meal Administration-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2AB1E8A7243F121A00A07BBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AB1E8B3243F121A00A07BBA /* ViewController.swift in Sources */,
+				2AB1E8E1243F131200A07BBA /* LoginViewController.swift in Sources */,
 				2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */,
 				2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */,
+				2AB1E8E5243F444700A07BBA /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +604,7 @@
 		};
 		2AB1E8D6243F122200A07BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E2FF7A8532E30758EBE3B93 /* Pods-Meal Administration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +623,7 @@
 		};
 		2AB1E8D7243F122200A07BBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12B252E0001BF3D19408A3B8 /* Pods-Meal Administration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +642,7 @@
 		};
 		2AB1E8D9243F122200A07BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59C239392DEABC138C702A1C /* Pods-Meal AdministrationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +665,7 @@
 		};
 		2AB1E8DA243F122200A07BBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7175EE0E1831682F6594E80 /* Pods-Meal AdministrationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +688,7 @@
 		};
 		2AB1E8DC243F122200A07BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91A5F3F3B0B8E9924A1816CD /* Pods-Meal Administration-Meal AdministrationUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +709,7 @@
 		};
 		2AB1E8DD243F122200A07BBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E856466503410B78CBCDB66 /* Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

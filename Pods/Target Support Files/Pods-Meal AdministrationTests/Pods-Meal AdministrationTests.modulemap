@@ -1,0 +1,6 @@
+framework module Pods_Meal_AdministrationTests {
+  umbrella header "Pods-Meal AdministrationTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
