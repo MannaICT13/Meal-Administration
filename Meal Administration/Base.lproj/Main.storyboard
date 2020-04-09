@@ -35,6 +35,9 @@
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Register"/>
+                                        <connections>
+                                            <segue destination="pV9-id-7qX" kind="show" id="uw4-c3-j2m"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -55,6 +58,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxE-k2-Yfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1446.376811594203" y="150.66964285714286"/>
+        </scene>
+        <!--Registration View Controller-->
+        <scene sceneID="79h-cr-MVn">
+            <objects>
+                <viewController id="pV9-id-7qX" customClass="RegistrationViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ISJ-Jz-2EC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hQP-BL-uUn">
+                                <rect key="frame" x="30" y="188" width="354" height="400"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mess Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Omj-pl-szq">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="OIz-ZM-Z12"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Jh-tq-SEQ">
+                                        <rect key="frame" x="0.0" y="70" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7qg-vH-j5k">
+                                        <rect key="frame" x="0.0" y="140" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvK-xB-RJV">
+                                        <rect key="frame" x="0.0" y="210" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgj-GB-8AU">
+                                        <rect key="frame" x="0.0" y="280" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Register"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="une-ja-UlJ">
+                                        <rect key="frame" x="0.0" y="350" width="354" height="50"/>
+                                        <state key="normal" title="Already Registered? Login Here"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Pgj-GB-8AU" firstAttribute="height" secondItem="une-ja-UlJ" secondAttribute="height" id="7Pg-bF-6si"/>
+                                    <constraint firstItem="7qg-vH-j5k" firstAttribute="height" secondItem="fvK-xB-RJV" secondAttribute="height" id="FzB-zl-bCE"/>
+                                    <constraint firstItem="4Jh-tq-SEQ" firstAttribute="height" secondItem="7qg-vH-j5k" secondAttribute="height" id="W7q-kK-Und"/>
+                                    <constraint firstItem="Omj-pl-szq" firstAttribute="height" secondItem="4Jh-tq-SEQ" secondAttribute="height" id="a7v-sZ-RnH"/>
+                                    <constraint firstItem="fvK-xB-RJV" firstAttribute="height" secondItem="Pgj-GB-8AU" secondAttribute="height" id="j60-Ef-cTB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hQP-BL-uUn" firstAttribute="top" secondItem="fr3-by-KWy" secondAttribute="top" constant="100" id="85R-ZO-MxK"/>
+                            <constraint firstItem="fr3-by-KWy" firstAttribute="trailing" secondItem="hQP-BL-uUn" secondAttribute="trailing" constant="30" id="E8D-lv-Zkz"/>
+                            <constraint firstItem="hQP-BL-uUn" firstAttribute="leading" secondItem="fr3-by-KWy" secondAttribute="leading" constant="30" id="yX9-QT-oL0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fr3-by-KWy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lI6-G0-pk3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qma-b6-63N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2384" y="731"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -133,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272.463768115942" y="150.66964285714286"/>
+            <point key="canvasLocation" x="2238" y="-485"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dBY-qx-5nK">

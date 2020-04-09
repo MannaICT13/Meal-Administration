@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  RegistrationViewController.swift
 //  Meal Administration
 //
 //  Created by Md Khaled Hasan Manna on 9/4/20.
@@ -8,15 +8,14 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class RegistrationViewController: UIViewController {
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Utilities.assignBackgroundImage(img: "background.png", view: view)
+        Utilities.assignBackgroundImage(img: "register.png", view:  view)
     }
     
- 
+
+
 }

@@ -18,6 +18,7 @@
 		2AB1E8E3243F141F00A07BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AB1E8E2243F141F00A07BBA /* GoogleService-Info.plist */; };
 		2AB1E8E5243F444700A07BBA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8E4243F444700A07BBA /* FirstViewController.swift */; };
 		2AB1E8E7243F542500A07BBA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8E6243F542500A07BBA /* Utilities.swift */; };
+		2AB1E8E9243F70F500A07BBA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8E8243F70F400A07BBA /* RegistrationViewController.swift */; };
 		56447B2D891C215BC0A58192 /* Pods_Meal_Administration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F61D66493F85CB0133D08 /* Pods_Meal_Administration.framework */; };
 		C84087D26422DF39FE743072 /* Pods_Meal_Administration_Meal_AdministrationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF9C732D41237D8098F637D /* Pods_Meal_Administration_Meal_AdministrationUITests.framework */; };
 		DBF754E8FBDC05553FC5EEC4 /* Pods_Meal_AdministrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D2F5B9B7B45413AF7DF058 /* Pods_Meal_AdministrationTests.framework */; };
@@ -62,6 +63,7 @@
 		2AB1E8E2243F141F00A07BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AB1E8E4243F444700A07BBA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		2AB1E8E6243F542500A07BBA /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2AB1E8E8243F70F400A07BBA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4DF9C732D41237D8098F637D /* Pods_Meal_Administration_Meal_AdministrationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_Administration_Meal_AdministrationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C239392DEABC138C702A1C /* Pods-Meal AdministrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal AdministrationTests.debug.xcconfig"; path = "Target Support Files/Pods-Meal AdministrationTests/Pods-Meal AdministrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65D2F5B9B7B45413AF7DF058 /* Pods_Meal_AdministrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_AdministrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 			children = (
 				2AB1E8E0243F131200A07BBA /* LoginViewController.swift */,
 				2AB1E8E4243F444700A07BBA /* FirstViewController.swift */,
+				2AB1E8E8243F70F400A07BBA /* RegistrationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB1E8E9243F70F500A07BBA /* RegistrationViewController.swift in Sources */,
 				2AB1E8E1243F131200A07BBA /* LoginViewController.swift in Sources */,
 				2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */,
 				2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */,

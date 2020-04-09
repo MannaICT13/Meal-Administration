@@ -17,13 +17,16 @@ class Utilities {
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.image = backgroundImg
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
         view.addSubview(imageView)
         view.sendSubviewToBack(imageView)
         
         
     }
+    
+    
+    
     
     
     
