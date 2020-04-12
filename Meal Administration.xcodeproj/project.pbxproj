@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AAC2A832443A55900FD9AEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC2A822443A55900FD9AEB /* HomeViewController.swift */; };
 		2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */; };
 		2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */; };
 		2AB1E8B6243F121A00A07BBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B4243F121A00A07BBA /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		0E2FF7A8532E30758EBE3B93 /* Pods-Meal Administration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration.debug.xcconfig"; path = "Target Support Files/Pods-Meal Administration/Pods-Meal Administration.debug.xcconfig"; sourceTree = "<group>"; };
 		12B252E0001BF3D19408A3B8 /* Pods-Meal Administration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration.release.xcconfig"; path = "Target Support Files/Pods-Meal Administration/Pods-Meal Administration.release.xcconfig"; sourceTree = "<group>"; };
 		1E856466503410B78CBCDB66 /* Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig"; path = "Target Support Files/Pods-Meal Administration-Meal AdministrationUITests/Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2AAC2A822443A55900FD9AEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AB1E8AB243F121A00A07BBA /* Meal Administration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Administration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				2AB1E8E0243F131200A07BBA /* LoginViewController.swift */,
 				2AB1E8E4243F444700A07BBA /* FirstViewController.swift */,
 				2AB1E8E8243F70F400A07BBA /* RegistrationViewController.swift */,
+				2AAC2A822443A55900FD9AEB /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */,
 				2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */,
 				2AB1E8E7243F542500A07BBA /* Utilities.swift in Sources */,
+				2AAC2A832443A55900FD9AEB /* HomeViewController.swift in Sources */,
 				2AB1E8E5243F444700A07BBA /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
