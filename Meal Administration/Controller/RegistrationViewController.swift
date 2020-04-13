@@ -35,7 +35,9 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.view.backgroundColor = UIColor.opaqueSeparator
+        
+        
         utilitiesManager()
         setUpImageIcon()
         
@@ -46,21 +48,24 @@ class RegistrationViewController: UIViewController {
     
     func utilitiesManager(){
         
-        Utilities.assignBackgroundImage(img: "register.png", view:  view)
+       
+        
+       // Utilities.assignBackgroundImage(img: "register.png", view:  view)
         Utilities.roundBtnFill(button: registerBtnOutlet)
         Utilities.lineTextFieldStyle(textField: messNameTextField)
         Utilities.lineTextFieldStyle(textField: emailTextField)
         Utilities.lineTextFieldStyle(textField: passwordTextField)
         Utilities.lineTextFieldStyle(textField: rePasswordTextField)
         
-        alreadyRegisterBtnOutlet.tintColor = UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
+        alreadyRegisterBtnOutlet.tintColor = Utilities.color
 
         
     }
     
     func setUpImageIcon(){
         
-        let color = UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
+        let color = Utilities.color
+        
         iconMessNameImageView.image = UIImage(systemName: "house.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(color)
         iconEmailImageView.image = UIImage(systemName: "envelope.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(color)
         iconPasswordImageView.image = UIImage(systemName: "lock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(color)

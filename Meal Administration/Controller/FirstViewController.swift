@@ -20,16 +20,30 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        self.view.backgroundColor = UIColor.opaqueSeparator
+       
         utilitieManager()
+        setUpNavBar()
     }
     
     //MARK: - Handler
     
+    func setUpNavBar(){
+     
+        let navBar = navigationController?.navigationBar
+        navBar?.barTintColor = Utilities.color
+        navBar?.tintColor = UIColor.white
+        navBar?.isTranslucent = false
+        navBar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        
+        
+    }
+    
+    
     
     func utilitieManager(){
         
-             Utilities.assignBackgroundImage(img: "background.png", view: view)
+            // Utilities.assignBackgroundImage(img: "background.png", view: view)
              Utilities.roundBtnFill(button: loginBtnOutlet)
              Utilities.roundBtn(button: registerBtnOutlet)
           

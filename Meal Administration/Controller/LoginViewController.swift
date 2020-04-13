@@ -31,6 +31,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    self.view.backgroundColor = UIColor.opaqueSeparator
+
+        
         utilitieManager()
         setUpImageIcon()
       
@@ -40,8 +43,9 @@ class LoginViewController: UIViewController {
     
     func utilitieManager(){
         
-        
-         Utilities.assignBackgroundImage(img: "login.png", view: view)
+       
+        // Utilities.assignBackgroundImage(img: "login.png", view: view)
+         
          Utilities.roundBtnFill(button: loginBtnOutlet)
          Utilities.roundBtn(button: forgotPasswordBtnOutlet)
          Utilities.lineTextFieldStyle(textField: emailTextField)
@@ -51,10 +55,9 @@ class LoginViewController: UIViewController {
     }
     
     func setUpImageIcon(){
-        
-        let color : UIColor =  UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
-        iconEmailImageView.image = UIImage(systemName: "envelope.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(color)
-        iconPasswordImageView.image = UIImage(systemName: "lock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(color)
+      
+        iconEmailImageView.image = UIImage(systemName: "envelope.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        iconPasswordImageView.image = UIImage(systemName: "lock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
         
         
         

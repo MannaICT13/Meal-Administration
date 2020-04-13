@@ -13,9 +13,9 @@ class Utilities {
     
     //MARK: - Handler
     
-    static func assignBackgroundImage(img : String,view : UIView){
+  /*  static func assignBackgroundImage(img : String,view : UIView){
         
-        let backgroundImg = UIImage(named: img)//?.withRenderingMode(.alwaysOriginal).withTintColor(.clear)
+        let backgroundImg = UIImage(named: img)?.withRenderingMode(.alwaysOriginal).withTintColor(.quaternaryLabel)
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.image = backgroundImg
@@ -26,6 +26,11 @@ class Utilities {
         
         
     }
+   */
+    
+    // for coloring button/navigationbar/textfield
+    static let color : UIColor =  UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
+    
     
     static func roundBtnFill(button : UIButton){
         
