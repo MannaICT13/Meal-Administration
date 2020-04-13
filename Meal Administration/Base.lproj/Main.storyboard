@@ -262,6 +262,7 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZz-YN-gRU"/>
+                                            <segue destination="1Ac-Oq-C7b" kind="show" id="fzE-hX-NHq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM6-RA-M6Z">

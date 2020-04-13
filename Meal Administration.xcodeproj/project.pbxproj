@@ -114,7 +114,7 @@
 		2A6798E4244469CE00700604 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2A6798F62444897800700604 /* MenuOptionCell.swift */,
+				2A6798FB2445059E00700604 /* SlideMenuView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +127,23 @@
 				2A6798F22444774000700604 /* MenuViewController.swift */,
 			);
 			path = SlideMenuController;
+			sourceTree = "<group>";
+		};
+		2A6798FA2445056F00700604 /* SlideMenuModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A6798F42444816D00700604 /* ToggleProtocal.swift */,
+				2A6798F824448D1800700604 /* MenuOption.swift */,
+			);
+			path = SlideMenuModel;
+			sourceTree = "<group>";
+		};
+		2A6798FB2445059E00700604 /* SlideMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				2A6798F62444897800700604 /* MenuOptionCell.swift */,
+			);
+			path = SlideMenuView;
 			sourceTree = "<group>";
 		};
 		2AB1E8A2243F121A00A07BBA = {
@@ -201,8 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				2AB1E8E6243F542500A07BBA /* Utilities.swift */,
-				2A6798F42444816D00700604 /* ToggleProtocal.swift */,
-				2A6798F824448D1800700604 /* MenuOption.swift */,
+				2A6798FA2445056F00700604 /* SlideMenuModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";

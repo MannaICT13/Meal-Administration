@@ -25,6 +25,7 @@ class MenuOptionCell: UITableViewCell {
        
         var lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 25)
+        lbl.textColor = UIColor.lightText
         return lbl
         
     }()
@@ -34,7 +35,8 @@ class MenuOptionCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = .darkGray
+        backgroundColor = Utilities.color
+        selectionStyle = .none
         iconConstraint()
         labelConstraint()
     }
@@ -53,8 +55,8 @@ class MenuOptionCell: UITableViewCell {
         iconDescription.translatesAutoresizingMaskIntoConstraints = false
         iconDescription.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         iconDescription.leftAnchor.constraint(equalTo: leftAnchor,constant: 10).isActive = true
-        iconDescription.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        iconDescription.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        iconDescription.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        iconDescription.widthAnchor.constraint(equalToConstant: 50).isActive = true
         
         
         
@@ -69,6 +71,8 @@ class MenuOptionCell: UITableViewCell {
          labelDescription.translatesAutoresizingMaskIntoConstraints = false
          labelDescription.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
          labelDescription.leftAnchor.constraint(equalTo: iconDescription.rightAnchor,constant: 10).isActive = true
+      
+
             
               
         

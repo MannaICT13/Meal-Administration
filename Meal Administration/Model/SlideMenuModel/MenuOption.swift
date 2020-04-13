@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 enum MenuOption : Int,CustomStringConvertible {
   
+    
     case members
     case bazarSchedule
     case bazarCost
@@ -36,16 +37,17 @@ enum MenuOption : Int,CustomStringConvertible {
     var iconDescription : UIImage{
     
         switch self{
+            
         case .members:
-            return  UIImage(systemName: "person.2.fill") ?? UIImage()
+            return  UIImage(systemName: "person.2.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white) ?? UIImage()
         case .bazarSchedule:
-            return UIImage(systemName: "timer") ?? UIImage()
+            return UIImage(systemName: "timer")?.withRenderingMode(.alwaysOriginal).withTintColor(.white) ?? UIImage()
         case .bazarCost:
-             return UIImage(systemName: "dollarsign.circle.fill") ?? UIImage()
+             return UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white) ?? UIImage()
         case .calculation:
-            return  UIImage(systemName: "pencil.and.ellipsis.rectangle") ?? UIImage()
+            return  UIImage(systemName: "pencil.and.ellipsis.rectangle")?.withRenderingMode(.alwaysOriginal).withTintColor(.white) ?? UIImage()
         case .logout:
-            return  UIImage(systemName: "goforward") ?? UIImage()
+            return  UIImage(systemName: "goforward")?.withRenderingMode(.alwaysOriginal).withTintColor(.white) ?? UIImage()
         
         }
     }

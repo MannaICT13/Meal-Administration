@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        self.view.backgroundColor = UIColor.opaqueSeparator
         navBarConfiguration()
 
        /* Utilities.assignBackgroundImage(img: "logo2.png", view: view)
@@ -44,12 +44,18 @@ class HomeViewController: UIViewController {
         
     }
     
+    
+    
+    //added a navigationbar with left button
+    
     func navBarConfiguration(){
         
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barTintColor = .darkGray
-        navigationController?.navigationBar.barStyle = .black
-        
+        let navBar = navigationController?.navigationBar
+        navBar?.barTintColor = Utilities.color
+        navBar?.tintColor = .white
+        navBar?.isTranslucent = false
+        navBar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+      
        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3")?.withRenderingMode(.alwaysOriginal).withTintColor(.white), style: .plain, target: self, action: #selector(handleToggle(_ :)))
         
         

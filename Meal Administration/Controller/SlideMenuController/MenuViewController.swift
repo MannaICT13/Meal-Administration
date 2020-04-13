@@ -38,7 +38,9 @@ class MenuViewController: UIViewController {
         tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.backgroundColor = .darkGray
+        tableView.backgroundColor = Utilities.color
+        tableView.separatorColor = UIColor.white
+        tableView.tableFooterView = UIView()
         tableView.register(MenuOptionCell.self, forCellReuseIdentifier: reuseIdentifier)
         view.addSubview(tableView)
         tableViewConstraint()
@@ -54,7 +56,7 @@ class MenuViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        
+       
     }
   
     
@@ -68,7 +70,7 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource{
         return 5
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 90
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
