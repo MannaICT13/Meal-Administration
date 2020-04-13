@@ -24,6 +24,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .darkGray
+        tableViewConfiguration()
       
     }
     
@@ -36,15 +37,25 @@ class MenuViewController: UIViewController {
         tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = .darkGray
         tableView.register(MenuOptionCell.self, forCellReuseIdentifier: reuseIdentifier)
         view.addSubview(tableView)
-        
-        
-        
+        tableViewConstraint()
+    
         
         
         
     }
+    func tableViewConstraint(){
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        
+    }
+  
     
     
 
@@ -53,11 +64,21 @@ class MenuViewController: UIViewController {
 extension MenuViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 5
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! MenuOptionCell
+        
+        let menuDescription = MenuOption(rawValue: indexPath.row)
+        cell.iconDescription.image = menuDescription?.iconDescription
+        cell.labelDescription.text = menuDescription?.description
+        
+        return cell
     }
     
     
