@@ -18,19 +18,23 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .darkGray
 
-        Utilities.assignBackgroundImage(img: "logo2.png", view: view)
+       /* Utilities.assignBackgroundImage(img: "logo2.png", view: view)
         self.navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(logOut(_ :)))
+ */
+        
     }
     
     //MARK: - Handler
     
-    @objc func logOut(_ sender : UIBarButtonItem){
+ /*   @objc func logOut(_ sender : UIBarButtonItem){
 
         navigationController?.popToRootViewController(animated: true)
         
     }
+ */
 
    
 

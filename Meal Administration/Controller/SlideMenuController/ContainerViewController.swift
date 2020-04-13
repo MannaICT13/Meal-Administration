@@ -13,15 +13,31 @@ class ContainerViewController: UIViewController {
     
     //MARK: - Properties
     
+    var homeController : HomeViewController!
+    var centerController : UIViewController!
+    
     //MARK: - init
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        homeConfiguration()
+        
     }
     
     //MARK: - Handler
+    
+    func homeConfiguration(){
+        
+       homeController = HomeViewController()
+        centerController = UINavigationController(rootViewController: homeController)
+        view.addSubview(centerController.view)
+        addChild(centerController)
+        centerController.didMove(toParent: centerController)
+        
+        
+    }
+    
     
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LC0-f8-0GI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Ac-Oq-C7b">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hQP-BL-uUn">
-                                <rect key="frame" x="30" y="148" width="354" height="400"/>
+                                <rect key="frame" x="30" y="104" width="354" height="400"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mess Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Omj-pl-szq">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -127,75 +127,14 @@
             </objects>
             <point key="canvasLocation" x="2248" y="505"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Container View Controller-->
         <scene sceneID="Eaj-Cf-nNs">
             <objects>
-                <viewController id="1Ac-Oq-C7b" customClass="HomeViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Ac-Oq-C7b" customClass="ContainerViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pQ1-wk-Llh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SAt-VC-2Pk">
-                                <rect key="frame" x="30" y="74" width="354" height="480"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SL-VJ-E0G">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="Lpq-Xz-fkv"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="MEMBERS">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exh-B4-qwm">
-                                        <rect key="frame" x="0.0" y="100" width="354" height="80"/>
-                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="BAZAR SCHEDULE">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8C-SS-QEE">
-                                        <rect key="frame" x="0.0" y="200" width="354" height="80"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="BAZAR COST">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlP-1g-XFC">
-                                        <rect key="frame" x="0.0" y="300" width="354" height="80"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="DAILY MEAL COUNT">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSv-Ea-QY9">
-                                        <rect key="frame" x="0.0" y="400" width="354" height="80"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="CALCULATION">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="7SL-VJ-E0G" firstAttribute="height" secondItem="exh-B4-qwm" secondAttribute="height" id="FKI-3f-E4k"/>
-                                    <constraint firstItem="exh-B4-qwm" firstAttribute="height" secondItem="u8C-SS-QEE" secondAttribute="height" id="M5d-Wp-DxA"/>
-                                    <constraint firstItem="u8C-SS-QEE" firstAttribute="height" secondItem="bSv-Ea-QY9" secondAttribute="height" id="kbL-jz-Idm"/>
-                                    <constraint firstItem="u8C-SS-QEE" firstAttribute="height" secondItem="BlP-1g-XFC" secondAttribute="height" id="qAw-6X-bcg"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="SAt-VC-2Pk" firstAttribute="leading" secondItem="W7j-zc-xTz" secondAttribute="leading" constant="30" id="8wM-uW-uj5"/>
-                            <constraint firstItem="W7j-zc-xTz" firstAttribute="trailing" secondItem="SAt-VC-2Pk" secondAttribute="trailing" constant="30" id="qdG-D0-otJ"/>
-                            <constraint firstItem="SAt-VC-2Pk" firstAttribute="top" secondItem="W7j-zc-xTz" secondAttribute="top" constant="30" id="rAv-1d-xUj"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W7j-zc-xTz"/>
                     </view>
                     <navigationItem key="navigationItem" id="h5K-Gr-ERy"/>
@@ -213,7 +152,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W3y-Gf-SK2">
-                                <rect key="frame" x="30" y="208" width="354" height="220"/>
+                                <rect key="frame" x="30" y="164" width="354" height="220"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zic-aa-qsv">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
@@ -286,10 +225,9 @@
         <!--Navigation Controller-->
         <scene sceneID="dBY-qx-5nK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LC0-f8-0GI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="LC0-f8-0GI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4VA-Rq-ijw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
