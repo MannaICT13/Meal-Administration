@@ -37,15 +37,15 @@ enum MenuOption : Int,CustomStringConvertible {
     
         switch self{
         case .members:
-            return  UIImage(systemName: "") ?? UIImage()
+            return  UIImage(systemName: "person.2.fill") ?? UIImage()
         case .bazarSchedule:
-            return UIImage(systemName: "") ?? UIImage()
+            return UIImage(systemName: "timer") ?? UIImage()
         case .bazarCost:
-             return UIImage(systemName: "") ?? UIImage()
+             return UIImage(systemName: "dollarsign.circle.fill") ?? UIImage()
         case .calculation:
-            return  UIImage(systemName: "") ?? UIImage()
+            return  UIImage(systemName: "pencil.and.ellipsis.rectangle") ?? UIImage()
         case .logout:
-            return  UIImage(systemName: "") ?? UIImage()
+            return  UIImage(systemName: "goforward") ?? UIImage()
         
         }
     }

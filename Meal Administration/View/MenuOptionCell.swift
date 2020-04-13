@@ -16,6 +16,7 @@ class MenuOptionCell: UITableViewCell {
         
         var icon = UIImageView()
         icon.contentMode = .scaleAspectFit
+        icon.clipsToBounds = false
         return icon
 
     }()
@@ -23,7 +24,7 @@ class MenuOptionCell: UITableViewCell {
     var labelDescription: UILabel = {
        
         var lbl = UILabel()
-        lbl.font = UIFont.systemFont(ofSize: 22)
+        lbl.font = UIFont.systemFont(ofSize: 25)
         return lbl
         
     }()
@@ -52,8 +53,8 @@ class MenuOptionCell: UITableViewCell {
         iconDescription.translatesAutoresizingMaskIntoConstraints = false
         iconDescription.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         iconDescription.leftAnchor.constraint(equalTo: leftAnchor,constant: 10).isActive = true
-        iconDescription.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        iconDescription.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        iconDescription.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        iconDescription.widthAnchor.constraint(equalToConstant: 25).isActive = true
         
         
         

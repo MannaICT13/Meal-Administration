@@ -17,6 +17,7 @@ class MenuViewController: UIViewController {
     
     var tableView : UITableView!
  
+    var deleagte : HomeControllerDelegate!
     
     //MARK: - init
     
@@ -67,7 +68,7 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource{
         return 5
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,6 +80,14 @@ extension MenuViewController : UITableViewDelegate,UITableViewDataSource{
         cell.labelDescription.text = menuDescription?.description
         
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let menuDescription = MenuOption(rawValue: indexPath.row)
+        deleagte!.handleToggle(menuOption: menuDescription)
+        
     }
     
     

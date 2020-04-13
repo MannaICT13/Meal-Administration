@@ -17,6 +17,7 @@ class ContainerViewController: UIViewController {
     var centerController : UIViewController!
     var menuController : MenuViewController!
     
+    
     var isExtended : Bool = false
 
     
@@ -51,9 +52,10 @@ class ContainerViewController: UIViewController {
     func menuConfiguration(){
         
         if menuController == nil{
-            
-            menuController = MenuViewController()
-            
+
+           
+             menuController = MenuViewController()
+             menuController.deleagte = self
             view.insertSubview(menuController.view, at: 0)
             addChild(menuController)
             menuController.didMove(toParent: self)
@@ -67,8 +69,28 @@ class ContainerViewController: UIViewController {
         
     }
     
+    func didSeletMenu(menuOption : MenuOption?){
+        
+        switch menuOption {
     
-    func animatePanel(extended : Bool){
+        case .members:
+            print("Member")
+        case .bazarSchedule:
+            print("Bazar Schedule")
+        case .bazarCost:
+            print("Bazar Cost")
+        case .calculation:
+            print("Calculation")
+        case .logout:
+            print("Logout")
+    
+        case .none:
+            break
+        }
+    }
+    
+    
+    func animatePanel(extended : Bool,menuOpion: MenuOption?){
         
          if extended{
                    
@@ -83,12 +105,21 @@ class ContainerViewController: UIViewController {
                    
                }else{
                    //hide menu
-                   UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                /*   UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                        
                        self.centerController.view.frame.origin.x = 0
                    }, completion: nil)
                    
-                   
+                  */
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                
+                   self.centerController.view.frame.origin.x = 0
+            }) { (_) in
+                
+                guard menuOpion != nil else{return}
+                self.didSeletMenu(menuOption: menuOpion)
+            }
                    
                    
                    
@@ -105,22 +136,23 @@ class ContainerViewController: UIViewController {
 }
 
 extension ContainerViewController : HomeControllerDelegate{
-  
+   
     
-    func handleToggle() {
     
+    func handleToggle(menuOption: MenuOption?) {
+        
         if !isExtended{
             
             menuConfiguration()
         }
         isExtended = !isExtended
         
-        animatePanel(extended: isExtended)
-        
+        animatePanel(extended: isExtended, menuOpion: menuOption)
         
         
     }
     
+  
     
     
 }
