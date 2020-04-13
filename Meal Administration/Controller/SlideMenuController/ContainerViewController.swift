@@ -25,6 +25,11 @@ class ContainerViewController: UIViewController {
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        
+        return .lightContent
+    }
+    
     //MARK: - Handler
     
     func homeConfiguration(){
@@ -33,7 +38,7 @@ class ContainerViewController: UIViewController {
         centerController = UINavigationController(rootViewController: homeController)
         view.addSubview(centerController.view)
         addChild(centerController)
-        centerController.didMove(toParent: centerController)
+        centerController.didMove(toParent: self)
         
         
     }

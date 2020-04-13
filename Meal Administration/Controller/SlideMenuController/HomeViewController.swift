@@ -18,7 +18,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .darkGray
+        
+       // view.backgroundColor = .darkGray
+        navBarConfiguration()
 
        /* Utilities.assignBackgroundImage(img: "logo2.png", view: view)
         self.navigationItem.hidesBackButton = true
@@ -35,6 +37,26 @@ class HomeViewController: UIViewController {
         
     }
  */
+    @objc func handleToggle(_ sender: UIBarButtonItem){
+    print("hello World!!")
+        
+    }
+    
+    func navBarConfiguration(){
+        
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barTintColor = .darkGray
+        navigationController?.navigationBar.barStyle = .black
+        
+       navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3")?.withRenderingMode(.alwaysOriginal).withTintColor(.white), style: .plain, target: self, action: #selector(handleToggle(_ :)))
+        
+        
+        
+    }
+    
+    
+    
+    
 
    
 
