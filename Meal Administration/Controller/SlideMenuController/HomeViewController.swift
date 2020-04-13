@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
  */
     @objc func handleToggle(_ sender: UIBarButtonItem){
         
-        delegate.handleToggle()
+        delegate.handleToggle(menuOption: nil)
         
     }
     

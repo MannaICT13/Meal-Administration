@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Ac-Oq-C7b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LC0-f8-0GI">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -20,22 +20,22 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xz-dz-XRh">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="nS8-aT-nFU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
+                                            <action selector="loginBtnAction:" destination="nMq-xT-QJ5" eventType="touchUpInside" id="XaM-Fn-ULE"/>
                                             <segue destination="BYZ-38-t0r" kind="show" id="ONQ-4j-r7E"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-XX-gSX">
                                         <rect key="frame" x="0.0" y="70" width="354" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Register"/>
                                         <connections>
+                                            <action selector="registerBtnAction:" destination="nMq-xT-QJ5" eventType="touchUpInside" id="uDR-qs-lKn"/>
                                             <segue destination="pV9-id-7qX" kind="show" id="uw4-c3-j2m"/>
                                         </connections>
                                     </button>
@@ -54,6 +54,10 @@
                         <viewLayoutGuide key="safeArea" id="7bB-eb-Wel"/>
                     </view>
                     <navigationItem key="navigationItem" id="vfa-2T-kbD"/>
+                    <connections>
+                        <outlet property="loginBtnOutlet" destination="7xz-dz-XRh" id="BU1-1q-M4k"/>
+                        <outlet property="registerBtnOutlet" destination="WhT-XX-gSX" id="ABw-hC-xne"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxE-k2-Yfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
