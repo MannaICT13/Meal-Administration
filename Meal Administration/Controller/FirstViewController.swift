@@ -10,15 +10,42 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    //MARK: - Properties
     
+    @IBOutlet weak var loginBtnOutlet: UIButton!
+    
+    @IBOutlet weak var registerBtnOutlet: UIButton!
+    
+    
+    //MARK: - init
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        Utilities.assignBackgroundImage(img: "background.png", view: view)
      
+        utilitieManager()
+    }
+    
+    //MARK: - Handler
+    
+    
+    func utilitieManager(){
+        
+             Utilities.assignBackgroundImage(img: "background.png", view: view)
+             Utilities.roundBtnFill(button: loginBtnOutlet)
+             Utilities.roundBtn(button: registerBtnOutlet)
+          
+        
+        
         
     }
+    
+    @IBAction func loginBtnAction(_ sender: Any) {
+    }
+    
+    
+    @IBAction func registerBtnAction(_ sender: Any) {
+    }
+    
     
     
  

@@ -10,12 +10,47 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
 
+    //MARK: - Properties
+    
+    @IBOutlet weak var messNameTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var rePasswordTextField: UITextField!
+    
+    
+    @IBOutlet weak var registerBtnOutlet: UIButton!
+    
+    @IBOutlet weak var alreadyRegisterBtnOutlet: UIButton!
+    
+    
+    //MARK: - init
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        utilitiesManager()
 
-        Utilities.assignBackgroundImage(img: "register.png", view:  view)
     }
     
+    
+    //MARK: - Handler
+    
+    func utilitiesManager(){
+        Utilities.assignBackgroundImage(img: "register.png", view:  view)
+        Utilities.roundBtnFill(button: registerBtnOutlet)
 
+        
+    }
+    
+    
+    @IBAction func registerBtnAction(_ sender: Any) {
+    }
+    
+    
+    @IBAction func alreadyRegisterBtnAction(_ sender: Any) {
+    }
+    
 
 }

@@ -10,12 +10,48 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    //MARK: - Properties
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var loginBtnOutlet: UIButton!
+    
+    @IBOutlet weak var forgotPasswordBtnOutlet: UIButton!
+    
+    
+    
+    
+    
+    //MARK: - init
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       Utilities.assignBackgroundImage(img: "login.png", view: view)
+        utilitieManager()
+      
     }
     
-  
+    //MARK: - Handler
+    
+    func utilitieManager(){
+        
+        
+         Utilities.assignBackgroundImage(img: "login.png", view: view)
+         Utilities.roundBtnFill(button: loginBtnOutlet)
+         Utilities.roundBtn(button: forgotPasswordBtnOutlet)
+
+        
+    }
+    
+    @IBAction func loginBtnAction(_ sender: Any) {
+    }
+    
+    
+    @IBAction func forgotPasswordBtnAction(_ sender: Any) {
+    }
+    
     
 
 }
