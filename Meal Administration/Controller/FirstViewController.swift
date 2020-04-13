@@ -13,7 +13,6 @@ class FirstViewController: UIViewController {
     //MARK: - Properties
     
     @IBOutlet weak var loginBtnOutlet: UIButton!
-    
     @IBOutlet weak var registerBtnOutlet: UIButton!
     
     

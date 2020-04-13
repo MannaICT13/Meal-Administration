@@ -12,17 +12,22 @@ class RegistrationViewController: UIViewController {
 
     //MARK: - Properties
     
+    //textField properties
     @IBOutlet weak var messNameTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var rePasswordTextField: UITextField!
     
+    //imageIcon properties
     
+    @IBOutlet weak var iconMessNameImageView: UIImageView!
+    @IBOutlet weak var iconEmailImageView: UIImageView!
+    @IBOutlet weak var iconPasswordImageView: UIImageView!
+    @IBOutlet weak var iconRePasswordImageView: UIImageView!
+    
+    
+    //button  properties
     @IBOutlet weak var registerBtnOutlet: UIButton!
-    
     @IBOutlet weak var alreadyRegisterBtnOutlet: UIButton!
     
     
@@ -30,17 +35,37 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         utilitiesManager()
-
+        setUpImageIcon()
+        
     }
     
     
     //MARK: - Handler
     
     func utilitiesManager(){
+        
         Utilities.assignBackgroundImage(img: "register.png", view:  view)
         Utilities.roundBtnFill(button: registerBtnOutlet)
+        Utilities.lineTextFieldStyle(textField: messNameTextField)
+        Utilities.lineTextFieldStyle(textField: emailTextField)
+        Utilities.lineTextFieldStyle(textField: passwordTextField)
+        Utilities.lineTextFieldStyle(textField: rePasswordTextField)
+        
+        alreadyRegisterBtnOutlet.tintColor = UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
 
+        
+    }
+    
+    func setUpImageIcon(){
+        
+        let color = UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
+        iconMessNameImageView.image = UIImage(systemName: "house.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(color)
+        iconEmailImageView.image = UIImage(systemName: "envelope.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(color)
+        iconPasswordImageView.image = UIImage(systemName: "lock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(color)
+        iconRePasswordImageView.image = UIImage(systemName: "lock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(color)
+        
         
     }
     

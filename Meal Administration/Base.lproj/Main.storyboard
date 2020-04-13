@@ -89,7 +89,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="of3-a5-XVT"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -102,8 +102,8 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Jh-tq-SEQ">
                                                 <rect key="frame" x="50" y="0.0" width="304" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -115,8 +115,8 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7qg-vH-j5k">
                                                 <rect key="frame" x="50" y="0.0" width="304" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -128,7 +128,7 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvK-xB-RJV">
                                                 <rect key="frame" x="50" y="0.0" width="304" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
@@ -181,6 +181,10 @@
                     <connections>
                         <outlet property="alreadyRegisterBtnOutlet" destination="une-ja-UlJ" id="pB0-q2-vdZ"/>
                         <outlet property="emailTextField" destination="4Jh-tq-SEQ" id="LhQ-gE-zpN"/>
+                        <outlet property="iconEmailImageView" destination="7h2-F8-Qk4" id="HVb-jP-uch"/>
+                        <outlet property="iconMessNameImageView" destination="pwf-Rk-qh9" id="6pc-dU-Pej"/>
+                        <outlet property="iconPasswordImageView" destination="mkV-hM-YoN" id="xDl-OQ-vfY"/>
+                        <outlet property="iconRePasswordImageView" destination="VTC-fB-XX8" id="7YI-3M-NBV"/>
                         <outlet property="messNameTextField" destination="Omj-pl-szq" id="7PL-Iw-rLV"/>
                         <outlet property="passwordTextField" destination="7qg-vH-j5k" id="MHp-l9-Faa"/>
                         <outlet property="rePasswordTextField" destination="fvK-xB-RJV" id="V3m-nW-HNh"/>
@@ -234,7 +238,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="2bZ-98-jrx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -247,7 +251,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndd-Qa-3Rj">
                                                 <rect key="frame" x="55" y="0.0" width="299" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -293,6 +297,8 @@
                     <connections>
                         <outlet property="emailTextField" destination="yj6-72-R7f" id="Vza-Mi-l19"/>
                         <outlet property="forgotPasswordBtnOutlet" destination="iM6-RA-M6Z" id="oCd-lB-r3s"/>
+                        <outlet property="iconEmailImageView" destination="peJ-Dy-MCk" id="e9i-ac-yBw"/>
+                        <outlet property="iconPasswordImageView" destination="lzR-sQ-MNY" id="kWo-pD-rwV"/>
                         <outlet property="loginBtnOutlet" destination="F4Q-E8-Iv0" id="4pQ-QP-BIT"/>
                         <outlet property="passwordTextField" destination="ndd-Qa-3Rj" id="MQ5-Sh-hYu"/>
                     </connections>
