@@ -8,10 +8,14 @@
 
 import UIKit
 
+private let reuseIdentifier = "MenuOptionCell"
+
 class MenuViewController: UIViewController {
 
     
     //MARK: - Properties
+    
+    var tableView : UITableView!
  
     
     //MARK: - init
@@ -26,5 +30,35 @@ class MenuViewController: UIViewController {
     
     //MARK: - Handler
     
+    
+    func tableViewConfiguration(){
+        
+        tableView = UITableView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(MenuOptionCell.self, forCellReuseIdentifier: reuseIdentifier)
+        view.addSubview(tableView)
+        
+        
+        
+        
+        
+        
+    }
+    
+    
 
+}
+
+extension MenuViewController : UITableViewDelegate,UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }

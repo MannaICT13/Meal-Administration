@@ -10,6 +10,7 @@
 		2A6798F12444771000700604 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F02444771000700604 /* ContainerViewController.swift */; };
 		2A6798F32444774000700604 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F22444774000700604 /* MenuViewController.swift */; };
 		2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F42444816D00700604 /* ToggleProtocal.swift */; };
+		2A6798F72444897800700604 /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F62444897800700604 /* MenuOptionCell.swift */; };
 		2AAC2A832443A55900FD9AEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC2A822443A55900FD9AEB /* HomeViewController.swift */; };
 		2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */; };
 		2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */; };
@@ -53,6 +54,7 @@
 		2A6798F02444771000700604 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2A6798F22444774000700604 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2A6798F42444816D00700604 /* ToggleProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleProtocal.swift; sourceTree = "<group>"; };
+		2A6798F62444897800700604 /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
 		2AAC2A822443A55900FD9AEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AB1E8AB243F121A00A07BBA /* Meal Administration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Administration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		2A6798E4244469CE00700604 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A6798F62444897800700604 /* MenuOptionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB1E8E9243F70F500A07BBA /* RegistrationViewController.swift in Sources */,
+				2A6798F72444897800700604 /* MenuOptionCell.swift in Sources */,
 				2AB1E8E1243F131200A07BBA /* LoginViewController.swift in Sources */,
 				2A6798F12444771000700604 /* ContainerViewController.swift in Sources */,
 				2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */,
