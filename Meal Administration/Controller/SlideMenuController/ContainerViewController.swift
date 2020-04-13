@@ -15,6 +15,10 @@ class ContainerViewController: UIViewController {
     
     var homeController : HomeViewController!
     var centerController : UIViewController!
+    var menuController : MenuViewController!
+    
+    var isExtended : Bool = false
+
     
     //MARK: - init
     
@@ -36,6 +40,7 @@ class ContainerViewController: UIViewController {
         
        homeController = HomeViewController()
         centerController = UINavigationController(rootViewController: homeController)
+        homeController.delegate = self
         view.addSubview(centerController.view)
         addChild(centerController)
         centerController.didMove(toParent: self)
@@ -43,7 +48,79 @@ class ContainerViewController: UIViewController {
         
     }
     
+    func menuConfiguration(){
+        
+        if menuController == nil{
+            
+            menuController = MenuViewController()
+            
+            view.insertSubview(menuController.view, at: 0)
+            addChild(menuController)
+            menuController.didMove(toParent: self)
+            
+            
+            
+        }
+        
+       
+        
+        
+    }
+    
+    
+    func animatePanel(extended : Bool){
+        
+         if extended{
+                   
+                   //Show manu
+                   UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                       
+                       self.centerController.view.frame.origin.x = self.centerController.view.frame.width - 80
+                       
+                       
+                   }, completion: nil)
+                   
+                   
+               }else{
+                   //hide menu
+                   UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                       
+                       self.centerController.view.frame.origin.x = 0
+                   }, completion: nil)
+                   
+                   
+                   
+                   
+                   
+               }
+               
+               
+               
+        
+    }
+    
     
 
 
+}
+
+extension ContainerViewController : HomeControllerDelegate{
+  
+    
+    func handleToggle() {
+    
+        if !isExtended{
+            
+            menuConfiguration()
+        }
+        isExtended = !isExtended
+        
+        animatePanel(extended: isExtended)
+        
+        
+        
+    }
+    
+    
+    
 }

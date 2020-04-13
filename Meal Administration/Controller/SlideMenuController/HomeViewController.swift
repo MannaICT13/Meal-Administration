@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     //MARK: - Properties
     
+    var delegate : HomeControllerDelegate!
     
     
     //MARK: - init
@@ -19,7 +20,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // view.backgroundColor = .darkGray
+        view.backgroundColor = .white
         navBarConfiguration()
 
        /* Utilities.assignBackgroundImage(img: "logo2.png", view: view)
@@ -38,7 +39,8 @@ class HomeViewController: UIViewController {
     }
  */
     @objc func handleToggle(_ sender: UIBarButtonItem){
-    print("hello World!!")
+        
+        delegate.handleToggle()
         
     }
     

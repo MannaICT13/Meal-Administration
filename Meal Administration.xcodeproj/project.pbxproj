@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A6798F12444771000700604 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F02444771000700604 /* ContainerViewController.swift */; };
 		2A6798F32444774000700604 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F22444774000700604 /* MenuViewController.swift */; };
+		2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F42444816D00700604 /* ToggleProtocal.swift */; };
 		2AAC2A832443A55900FD9AEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC2A822443A55900FD9AEB /* HomeViewController.swift */; };
 		2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */; };
 		2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 		1E856466503410B78CBCDB66 /* Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig"; path = "Target Support Files/Pods-Meal Administration-Meal AdministrationUITests/Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2A6798F02444771000700604 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2A6798F22444774000700604 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2A6798F42444816D00700604 /* ToggleProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleProtocal.swift; sourceTree = "<group>"; };
 		2AAC2A822443A55900FD9AEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AB1E8AB243F121A00A07BBA /* Meal Administration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Administration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				2AB1E8E6243F542500A07BBA /* Utilities.swift */,
+				2A6798F42444816D00700604 /* ToggleProtocal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				2A6798F12444771000700604 /* ContainerViewController.swift in Sources */,
 				2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */,
 				2A6798F32444774000700604 /* MenuViewController.swift in Sources */,
+				2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */,
 				2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */,
 				2AB1E8E7243F542500A07BBA /* Utilities.swift in Sources */,
 				2AAC2A832443A55900FD9AEB /* HomeViewController.swift in Sources */,
