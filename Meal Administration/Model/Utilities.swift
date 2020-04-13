@@ -54,6 +54,21 @@ class Utilities {
         
     }
     
+    static func lineTextFieldStyle(textField: UITextField){
+        
+        
+        let bottomLine = CALayer()
+        
+        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 3, width: textField.frame.width, height: 3)
+        bottomLine.backgroundColor = CGColor(srgbRed: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
+       
+        textField.borderStyle = .none
+        textField.layer.addSublayer(bottomLine)
+        
+        
+        
+    }
+    
     
     
     
