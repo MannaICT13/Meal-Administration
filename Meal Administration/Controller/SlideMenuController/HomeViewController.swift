@@ -10,6 +10,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    //MARK: - Properties
+    
+    
+    
+    //MARK: - init
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +23,9 @@ class HomeViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(logOut(_ :)))
     }
+    
+    //MARK: - Handler
+    
     @objc func logOut(_ sender : UIBarButtonItem){
 
         navigationController?.popToRootViewController(animated: true)

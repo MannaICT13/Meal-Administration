@@ -13,7 +13,7 @@ class Utilities {
     
     static func assignBackgroundImage(img : String,view : UIView){
         
-        let backgroundImg = UIImage(named: img)
+        let backgroundImg = UIImage(named: img)//?.withRenderingMode(.alwaysOriginal).withTintColor(.clear)
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.image = backgroundImg

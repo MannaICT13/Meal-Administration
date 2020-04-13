@@ -16,7 +16,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
 
         Utilities.assignBackgroundImage(img: "background.png", view: view)
+     
+        
     }
+    
     
  
 }
