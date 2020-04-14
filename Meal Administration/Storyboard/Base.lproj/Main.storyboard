@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bZ9-U6-ZUw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YPZ-tH-osg">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -225,6 +225,138 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="327-Bb-3ln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5784" y="165"/>
+        </scene>
+        <!--Bazar Cost View Controller-->
+        <scene sceneID="WnB-H9-zha">
+            <objects>
+                <viewController storyboardIdentifier="BazarCostViewController" id="vXH-ZB-L3D" customClass="BazarCostViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jN4-Se-BLU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4U0-c5-h75"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2TK-cy-Rvq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5818" y="919"/>
+        </scene>
+        <!--Add Bazar Cost View Controller-->
+        <scene sceneID="3fH-Wr-iy6">
+            <objects>
+                <viewController storyboardIdentifier="AddBazarCostViewController" id="YPZ-tH-osg" customClass="AddBazarCostViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MSf-pK-OeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CRV-JL-lxo">
+                                <rect key="frame" x="30" y="104" width="354" height="330"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZO-3m-cBB">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="onY-Z6-HGx">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="KzX-oy-6fE"/>
+                                                    <constraint firstAttribute="height" constant="50" id="ymm-c5-Kib"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zXG-qh-8Ci">
+                                                <rect key="frame" x="50" y="0.0" width="304" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="10B-CI-y3v"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-CJ-R8f">
+                                        <rect key="frame" x="0.0" y="70" width="354" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-pG-bdb">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOR-do-hTN">
+                                                <rect key="frame" x="50" y="0.0" width="304" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mu6-S2-jVT">
+                                        <rect key="frame" x="0.0" y="140" width="354" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zm3-ID-sYD">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bazar Cost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PhD-cJ-m5k">
+                                                <rect key="frame" x="50" y="0.0" width="304" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CW4-x2-TEp">
+                                        <rect key="frame" x="0.0" y="210" width="354" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r6u-1a-RkP">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bazar Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nve-yM-30Y">
+                                                <rect key="frame" x="50" y="0.0" width="304" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iF-n7-WOy">
+                                        <rect key="frame" x="0.0" y="280" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveBtnAction:" destination="YPZ-tH-osg" eventType="touchUpInside" id="5cc-Xd-KpG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zm3-ID-sYD" firstAttribute="width" secondItem="r6u-1a-RkP" secondAttribute="width" id="J5a-wo-2Yl"/>
+                                    <constraint firstItem="qOR-do-hTN" firstAttribute="height" secondItem="PhD-cJ-m5k" secondAttribute="height" id="Oym-5y-D8U"/>
+                                    <constraint firstItem="PhD-cJ-m5k" firstAttribute="height" secondItem="nve-yM-30Y" secondAttribute="height" id="RKh-Ts-jsO"/>
+                                    <constraint firstItem="zXG-qh-8Ci" firstAttribute="height" secondItem="qOR-do-hTN" secondAttribute="height" id="Ry1-1z-ReN"/>
+                                    <constraint firstItem="ggB-pG-bdb" firstAttribute="height" secondItem="zm3-ID-sYD" secondAttribute="height" id="Uv7-1j-Q9v"/>
+                                    <constraint firstItem="onY-Z6-HGx" firstAttribute="width" secondItem="ggB-pG-bdb" secondAttribute="width" id="cLI-rv-6fw"/>
+                                    <constraint firstItem="onY-Z6-HGx" firstAttribute="height" secondItem="ggB-pG-bdb" secondAttribute="height" id="fYF-6F-a2O"/>
+                                    <constraint firstItem="ggB-pG-bdb" firstAttribute="width" secondItem="zm3-ID-sYD" secondAttribute="width" id="l2p-kK-o23"/>
+                                    <constraint firstItem="zm3-ID-sYD" firstAttribute="height" secondItem="r6u-1a-RkP" secondAttribute="height" id="oIy-3V-oMc"/>
+                                    <constraint firstItem="nve-yM-30Y" firstAttribute="height" secondItem="2iF-n7-WOy" secondAttribute="height" id="w3d-nV-SYG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CRV-JL-lxo" firstAttribute="top" secondItem="9ih-5A-7pa" secondAttribute="top" constant="60" id="Jjo-yB-5Mo"/>
+                            <constraint firstItem="CRV-JL-lxo" firstAttribute="leading" secondItem="9ih-5A-7pa" secondAttribute="leading" constant="30" id="WI5-3N-Gic"/>
+                            <constraint firstItem="9ih-5A-7pa" firstAttribute="trailing" secondItem="CRV-JL-lxo" secondAttribute="trailing" constant="30" id="zjp-wH-LG5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9ih-5A-7pa"/>
+                    </view>
+                    <connections>
+                        <outlet property="bazarCostImg" destination="zm3-ID-sYD" id="w1K-KL-CrZ"/>
+                        <outlet property="bazarCostTextField" destination="PhD-cJ-m5k" id="VNQ-dU-rM8"/>
+                        <outlet property="bazarDateImg" destination="r6u-1a-RkP" id="yvo-xr-25S"/>
+                        <outlet property="bazarDateTextField" destination="nve-yM-30Y" id="Et2-ts-ZRo"/>
+                        <outlet property="emailImg" destination="ggB-pG-bdb" id="MbP-on-WLO"/>
+                        <outlet property="emailTextField" destination="qOR-do-hTN" id="pwq-KD-NDP"/>
+                        <outlet property="nameImg" destination="onY-Z6-HGx" id="mxw-Zg-bFI"/>
+                        <outlet property="nameTextField" destination="zXG-qh-8Ci" id="d9t-uM-dGp"/>
+                        <outlet property="saveBtnOutlet" destination="2iF-n7-WOy" id="On5-AW-HLf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snQ-TP-qTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6674" y="915"/>
         </scene>
         <!--Add Bazar Schedule View Controller-->
         <scene sceneID="3br-Ba-xlw">

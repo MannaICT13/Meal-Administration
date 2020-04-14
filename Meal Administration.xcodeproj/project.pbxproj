@@ -17,6 +17,8 @@
 		2A7061D02445B8BB00C55D5A /* MemberDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061CF2445B8BB00C55D5A /* MemberDetailTableViewController.swift */; };
 		2A7061D3244626D600C55D5A /* BazarScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061D2244626D600C55D5A /* BazarScheduleViewController.swift */; };
 		2A7061D5244626EC00C55D5A /* AddBazarScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061D4244626EC00C55D5A /* AddBazarScheduleViewController.swift */; };
+		2A7061D824464F6F00C55D5A /* BazarCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061D724464F6F00C55D5A /* BazarCostViewController.swift */; };
+		2A7061DA24464F8000C55D5A /* AddBazarCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061D924464F8000C55D5A /* AddBazarCostViewController.swift */; };
 		2AAC2A832443A55900FD9AEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC2A822443A55900FD9AEB /* HomeViewController.swift */; };
 		2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */; };
 		2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */; };
@@ -67,6 +69,8 @@
 		2A7061CF2445B8BB00C55D5A /* MemberDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailTableViewController.swift; sourceTree = "<group>"; };
 		2A7061D2244626D600C55D5A /* BazarScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazarScheduleViewController.swift; sourceTree = "<group>"; };
 		2A7061D4244626EC00C55D5A /* AddBazarScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBazarScheduleViewController.swift; sourceTree = "<group>"; };
+		2A7061D724464F6F00C55D5A /* BazarCostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazarCostViewController.swift; sourceTree = "<group>"; };
+		2A7061D924464F8000C55D5A /* AddBazarCostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBazarCostViewController.swift; sourceTree = "<group>"; };
 		2AAC2A822443A55900FD9AEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AB1E8AB243F121A00A07BBA /* Meal Administration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Administration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +179,33 @@
 			path = BazarSchedule;
 			sourceTree = "<group>";
 		};
+		2A7061D624464F4D00C55D5A /* BazarCost */ = {
+			isa = PBXGroup;
+			children = (
+				2A7061D724464F6F00C55D5A /* BazarCostViewController.swift */,
+				2A7061D924464F8000C55D5A /* AddBazarCostViewController.swift */,
+			);
+			path = BazarCost;
+			sourceTree = "<group>";
+		};
+		2A7061DB24464F8E00C55D5A /* General */ = {
+			isa = PBXGroup;
+			children = (
+				2AB1E8E4243F444700A07BBA /* FirstViewController.swift */,
+				2AB1E8E0243F131200A07BBA /* LoginViewController.swift */,
+				2AB1E8E8243F70F400A07BBA /* RegistrationViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		2A7061DC24464FFD00C55D5A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2AB1E8B4243F121A00A07BBA /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		2AB1E8A2243F121A00A07BBA = {
 			isa = PBXGroup;
 			children = (
@@ -200,12 +231,12 @@
 		2AB1E8AD243F121A00A07BBA /* Meal Administration */ = {
 			isa = PBXGroup;
 			children = (
+				2A7061DC24464FFD00C55D5A /* Storyboard */,
 				2AB1E8DF243F12B200A07BBA /* Model */,
 				2A6798E4244469CE00700604 /* View */,
 				2AB1E8DE243F12A400A07BBA /* Controller */,
 				2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */,
 				2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */,
-				2AB1E8B4243F121A00A07BBA /* Main.storyboard */,
 				2AB1E8B7243F122200A07BBA /* Assets.xcassets */,
 				2AB1E8B9243F122200A07BBA /* LaunchScreen.storyboard */,
 				2AB1E8BC243F122200A07BBA /* Info.plist */,
@@ -235,12 +266,11 @@
 		2AB1E8DE243F12A400A07BBA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2AB1E8E4243F444700A07BBA /* FirstViewController.swift */,
-				2AB1E8E0243F131200A07BBA /* LoginViewController.swift */,
-				2AB1E8E8243F70F400A07BBA /* RegistrationViewController.swift */,
-				2A7061D12446268900C55D5A /* BazarSchedule */,
-				2A7061CA2445B7A200C55D5A /* Members */,
+				2A7061DB24464F8E00C55D5A /* General */,
 				2A6798EF244476C800700604 /* SlideMenuController */,
+				2A7061CA2445B7A200C55D5A /* Members */,
+				2A7061D12446268900C55D5A /* BazarSchedule */,
+				2A7061D624464F4D00C55D5A /* BazarCost */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -518,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7061CE2445B82D00C55D5A /* AddMembersViewController.swift in Sources */,
+				2A7061DA24464F8000C55D5A /* AddBazarCostViewController.swift in Sources */,
 				2AB1E8E9243F70F500A07BBA /* RegistrationViewController.swift in Sources */,
 				2A7061CC2445B81400C55D5A /* MembersViewController.swift in Sources */,
 				2A6798F924448D1800700604 /* MenuOption.swift in Sources */,
@@ -527,6 +558,7 @@
 				2A6798F12444771000700604 /* ContainerViewController.swift in Sources */,
 				2A7061D3244626D600C55D5A /* BazarScheduleViewController.swift in Sources */,
 				2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */,
+				2A7061D824464F6F00C55D5A /* BazarCostViewController.swift in Sources */,
 				2A7061D5244626EC00C55D5A /* AddBazarScheduleViewController.swift in Sources */,
 				2A6798F32444774000700604 /* MenuViewController.swift in Sources */,
 				2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */,
