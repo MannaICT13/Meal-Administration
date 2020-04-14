@@ -10,23 +10,65 @@ import UIKit
 
 class AddBazarScheduleViewController: UIViewController {
 
+    //MARK: - Properties
     
+    //text fields outlets
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var startDateTextField: UITextField!
+    @IBOutlet weak var endDateTextField: UITextField!
+    
+    //icon image outlets
+    @IBOutlet weak var nameImg: UIImageView!
+    @IBOutlet weak var emailImg: UIImageView!
+    @IBOutlet weak var startDateImg: UIImageView!
+    @IBOutlet weak var endDateImg: UIImageView!
+    
+    
+    @IBOutlet weak var saveBtnOutlet: UIButton!
+    
+    
+    //MARK: - init
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpIconImage()
+        utilitieManager()
 
-        // Do any additional setup after loading the view.
     }
+
+    
+    //MARK: - Handler
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveBtnAction(_ sender: Any) {
+        
     }
-    */
+    
+    func setUpIconImage(){
+        
+        nameImg.image = UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        emailImg.image = UIImage(systemName: "envelope.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        startDateImg.image = UIImage(systemName: "clock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        endDateImg.image = UIImage(systemName: "clock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+
+        
+    }
+    
+    func utilitieManager(){
+        
+         Utilities.lineTextFieldStyle(textField: nameTextField)
+         Utilities.lineTextFieldStyle(textField: emailTextField)
+         Utilities.lineTextFieldStyle(textField: startDateTextField)
+         Utilities.lineTextFieldStyle(textField: endDateTextField)
+         Utilities.roundBtnFill(button: saveBtnOutlet, color: Utilities.color)
+        
+        
+    }
+    
+    
+    
+    
+    
 
 }
