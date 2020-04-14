@@ -12,7 +12,7 @@ class AddMembersViewController: UIViewController {
 
     //MARK: - Properties
     
-    //textField Outlets
+    // textField Outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
@@ -25,7 +25,7 @@ class AddMembersViewController: UIViewController {
     @IBOutlet weak var waterTextField: UITextField!
     @IBOutlet weak var othersTextField: UITextField!
     
-    //Button Outlets
+    // Button Outlets
     @IBOutlet weak var saveBtnOutlets: UIButton!
     
     //icon Image Outlets

@@ -75,6 +75,8 @@ class ContainerViewController: UIViewController {
     
         case .members:
             print("Member")
+            didSelectMembers()
+            
         case .bazarSchedule:
             print("Bazar Schedule")
         case .bazarCost:
@@ -88,6 +90,10 @@ class ContainerViewController: UIViewController {
             break
         }
     }
+    
+    
+    
+    
     
     
     func animatePanel(extended : Bool,menuOpion: MenuOption?){
@@ -153,6 +159,23 @@ extension ContainerViewController : HomeControllerDelegate{
     }
     
   
+    
+    
+}
+
+extension ContainerViewController {
+    
+    
+    func didSelectMembers(){
+        
+        let addMembersVC = storyboard?.instantiateViewController(identifier: "MembersViewController") as! MembersViewController
+        self.navigationController?.pushViewController(addMembersVC, animated: true)
+        
+        
+        
+    }
+    
+    
     
     
 }

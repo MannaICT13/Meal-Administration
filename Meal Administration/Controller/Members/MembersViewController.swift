@@ -10,10 +10,34 @@ import UIKit
 
 class MembersViewController: UIViewController {
 
+    
+    //MARK: - Properties
+    
+    
+    //MARK: - init
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .opaqueSeparator
+        addMembersNavBarBtn()
+    }
+    
+    //MARK: - Handler
+    
+    func addMembersNavBarBtn(){
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Members", style: .plain, target: self, action: #selector(addNavBtnAction(_ :)))
+        
+        
+    }
+    
+    @objc func addNavBtnAction(_ sender : UIBarButtonItem){
+        
+        let addMembersVC = storyboard?.instantiateViewController(identifier: "AddMembersViewController") as! AddMembersViewController
+        self.navigationController?.pushViewController(addMembersVC, animated: true)
+        
+        
     }
     
 
