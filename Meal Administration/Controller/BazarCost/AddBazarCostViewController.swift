@@ -30,6 +30,7 @@ class AddBazarCostViewController: UIViewController {
     @IBOutlet weak var saveBtnOutlet: UIButton!
     
     
+    var datePicker : UIDatePicker!
     //MARK: - init
     
     override func viewDidLoad() {
@@ -37,6 +38,7 @@ class AddBazarCostViewController: UIViewController {
         
         utilitieManager()
         setUpImageIcon()
+        manageDatePicker()
 
       
     }
@@ -77,5 +79,48 @@ class AddBazarCostViewController: UIViewController {
         
         
     }
+    
+    func manageDatePicker(){
+        
+        
+        datePicker = UIDatePicker()
+        
+        //toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let done = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(doneAction(_ :)))
+       
+        toolbar.setItems([done], animated: true)
+        
+         bazarDateTextField.inputAccessoryView = toolbar
+         bazarDateTextField.inputView = datePicker
+         datePicker.datePickerMode  = .date
+       
+        
+        
+        
+    }
+    
+    @objc func doneAction(_ sender : UIBarButtonItem){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        if bazarDateTextField.isFirstResponder{
+            
+            bazarDateTextField.text = dateFormatter.string(from: datePicker.date)
+            
+        }
+        
+        self.view.endEditing(true)
+        
+        
+    }
+    
+    
+    
+    
     
 }
