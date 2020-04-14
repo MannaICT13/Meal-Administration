@@ -34,6 +34,9 @@ class AddBazarCostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        utilitieManager()
+        setUpImageIcon()
 
       
     }
@@ -43,6 +46,36 @@ class AddBazarCostViewController: UIViewController {
 
    
     @IBAction func saveBtnAction(_ sender: Any) {
+        
+    }
+    
+    
+    
+    
+    func setUpImageIcon(){
+        
+        nameImg.image = UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        
+        emailImg.image = UIImage(systemName: "envelope.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        
+        bazarCostImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        
+        bazarDateImg.image = UIImage(systemName: "clock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        
+        
+        
+        
+    }
+    func utilitieManager(){
+        
+           Utilities.lineTextFieldStyle(textField: nameTextField)
+           Utilities.lineTextFieldStyle(textField: emailTextField)
+           Utilities.lineTextFieldStyle(textField: bazarCostTextField)
+           Utilities.lineTextFieldStyle(textField: bazarDateTextField)
+        
+        Utilities.roundBtnFill(button: saveBtnOutlet, color: Utilities.color)
+        
+        
     }
     
 }
