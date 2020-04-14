@@ -211,6 +211,36 @@
             </objects>
             <point key="canvasLocation" x="4060.8695652173915" y="164.73214285714286"/>
         </scene>
+        <!--Bazar Schedule View Controller-->
+        <scene sceneID="UGL-91-q3X">
+            <objects>
+                <viewController storyboardIdentifier="BazarScheduleViewController" id="Irz-wi-YmQ" customClass="BazarScheduleViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lr3-YI-en5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4m0-ig-BSB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="327-Bb-3ln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5784" y="165"/>
+        </scene>
+        <!--Add Bazar Schedule View Controller-->
+        <scene sceneID="3br-Ba-xlw">
+            <objects>
+                <viewController storyboardIdentifier="AddBazarScheduleViewController" id="Lok-rb-Sez" customClass="AddBazarScheduleViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uRf-VN-mla">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KQq-73-Apk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlM-a2-zi8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6637" y="168"/>
+        </scene>
         <!--Members View Controller-->
         <scene sceneID="IgW-7g-JGp">
             <objects>
@@ -224,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGi-AY-kHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4972" y="-514"/>
+            <point key="canvasLocation" x="4967" y="-648"/>
         </scene>
         <!--Add Members View Controller-->
         <scene sceneID="UEv-ba-oe5">
@@ -488,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3p-kt-vAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5931.884057971015" y="-499.55357142857139"/>
+            <point key="canvasLocation" x="5784" y="-621"/>
         </scene>
         <!--Member Detail Table View Controller-->
         <scene sceneID="bHV-1a-mSB">
@@ -516,7 +546,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KL1-YJ-8kT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7036" y="-514"/>
+            <point key="canvasLocation" x="6546" y="-648"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">

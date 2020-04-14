@@ -79,6 +79,7 @@ class ContainerViewController: UIViewController {
             
         case .bazarSchedule:
             print("Bazar Schedule")
+            didSelectBazarSchedule()
         case .bazarCost:
             print("Bazar Cost")
         case .calculation:
@@ -171,6 +172,16 @@ extension ContainerViewController {
         let addMembersVC = storyboard?.instantiateViewController(identifier: "MembersViewController") as! MembersViewController
         self.navigationController?.pushViewController(addMembersVC, animated: true)
         
+        
+        
+    }
+    
+    func didSelectBazarSchedule(){
+         
+        let addScheduleVC = storyboard?.instantiateViewController(identifier: "BazarScheduleViewController") as! BazarScheduleViewController
+        self.navigationController?.pushViewController(addScheduleVC, animated: true)
+               
+               
         
         
     }
