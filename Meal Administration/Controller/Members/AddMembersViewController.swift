@@ -49,13 +49,13 @@ class AddMembersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .opaqueSeparator
+     
         
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.view.backgroundColor = Utilities.color
+        
         setUpIconImg()
         utlilitieManager()
     }
@@ -73,17 +73,17 @@ class AddMembersViewController: UIViewController {
     
     func setUpIconImg(){
         
-        nameImg.image = UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         phoneImg.image = UIImage(systemName: "phone.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         addressImg.image = UIImage(systemName: "house.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         emailImg.image = UIImage(systemName: "envelope.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         rentImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         netImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         gassImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         khalaImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         currentImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         waterImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
-         othersImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
+        nameImg.image = UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         phoneImg.image = UIImage(systemName: "phone.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         addressImg.image = UIImage(systemName: "house.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         emailImg.image = UIImage(systemName: "envelope.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         rentImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         netImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         gassImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         khalaImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         currentImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         waterImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         othersImg.image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
         
         
         
@@ -92,9 +92,19 @@ class AddMembersViewController: UIViewController {
     
     func utlilitieManager(){
         
-        Utilities.roundBtnFill(button: saveBtnOutlets, color: .white)
-    
-        
+         Utilities.roundBtnFill(button: saveBtnOutlets, color: Utilities.color)
+         Utilities.lineTextFieldStyle(textField: nameTextField)
+         Utilities.lineTextFieldStyle(textField: phoneTextField)
+         Utilities.lineTextFieldStyle(textField: addressTextField)
+         Utilities.lineTextFieldStyle(textField: emailTextField)
+        Utilities.lineTextFieldStyle(textField:  rentTextField)
+         Utilities.lineTextFieldStyle(textField: netTextField)
+         Utilities.lineTextFieldStyle(textField: gassTextField)
+         Utilities.lineTextFieldStyle(textField: khalaTextField)
+         Utilities.lineTextFieldStyle(textField: currentTextField)
+         Utilities.lineTextFieldStyle(textField: waterTextField)
+         Utilities.lineTextFieldStyle(textField: othersTextField)
+       
         
     }
     

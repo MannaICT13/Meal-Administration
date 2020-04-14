@@ -41,7 +41,6 @@ class Utilities {
         button.layer.borderColor = UIColor.black.cgColor
         button.tintColor = .white
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
-        button.titleLabel?.textColor = .white
         
       
         

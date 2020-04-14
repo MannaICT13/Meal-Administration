@@ -528,9 +528,7 @@
                                                         <rect key="frame" x="0.0" y="770" width="354" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                        <state key="normal" title="Save">
-                                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
+                                                        <state key="normal" title="Save"/>
                                                         <connections>
                                                             <action selector="saveBtnAction:" destination="d1r-38-kBU" eventType="touchUpInside" id="G70-4H-YKi"/>
                                                         </connections>
