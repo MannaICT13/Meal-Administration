@@ -28,12 +28,16 @@ class AddBazarScheduleViewController: UIViewController {
     @IBOutlet weak var saveBtnOutlet: UIButton!
     
     
+    
+    var datePicker : UIDatePicker!
+    
     //MARK: - init
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpIconImage()
         utilitieManager()
+        manageDatePicker()
 
     }
 
@@ -44,6 +48,54 @@ class AddBazarScheduleViewController: UIViewController {
     @IBAction func saveBtnAction(_ sender: Any) {
         
     }
+    
+    func manageDatePicker(){
+        
+        datePicker = UIDatePicker()
+        
+        //create a toobar
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let done = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(datePickerAction(_ :)))
+        toolBar.setItems([done], animated: true)
+        
+        startDateTextField.inputAccessoryView = toolBar
+        startDateTextField.inputView = datePicker
+        
+        endDateTextField.inputAccessoryView = toolBar
+        endDateTextField.inputView = datePicker
+        
+        datePicker.datePickerMode = .date
+                
+    }
+
+    @objc func datePickerAction(_ sender : UIBarButtonItem){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        if startDateTextField.isFirstResponder {
+            
+            startDateTextField.text = dateFormatter.string(from: datePicker.date)
+            
+            
+        }else if endDateTextField.isFirstResponder{
+            
+            endDateTextField.text = dateFormatter.string(from: datePicker.date)
+        }
+        
+
+        self.view.endEditing(true)
+        
+        
+        
+    }
+    
+    
+    
+    
+    
     
     func setUpIconImage(){
         
