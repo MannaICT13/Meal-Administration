@@ -26,6 +26,7 @@ class ContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.hidesBackButton = true
         homeConfiguration()
         
     }
@@ -86,6 +87,7 @@ class ContainerViewController: UIViewController {
             print("Calculation")
         case .logout:
             print("Logout")
+            didSeletLogOut()
     
         case .none:
             break
@@ -183,6 +185,12 @@ extension ContainerViewController {
                
                
         
+        
+    }
+    
+  func didSeletLogOut(){
+ 
+    navigationController?.popToRootViewController(animated: false)
         
     }
     

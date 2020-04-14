@@ -20,24 +20,15 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.opaqueSeparator
+        self.view.backgroundColor = UIColor.white
         navBarConfiguration()
 
-       /* Utilities.assignBackgroundImage(img: "logo2.png", view: view)
-        self.navigationItem.hidesBackButton = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(logOut(_ :)))
- */
+       // self.navigationItem.hidesBackButton = true
         
     }
     
     //MARK: - Handler
     
- /*   @objc func logOut(_ sender : UIBarButtonItem){
-
-        navigationController?.popToRootViewController(animated: true)
-        
-    }
- */
     @objc func handleToggle(_ sender: UIBarButtonItem){
         
         delegate.handleToggle(menuOption: nil)

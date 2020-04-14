@@ -19,7 +19,7 @@ class MembersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .opaqueSeparator
+       // self.view.backgroundColor = .opaqueSeparator
         addMembersNavBarBtn()
     }
     
