@@ -51,7 +51,7 @@ class RegistrationViewController: UIViewController {
        
         
        // Utilities.assignBackgroundImage(img: "register.png", view:  view)
-        Utilities.roundBtnFill(button: registerBtnOutlet)
+        Utilities.roundBtnFill(button: registerBtnOutlet, color: Utilities.color)
         Utilities.lineTextFieldStyle(textField: messNameTextField)
         Utilities.lineTextFieldStyle(textField: emailTextField)
         Utilities.lineTextFieldStyle(textField: passwordTextField)

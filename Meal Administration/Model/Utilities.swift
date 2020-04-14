@@ -32,29 +32,30 @@ class Utilities {
     static let color : UIColor =  UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
     
     
-    static func roundBtnFill(button : UIButton){
+    static func roundBtnFill(button : UIButton,color : UIColor){
         
-        button.backgroundColor = UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
+        button.backgroundColor = color
         button.clipsToBounds = true
         button.layer.cornerRadius = 20.0
         button.layer.borderWidth = 2.0
         button.layer.borderColor = UIColor.black.cgColor
         button.tintColor = .white
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
+        button.titleLabel?.textColor = .white
+        
       
         
     }
     
     static func roundBtn(button : UIButton){
- 
-        
+
                button.backgroundColor = .clear
                button.clipsToBounds = true
                button.layer.cornerRadius = 20.0
                button.layer.borderWidth = 5.0
                button.layer.borderColor = CGColor(srgbRed: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
-               button.tintColor = UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
+               button.tintColor = color
+               button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
              
         
     }

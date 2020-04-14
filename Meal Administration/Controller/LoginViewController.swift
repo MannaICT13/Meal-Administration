@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
        
         // Utilities.assignBackgroundImage(img: "login.png", view: view)
          
-         Utilities.roundBtnFill(button: loginBtnOutlet)
+        Utilities.roundBtnFill(button: loginBtnOutlet, color: Utilities.color)
          Utilities.roundBtn(button: forgotPasswordBtnOutlet)
          Utilities.lineTextFieldStyle(textField: emailTextField)
          Utilities.lineTextFieldStyle(textField: passwordTextField)

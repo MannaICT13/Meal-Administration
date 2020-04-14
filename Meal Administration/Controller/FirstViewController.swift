@@ -44,7 +44,7 @@ class FirstViewController: UIViewController {
     func utilitieManager(){
         
             // Utilities.assignBackgroundImage(img: "background.png", view: view)
-             Utilities.roundBtnFill(button: loginBtnOutlet)
+        Utilities.roundBtnFill(button: loginBtnOutlet, color: Utilities.color)
              Utilities.roundBtn(button: registerBtnOutlet)
           
         
