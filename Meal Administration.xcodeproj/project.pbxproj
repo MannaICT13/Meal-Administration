@@ -12,6 +12,9 @@
 		2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F42444816D00700604 /* ToggleProtocal.swift */; };
 		2A6798F72444897800700604 /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F62444897800700604 /* MenuOptionCell.swift */; };
 		2A6798F924448D1800700604 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F824448D1800700604 /* MenuOption.swift */; };
+		2A7061CC2445B81400C55D5A /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061CB2445B81400C55D5A /* MembersViewController.swift */; };
+		2A7061CE2445B82D00C55D5A /* AddMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061CD2445B82D00C55D5A /* AddMembersViewController.swift */; };
+		2A7061D02445B8BB00C55D5A /* MemberDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061CF2445B8BB00C55D5A /* MemberDetailTableViewController.swift */; };
 		2AAC2A832443A55900FD9AEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC2A822443A55900FD9AEB /* HomeViewController.swift */; };
 		2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */; };
 		2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */; };
@@ -57,6 +60,9 @@
 		2A6798F42444816D00700604 /* ToggleProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleProtocal.swift; sourceTree = "<group>"; };
 		2A6798F62444897800700604 /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
 		2A6798F824448D1800700604 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
+		2A7061CB2445B81400C55D5A /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
+		2A7061CD2445B82D00C55D5A /* AddMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMembersViewController.swift; sourceTree = "<group>"; };
+		2A7061CF2445B8BB00C55D5A /* MemberDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailTableViewController.swift; sourceTree = "<group>"; };
 		2AAC2A822443A55900FD9AEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AB1E8AB243F121A00A07BBA /* Meal Administration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Administration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +152,16 @@
 			path = SlideMenuView;
 			sourceTree = "<group>";
 		};
+		2A7061CA2445B7A200C55D5A /* Members */ = {
+			isa = PBXGroup;
+			children = (
+				2A7061CB2445B81400C55D5A /* MembersViewController.swift */,
+				2A7061CD2445B82D00C55D5A /* AddMembersViewController.swift */,
+				2A7061CF2445B8BB00C55D5A /* MemberDetailTableViewController.swift */,
+			);
+			path = Members;
+			sourceTree = "<group>";
+		};
 		2AB1E8A2243F121A00A07BBA = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +222,7 @@
 		2AB1E8DE243F12A400A07BBA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A7061CA2445B7A200C55D5A /* Members */,
 				2AB1E8E4243F444700A07BBA /* FirstViewController.swift */,
 				2AB1E8E0243F131200A07BBA /* LoginViewController.swift */,
 				2AB1E8E8243F70F400A07BBA /* RegistrationViewController.swift */,
@@ -486,9 +503,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7061CE2445B82D00C55D5A /* AddMembersViewController.swift in Sources */,
 				2AB1E8E9243F70F500A07BBA /* RegistrationViewController.swift in Sources */,
+				2A7061CC2445B81400C55D5A /* MembersViewController.swift in Sources */,
 				2A6798F924448D1800700604 /* MenuOption.swift in Sources */,
 				2A6798F72444897800700604 /* MenuOptionCell.swift in Sources */,
+				2A7061D02445B8BB00C55D5A /* MemberDetailTableViewController.swift in Sources */,
 				2AB1E8E1243F131200A07BBA /* LoginViewController.swift in Sources */,
 				2A6798F12444771000700604 /* ContainerViewController.swift in Sources */,
 				2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */,
