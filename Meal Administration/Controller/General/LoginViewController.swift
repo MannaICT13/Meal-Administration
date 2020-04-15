@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class LoginViewController: UIViewController {
 
     
@@ -63,6 +63,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnAction(_ sender: Any) {
+        
+        
+        guard let email = emailTextField.text else{return}
+        guard let password = passwordTextField.text else {return}
+        
+     
+        login(email: email, password: password)
     }
     
     
@@ -71,4 +78,59 @@ class LoginViewController: UIViewController {
     
     
 
+}
+
+
+
+extension LoginViewController{
+    
+    
+    
+    private var authUser : User?{
+        
+        return Auth.auth().currentUser
+    }
+    
+    func login(email:String,password:String){
+        
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            
+            if let err = error{
+                
+                print(err.localizedDescription)
+            }else{
+                
+                if result != nil && !self.authUser!.isEmailVerified{
+                    
+                    print("Already send a verification link...")
+                    
+                    
+                }else{
+                    
+                    let containerVC = self.storyboard?.instantiateViewController(identifier: "ContainerViewController") as! ContainerViewController
+                    self.navigationController?.pushViewController(containerVC, animated: true)
+                    
+                    
+                }
+                
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
