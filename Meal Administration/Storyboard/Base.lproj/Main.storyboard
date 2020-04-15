@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YPZ-tH-osg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bZ9-U6-ZUw">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="327-Bb-3ln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5784" y="165"/>
+            <point key="canvasLocation" x="5717" y="-311"/>
         </scene>
         <!--Bazar Cost View Controller-->
         <scene sceneID="WnB-H9-zha">
@@ -239,7 +239,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2TK-cy-Rvq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5818" y="919"/>
+            <point key="canvasLocation" x="5720" y="452"/>
+        </scene>
+        <!--Daily Meal Count View Controller-->
+        <scene sceneID="CMN-ZJ-K3v">
+            <objects>
+                <viewController storyboardIdentifier="DailyMealCountViewController" id="tld-uq-guv" customClass="DailyMealCountViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kGP-f9-eZE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="L1i-47-XaO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIm-QK-PZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5734" y="1268"/>
+        </scene>
+        <!--Add Daily Meal Count View Controller-->
+        <scene sceneID="ELD-G4-yP6">
+            <objects>
+                <viewController storyboardIdentifier="AddDailyMealCountViewController" id="pEc-Ay-fef" customClass="AddDailyMealCountViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dot-uN-41a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Cwk-V3-jgG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCY-Ob-akb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6769" y="1264"/>
         </scene>
         <!--Add Bazar Cost View Controller-->
         <scene sceneID="3fH-Wr-iy6">
@@ -356,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snQ-TP-qTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6674" y="915"/>
+            <point key="canvasLocation" x="6643" y="451"/>
         </scene>
         <!--Add Bazar Schedule View Controller-->
         <scene sceneID="3br-Ba-xlw">
@@ -472,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OlM-a2-zi8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6636.2318840579719" y="167.41071428571428"/>
+            <point key="canvasLocation" x="6575" y="-311"/>
         </scene>
         <!--Members View Controller-->
         <scene sceneID="IgW-7g-JGp">
@@ -487,7 +517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGi-AY-kHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4967" y="-648"/>
+            <point key="canvasLocation" x="4972" y="-1201"/>
         </scene>
         <!--Add Members View Controller-->
         <scene sceneID="UEv-ba-oe5">
@@ -749,7 +779,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3p-kt-vAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5784" y="-621"/>
+            <point key="canvasLocation" x="5719" y="-1174"/>
         </scene>
         <!--Member Detail Table View Controller-->
         <scene sceneID="bHV-1a-mSB">
@@ -777,7 +807,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KL1-YJ-8kT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6546" y="-648"/>
+            <point key="canvasLocation" x="6517" y="-1202"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">

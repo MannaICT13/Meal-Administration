@@ -34,7 +34,7 @@ class BazarCostViewController: UIViewController {
     
     @objc func addCostAction(_ sender : UIBarButtonItem){
         
-        let addBazarCostVC = storyboard?.instantiateViewController(identifier: "BazarCostViewController") as! BazarCostViewController
+        let addBazarCostVC = storyboard?.instantiateViewController(identifier: "AddBazarCostViewController") as! AddBazarCostViewController
         self.navigationController?.pushViewController(addBazarCostVC, animated: true)
         
         

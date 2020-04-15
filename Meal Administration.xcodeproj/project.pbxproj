@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A25CB8B2447458D0068E249 /* DailyMealCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25CB8A2447458D0068E249 /* DailyMealCountViewController.swift */; };
+		2A25CB8D2447459F0068E249 /* AddDailyMealCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25CB8C2447459F0068E249 /* AddDailyMealCountViewController.swift */; };
 		2A6798F12444771000700604 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F02444771000700604 /* ContainerViewController.swift */; };
 		2A6798F32444774000700604 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F22444774000700604 /* MenuViewController.swift */; };
 		2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F42444816D00700604 /* ToggleProtocal.swift */; };
@@ -59,6 +61,9 @@
 		0E2FF7A8532E30758EBE3B93 /* Pods-Meal Administration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration.debug.xcconfig"; path = "Target Support Files/Pods-Meal Administration/Pods-Meal Administration.debug.xcconfig"; sourceTree = "<group>"; };
 		12B252E0001BF3D19408A3B8 /* Pods-Meal Administration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration.release.xcconfig"; path = "Target Support Files/Pods-Meal Administration/Pods-Meal Administration.release.xcconfig"; sourceTree = "<group>"; };
 		1E856466503410B78CBCDB66 /* Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig"; path = "Target Support Files/Pods-Meal Administration-Meal AdministrationUITests/Pods-Meal Administration-Meal AdministrationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2A25CB8A2447458D0068E249 /* DailyMealCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealCountViewController.swift; sourceTree = "<group>"; };
+		2A25CB8C2447459F0068E249 /* AddDailyMealCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDailyMealCountViewController.swift; sourceTree = "<group>"; };
+		2A25CB8E244754710068E249 /* Meal AdministrationDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Meal AdministrationDebug.entitlements"; sourceTree = "<group>"; };
 		2A6798F02444771000700604 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2A6798F22444774000700604 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2A6798F42444816D00700604 /* ToggleProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleProtocal.swift; sourceTree = "<group>"; };
@@ -125,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A25CB89244745320068E249 /* DailyMealCount */ = {
+			isa = PBXGroup;
+			children = (
+				2A25CB8A2447458D0068E249 /* DailyMealCountViewController.swift */,
+				2A25CB8C2447459F0068E249 /* AddDailyMealCountViewController.swift */,
+			);
+			path = DailyMealCount;
+			sourceTree = "<group>";
+		};
 		2A6798E4244469CE00700604 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +255,7 @@
 				2AB1E8B9243F122200A07BBA /* LaunchScreen.storyboard */,
 				2AB1E8BC243F122200A07BBA /* Info.plist */,
 				2AB1E8E2243F141F00A07BBA /* GoogleService-Info.plist */,
+				2A25CB8E244754710068E249 /* Meal AdministrationDebug.entitlements */,
 			);
 			path = "Meal Administration";
 			sourceTree = "<group>";
@@ -266,6 +281,7 @@
 		2AB1E8DE243F12A400A07BBA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A25CB89244745320068E249 /* DailyMealCount */,
 				2A7061DB24464F8E00C55D5A /* General */,
 				2A6798EF244476C800700604 /* SlideMenuController */,
 				2A7061CA2445B7A200C55D5A /* Members */,
@@ -550,11 +566,13 @@
 				2A7061CE2445B82D00C55D5A /* AddMembersViewController.swift in Sources */,
 				2A7061DA24464F8000C55D5A /* AddBazarCostViewController.swift in Sources */,
 				2AB1E8E9243F70F500A07BBA /* RegistrationViewController.swift in Sources */,
+				2A25CB8B2447458D0068E249 /* DailyMealCountViewController.swift in Sources */,
 				2A7061CC2445B81400C55D5A /* MembersViewController.swift in Sources */,
 				2A6798F924448D1800700604 /* MenuOption.swift in Sources */,
 				2A6798F72444897800700604 /* MenuOptionCell.swift in Sources */,
 				2A7061D02445B8BB00C55D5A /* MemberDetailTableViewController.swift in Sources */,
 				2AB1E8E1243F131200A07BBA /* LoginViewController.swift in Sources */,
+				2A25CB8D2447459F0068E249 /* AddDailyMealCountViewController.swift in Sources */,
 				2A6798F12444771000700604 /* ContainerViewController.swift in Sources */,
 				2A7061D3244626D600C55D5A /* BazarScheduleViewController.swift in Sources */,
 				2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */,
@@ -739,6 +757,7 @@
 			baseConfigurationReference = 0E2FF7A8532E30758EBE3B93 /* Pods-Meal Administration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Meal Administration/Meal AdministrationDebug.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKCXG9MS9M;

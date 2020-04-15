@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class RegistrationViewController: UIViewController {
 
@@ -30,6 +32,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registerBtnOutlet: UIButton!
     @IBOutlet weak var alreadyRegisterBtnOutlet: UIButton!
     
+    let db = Firestore.firestore()
     
     //MARK: - init
     
@@ -39,6 +42,7 @@ class RegistrationViewController: UIViewController {
         
         utilitiesManager()
         setUpImageIcon()
+       
         
     }
     
@@ -75,11 +79,118 @@ class RegistrationViewController: UIViewController {
     
     
     @IBAction func registerBtnAction(_ sender: Any) {
+    
+        guard let email = emailTextField.text else {return}
+        guard  let password = passwordTextField.text else {return}
+        guard let rePassword = rePasswordTextField.text else {return}
+        guard let messName = messNameTextField.text else{return}
+        
+        registration(messName: messName, email: email, password: password, rePassword: rePassword)
+        
     }
     
     
     @IBAction func alreadyRegisterBtnAction(_ sender: Any) {
+        
     }
     
 
+}
+
+
+
+extension RegistrationViewController {
+    
+    
+    
+    //User Registration
+    
+    private var authUser : User?{
+        return Auth.auth().currentUser
+        
+    }
+    
+    
+    //for email Link Verification
+    
+    func emailVerfication(){
+        
+        if authUser != nil && !self.authUser!.isEmailVerified{
+            
+            authUser?.sendEmailVerification(completion: { (error) in
+                
+                if let err = error{
+                    
+                    print(err.localizedDescription)
+                }else{
+                    
+                    print("Successfully send verification link.....")
+                }
+                
+            })
+            
+        }
+        
+        
+        
+    }
+    
+    
+    //User registration
+     
+    func registration(messName: String,email:String,password:String,rePassword:String){
+      
+        
+        if password != rePassword{
+            print("Password Not Match")
+        }
+        else{
+            
+            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                
+                if let err = error{
+                    
+                    print(err.localizedDescription)
+                    return
+                }else{
+                    
+                   
+                    
+                    self.db.collection(email).addDocument(data: [
+                        "messName": messName,
+                        "email":email,
+                        "password":password,
+                        "uid":result!.user.uid
+                    
+                    
+                    ]) { (error) in
+                        
+                        if let err = error{
+                            
+                            print(err.localizedDescription)
+                            return
+                        }
+                        
+                        
+                    }
+                    self.emailVerfication()
+                    
+                }
+                
+                
+                
+            }
+            
+            
+            
+        }
+     
+        
+        
+    }
+    
+    
+    
+    
+    
 }

@@ -14,6 +14,7 @@ enum MenuOption : Int,CustomStringConvertible {
     case members
     case bazarSchedule
     case bazarCost
+    case dailyMealCount
     case calculation
     case logout
     
@@ -27,6 +28,8 @@ enum MenuOption : Int,CustomStringConvertible {
             return "Bazar Schedule"
         case .bazarCost:
             return "Bazar Cost"
+        case .dailyMealCount:
+            return "Daily Meal Count"
         case .calculation:
             return "Calculation"
         case .logout:
@@ -44,6 +47,10 @@ enum MenuOption : Int,CustomStringConvertible {
             return UIImage(systemName: "timer")?.withRenderingMode(.alwaysOriginal).withTintColor(.white) ?? UIImage()
         case .bazarCost:
              return UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white) ?? UIImage()
+            
+        case .dailyMealCount:
+                        return UIImage(systemName: "list.number")?.withRenderingMode(.alwaysOriginal).withTintColor(.white) ?? UIImage()
+            
         case .calculation:
             return  UIImage(systemName: "pencil.and.ellipsis.rectangle")?.withRenderingMode(.alwaysOriginal).withTintColor(.white) ?? UIImage()
         case .logout:

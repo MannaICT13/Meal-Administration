@@ -81,10 +81,18 @@ class ContainerViewController: UIViewController {
         case .bazarSchedule:
             print("Bazar Schedule")
             didSelectBazarSchedule()
+            
         case .bazarCost:
             print("Bazar Cost")
+            didSlectBazarCost()
+            
+        case .dailyMealCount:
+            
+            print("Daily Meal Count")
+            
         case .calculation:
             print("Calculation")
+            
         case .logout:
             print("Logout")
             didSeletLogOut()
@@ -188,11 +196,29 @@ extension ContainerViewController {
         
     }
     
-  func didSeletLogOut(){
  
-    navigationController?.popToRootViewController(animated: false)
+    
+   func  didSlectBazarCost(){
+        
+          let bazarCostVC = storyboard?.instantiateViewController(identifier: "BazarCostViewController") as! BazarCostViewController
+              self.navigationController?.pushViewController(bazarCostVC, animated: true)
+                     
+                     
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    func didSeletLogOut(){
+    
+       navigationController?.popToRootViewController(animated: false)
+           
+       }
     
     
     
