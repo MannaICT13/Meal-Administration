@@ -92,6 +92,10 @@ class RegistrationViewController: UIViewController {
     
     @IBAction func alreadyRegisterBtnAction(_ sender: Any) {
         
+        self.navigationController?.popViewController(animated: true)
+        
+        
+        
     }
     
 
