@@ -45,11 +45,11 @@ class LoginViewController: UIViewController {
        
         // Utilities.assignBackgroundImage(img: "login.png", view: view)
          
-        Utilities.roundBtnFill(button: loginBtnOutlet, color: Utilities.color)
+         Utilities.roundBtnFill(button: loginBtnOutlet, color: Utilities.color)
          Utilities.roundBtn(button: forgotPasswordBtnOutlet)
          Utilities.lineTextFieldStyle(textField: emailTextField)
          Utilities.lineTextFieldStyle(textField: passwordTextField)
-
+       
         
     }
     
@@ -74,6 +74,32 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func forgotPasswordBtnAction(_ sender: Any) {
+        
+        
+        let alertController = UIAlertController(title: "Message!", message: "You want to reset password?", preferredStyle: .alert)
+        
+        
+        alertController.addTextField { (emailTxt) in
+            emailTxt.placeholder = "Email"
+            emailTxt.borderStyle = .none
+            emailTxt.keyboardType = .emailAddress
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancel)
+        let send = UIAlertAction(title: "Send", style: .default) { (sendAction) in
+            
+            guard  let email = alertController.textFields![0].text else{return}
+            
+            self.forgotPassword(email: email)
+            
+            
+        }
+        alertController.addAction(send)
+        alertController.view.tintColor = .black
+        alertController.view.backgroundColor = Utilities.color
+        self.present(alertController, animated: true, completion: nil)
+        
     }
     
     
@@ -126,6 +152,25 @@ extension LoginViewController{
         
     }
     
+    
+    func forgotPassword(email: String){
+        
+        
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+          
+            if let err = error{
+                
+                print(err.localizedDescription)
+                
+            }else{
+                print("Successfully send a link to your email...")
+            }
+            
+        }
+        
+        
+        
+    }
     
     
     
