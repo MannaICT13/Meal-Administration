@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class ContainerViewController: UIViewController {
 
     
@@ -78,16 +78,17 @@ class ContainerViewController: UIViewController {
             print("Member")
             didSelectMembers()
             
+            
         case .bazarSchedule:
             print("Bazar Schedule")
             didSelectBazarSchedule()
+            
             
         case .bazarCost:
             print("Bazar Cost")
             didSlectBazarCost()
             
         case .dailyMealCount:
-            
             print("Daily Meal Count")
             
         case .calculation:
@@ -216,7 +217,23 @@ extension ContainerViewController {
     
     func didSeletLogOut(){
     
+        
+           let firebaseAuth = Auth.auth()
+        do {
+            
+          try firebaseAuth.signOut()
+            
+        } catch let signOutError as NSError {
+            
+          print ("Error signing out: %@", signOutError)
+            
+        }
+          
+        
        navigationController?.popToRootViewController(animated: false)
+        
+        LoginViewController.userEmail = ""
+        
            
        }
     

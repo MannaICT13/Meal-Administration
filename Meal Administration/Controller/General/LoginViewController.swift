@@ -23,6 +23,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgotPasswordBtnOutlet: UIButton!
     
     
+    //to get Admin user email
+    static var userEmail = String()
     
     
     
@@ -136,6 +138,14 @@ extension LoginViewController{
                     
                     let containerVC = self.storyboard?.instantiateViewController(identifier: "ContainerViewController") as! ContainerViewController
                     self.navigationController?.pushViewController(containerVC, animated: true)
+                 
+                    
+                    //to get admin user email id
+                    LoginViewController.userEmail = email
+                    
+                    print(LoginViewController.userEmail)
+                
+                    
                     
                     
                 }

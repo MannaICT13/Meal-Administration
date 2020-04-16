@@ -67,7 +67,21 @@ class AddMembersViewController: UIViewController {
     
     @IBAction func saveBtnAction(_ sender: Any) {
         
-        print("Save")
+         guard let name  = nameTextField.text else { return}
+         guard let phone  =  Int(phoneTextField.text!) else { return}
+         guard let address  =  addressTextField.text else { return}
+         guard let email  =  emailTextField.text else { return}
+         guard let rent  =  Int(rentTextField.text!) else { return}
+         guard let net  =  Int(netTextField.text!) else { return}
+         guard let gass  =  Int(gassTextField.text!) else { return}
+         guard let khala  =  Int(khalaTextField.text!) else { return}
+         guard let current =  Int(currentTextField.text!) else { return}
+         guard let water  =  Int(waterTextField.text!) else { return}
+         guard let others  =  Int(othersTextField.text!) else { return}
+        
+        MemberDbHelper.instanceMemberDb.writeMember(name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others)
+        
+        
         
     }
     
