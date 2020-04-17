@@ -11,7 +11,6 @@ import Foundation
 class Member {
     
    
-    
     var name: String?
     var phone: Int?
     var address: String?
@@ -23,8 +22,10 @@ class Member {
     var current: Int?
     var water: Int?
     var others: Int?
+    var id : String?
     
-     init(name: String?, phone: Int?, address: String?, email: String?, rent: Int?, net: Int?, gass: Int?, khala: Int?, current: Int?, water: Int?, others: Int?) {
+    
+    init(name: String?, phone: Int?, address: String?, email: String?, rent: Int?, net: Int?, gass: Int?, khala: Int?, current: Int?, water: Int?, others: Int?,id : String?) {
            
            self.name = name
            self.phone = phone
@@ -37,6 +38,7 @@ class Member {
            self.current = current
            self.water = water
            self.others = others
+          self.id = id
        }
        
     
