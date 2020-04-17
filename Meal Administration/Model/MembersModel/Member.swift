@@ -11,21 +11,21 @@ import Foundation
 class Member {
     
    
-    var name: String?
-    var phone: Int?
-    var address: String?
-    var email: String?
-    var rent: Int?
-    var net: Int?
-    var gass: Int?
-    var khala: Int?
-    var current: Int?
-    var water: Int?
-    var others: Int?
-    var id : String?
+    var name: String = ""
+    var phone: Int = 0
+    var address: String = ""
+    var email: String = ""
+    var rent: Int = 0
+    var net: Int = 0
+    var gass: Int = 0
+    var khala: Int = 0
+    var current: Int = 0
+    var water: Int = 0
+    var others: Int = 0
+    var id : String = ""
     
     
-    init(name: String?, phone: Int?, address: String?, email: String?, rent: Int?, net: Int?, gass: Int?, khala: Int?, current: Int?, water: Int?, others: Int?,id : String?) {
+    init(name: String, phone: Int, address: String, email: String, rent: Int, net: Int, gass: Int, khala: Int, current: Int, water: Int, others: Int,id : String) {
            
            self.name = name
            self.phone = phone

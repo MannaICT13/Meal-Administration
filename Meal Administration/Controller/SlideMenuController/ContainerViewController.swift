@@ -233,6 +233,8 @@ extension ContainerViewController {
        navigationController?.popToRootViewController(animated: false)
         
         LoginViewController.userEmail = ""
+    
+       
         
            
        }

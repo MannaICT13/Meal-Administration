@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     
     
     //to get Admin user email
-    static var userEmail = String()
+   static var userEmail = String()
     
     
     

@@ -44,17 +44,16 @@ class MemberDbHelper {
         
         ]
         
-        
-        db.collection(userId).document(email).setData(dic) { (error) in
-           
+        db.collection(userId).document("memberDocument").collection("memberCollection").addDocument(data: dic) { (error) in
+             
             if let err = error{
-                
-                print(err.localizedDescription)
-                
-                
-            }
+                        
+                        print(err.localizedDescription)
+                        
+                        
+                    }
+            
         }
-        
 
         
         
@@ -68,12 +67,10 @@ class MemberDbHelper {
         
         var member = [Member]()
         
-        
         let dispatch = DispatchGroup()
-        
         dispatch.enter()
-        
-        self.db.collection(userId).getDocuments { (snapshort, error) in
+       
+        self.db.collection(userId).document("memberDocument").collection("memberCollection").getDocuments { (snapshort, error) in
         
             if let err = error {
                 print(err.localizedDescription)
@@ -84,7 +81,9 @@ class MemberDbHelper {
                 
                 for result in snapshort!.documents{
                     
-                    member.append(Member(name: result.data()["name"] as? String, phone: result.data()["phone"] as? Int, address: result.data()["address"] as? String, email: result.data()["email"] as? String, rent: result.data()["rent"] as? Int, net: result.data()["net"] as? Int, gass: result.data()["gass"] as? Int, khala: result.data()["khala"] as? Int, current: result.data()["khala"] as? Int, water: result.data()["water"] as? Int, others: result.data()["others"] as? Int, id: result.documentID))
+                    member.append(Member(name: result.data()["name"]! as! String, phone: result.data()["phone"]! as! Int, address: result.data()["address"]! as! String, email: result.data()["email"]! as! String, rent: result.data()["rent"]! as! Int , net: result.data()["net"]! as! Int, gass: result.data()["gass"]! as! Int, khala: result.data()["khala"]! as! Int, current: result.data()["khala"]! as! Int, water: result.data()["water"]! as! Int, others: result.data()["others"]! as! Int, id: result.documentID))
+                    
+                    print(result.data())
                 }
                 
                 
@@ -98,6 +97,7 @@ class MemberDbHelper {
         dispatch.notify(queue: .main, execute: {
             
             print(member.count)
+            completed(member)
             
         })
             

@@ -13,17 +13,40 @@ class MembersViewController: UIViewController {
     
     //MARK: - Properties
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    var member =  [Member]()
     
     //MARK: - init
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
        // self.view.backgroundColor = .opaqueSeparator
         addMembersNavBarBtn()
+
+                MemberDbHelper.instanceMemberDb.readMember { member in
+                   
+                    self.member = member
+                    self.tableView.reloadData()
+                    
+                }
+    
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        MemberDbHelper.instanceMemberDb.readMember { member in
+            self.member = member
+            self.tableView.reloadData()
+        }
     }
     
     //MARK: - Handler
+  
     
     func addMembersNavBarBtn(){
         
@@ -43,4 +66,36 @@ class MembersViewController: UIViewController {
 
    
 
+}
+
+
+extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return member.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MembersCell
+        cell.memberNameLbl.text = member[indexPath.row].name
+        cell.memberEmailLbl.text = member[indexPath.row].email
+     
+        return cell
+    }
+    
+    
+    
+    
+    
+    
 }
