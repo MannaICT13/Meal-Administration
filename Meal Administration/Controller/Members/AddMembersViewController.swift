@@ -43,7 +43,7 @@ class AddMembersViewController: UIViewController {
     
 
     
-    
+    var userEmail = String()
     
     //MARK: - init
     
@@ -79,7 +79,7 @@ class AddMembersViewController: UIViewController {
          guard let water  =  Int(waterTextField.text!) else { return}
          guard let others  =  Int(othersTextField.text!) else { return}
         
-        MemberDbHelper.instanceMemberDb.writeMember(name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others)
+        MemberDbHelper.instanceMemberDb.writeMember(userEmail: userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others)
         
         
         

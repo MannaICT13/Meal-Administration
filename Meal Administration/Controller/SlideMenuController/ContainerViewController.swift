@@ -19,8 +19,8 @@ class ContainerViewController: UIViewController {
     
     
     var isExtended : Bool = false
+    var userEmail = String()
 
-    
     //MARK: - init
     
     override func viewDidLoad() {
@@ -180,8 +180,10 @@ extension ContainerViewController {
     
     func didSelectMembers(){
         
-        let addMembersVC = storyboard?.instantiateViewController(identifier: "MembersViewController") as! MembersViewController
-        self.navigationController?.pushViewController(addMembersVC, animated: true)
+        let membersVC = storyboard?.instantiateViewController(identifier: "MembersViewController") as! MembersViewController
+        membersVC.userEmail = self.userEmail
+        
+        self.navigationController?.pushViewController(membersVC, animated: true)
         
         
         
@@ -223,6 +225,8 @@ extension ContainerViewController {
             
           try firebaseAuth.signOut()
             
+           navigationController?.popToRootViewController(animated: false)
+            
         } catch let signOutError as NSError {
             
           print ("Error signing out: %@", signOutError)
@@ -230,12 +234,8 @@ extension ContainerViewController {
         }
           
         
-       navigationController?.popToRootViewController(animated: false)
-        
-        LoginViewController.userEmail = ""
-    
        
-        
+    
            
        }
     

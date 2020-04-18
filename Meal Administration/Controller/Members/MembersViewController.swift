@@ -16,6 +16,8 @@ class MembersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var member =  [Member]()
+    var userEmail = String()
+    
     
     //MARK: - init
     
@@ -26,7 +28,7 @@ class MembersViewController: UIViewController {
        // self.view.backgroundColor = .opaqueSeparator
         addMembersNavBarBtn()
 
-                MemberDbHelper.instanceMemberDb.readMember { member in
+        MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { member in
                    
                     self.member = member
                     self.tableView.reloadData()
@@ -39,7 +41,7 @@ class MembersViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        MemberDbHelper.instanceMemberDb.readMember { member in
+        MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { member in
             self.member = member
             self.tableView.reloadData()
         }
@@ -58,6 +60,7 @@ class MembersViewController: UIViewController {
     @objc func addNavBtnAction(_ sender : UIBarButtonItem){
         
         let addMembersVC = storyboard?.instantiateViewController(identifier: "AddMembersViewController") as! AddMembersViewController
+        addMembersVC.userEmail = self.userEmail
         self.navigationController?.pushViewController(addMembersVC, animated: true)
         
         

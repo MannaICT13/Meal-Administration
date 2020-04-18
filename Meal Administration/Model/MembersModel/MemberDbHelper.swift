@@ -17,14 +17,16 @@ class MemberDbHelper {
     static let instanceMemberDb = MemberDbHelper()
     
     var db = Firestore.firestore()
-    let userId = LoginViewController.userEmail
-    
    
+    
+    
+    //MARK: - init
+
     //MARk: - Handler
     
     
     // write member data to firebase firestore
-    func writeMember(name: String,phone:Int,address:String,email:String,rent : Int,net:Int,gass:Int,khala:Int,current:Int,water:Int,others:Int){
+    func writeMember(userEmail:String,name: String,phone:Int,address:String,email:String,rent : Int,net:Int,gass:Int,khala:Int,current:Int,water:Int,others:Int){
         
         let dic : [String : Any] = [
         
@@ -44,7 +46,7 @@ class MemberDbHelper {
         
         ]
         
-        db.collection(userId).document("memberDocument").collection("memberCollection").addDocument(data: dic) { (error) in
+        self.db.collection(userEmail).document("memberDocument").collection("memberCollection").addDocument(data: dic) { (error) in
              
             if let err = error{
                         
@@ -62,7 +64,7 @@ class MemberDbHelper {
     }
     
     
-    func readMember(completed : @escaping ([Member]) -> Void){
+    func readMember(userEmail: String,completed : @escaping ([Member]) -> Void){
         
         
         var member = [Member]()
@@ -70,7 +72,7 @@ class MemberDbHelper {
         let dispatch = DispatchGroup()
         dispatch.enter()
        
-        self.db.collection(userId).document("memberDocument").collection("memberCollection").getDocuments { (snapshort, error) in
+        self.db.collection(userEmail).document("memberDocument").collection("memberCollection").getDocuments { (snapshort, error) in
         
             if let err = error {
                 print(err.localizedDescription)
@@ -97,6 +99,7 @@ class MemberDbHelper {
         dispatch.notify(queue: .main, execute: {
             
             print(member.count)
+            //must use completed member
             completed(member)
             
         })

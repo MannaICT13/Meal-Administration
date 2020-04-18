@@ -24,8 +24,8 @@ class LoginViewController: UIViewController {
     
     
     //to get Admin user email
-   static var userEmail = String()
     
+    var userEmail = String()
     
     
     
@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
         guard let email = emailTextField.text else{return}
         guard let password = passwordTextField.text else {return}
         
-     
+    
         login(email: email, password: password)
     }
     
@@ -120,8 +120,7 @@ extension LoginViewController{
     }
     
     func login(email:String,password:String){
-        
-        
+    
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             
             if let err = error{
@@ -139,16 +138,12 @@ extension LoginViewController{
                     let containerVC = self.storyboard?.instantiateViewController(identifier: "ContainerViewController") as! ContainerViewController
                     self.navigationController?.pushViewController(containerVC, animated: true)
                  
-                    
-                    //to get admin user email id
-                    LoginViewController.userEmail = email
-                    
-                    print(LoginViewController.userEmail)
-                
+                    containerVC.userEmail = (result?.user.email)!
                     
                     
                     
                 }
+               
                 
                 
             }
@@ -156,7 +151,7 @@ extension LoginViewController{
             
             
         }
-        
+    
         
         
         
