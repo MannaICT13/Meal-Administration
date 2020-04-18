@@ -17,7 +17,6 @@ class MemberDetailTableViewController: UITableViewController {
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
-    
     @IBOutlet weak var rentLbl: UILabel!
     @IBOutlet weak var netLbl: UILabel!
     @IBOutlet weak var gassLbl: UILabel!
@@ -27,6 +26,7 @@ class MemberDetailTableViewController: UITableViewController {
     @IBOutlet weak var othersLbl: UILabel!
     
     
+    var memberDetails : Member?
     
     
     //MARK: - init
@@ -34,15 +34,34 @@ class MemberDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+     
+              
+              //  self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+             nameLbl.text = memberDetails?.name
+             phoneLbl.text = String(memberDetails!.phone)
+             addressLbl.text = memberDetails?.address
+             emailLbl.text = memberDetails?.email
+             rentLbl.text = String(memberDetails!.rent)
+             netLbl.text = String(memberDetails!.net)
+             gassLbl.text = String(memberDetails!.gass)
+             khalaLbl.text = String(memberDetails!.khala)
+             electricityLbl.text = String(memberDetails!.current)
+             waterLbl.text = String(memberDetails!.water)
+             othersLbl.text = String( memberDetails!.others)
+    }
 
     // MARK: - Table view data source
+    
+    
 
+/*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -107,5 +126,6 @@ class MemberDetailTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+*/
+    
 }

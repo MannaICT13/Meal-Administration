@@ -1206,10 +1206,6 @@
                                 </cells>
                             </tableViewSection>
                         </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="DWz-dr-0xd" id="cQO-2f-dtT"/>
-                            <outlet property="delegate" destination="DWz-dr-0xd" id="Mi2-BP-x9i"/>
-                        </connections>
                     </tableView>
                     <connections>
                         <outlet property="addressLbl" destination="EBd-7H-ced" id="8E7-1Z-TSA"/>
@@ -1218,7 +1214,7 @@
                         <outlet property="gassLbl" destination="lFj-BU-uxT" id="8tf-gU-29c"/>
                         <outlet property="khalaLbl" destination="aQa-1F-PdB" id="xnJ-UU-aGo"/>
                         <outlet property="nameLbl" destination="Ygt-Ms-Ufy" id="Mpc-fY-WYL"/>
-                        <outlet property="netLbl" destination="ChY-ej-GOf" id="R5R-fs-1Ba"/>
+                        <outlet property="netLbl" destination="hMW-9I-yFf" id="LUb-hf-Cyw"/>
                         <outlet property="othersLbl" destination="aCe-Ql-PZR" id="6Ur-wt-Bhg"/>
                         <outlet property="phoneLbl" destination="bip-gQ-Py6" id="uxW-Lx-Y7J"/>
                         <outlet property="rentLbl" destination="fi8-gY-zsa" id="utA-Rz-1dx"/>

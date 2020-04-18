@@ -96,6 +96,17 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let memberDetailVC = storyboard?.instantiateViewController(identifier: "MemberDetailTableViewController") as! MemberDetailTableViewController
+         memberDetailVC.memberDetails = member[indexPath.row]
+      
+        self.navigationController?.pushViewController(memberDetailVC, animated: true)
+        
+        
+        
+    }
+    
     
     
     
