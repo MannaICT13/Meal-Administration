@@ -17,6 +17,7 @@ class MembersViewController: UIViewController {
     
     var member =  [Member]()
     var userEmail = String()
+   
     
     
     //MARK: - init
@@ -60,7 +61,8 @@ class MembersViewController: UIViewController {
     @objc func addNavBtnAction(_ sender : UIBarButtonItem){
         
         let addMembersVC = storyboard?.instantiateViewController(identifier: "AddMembersViewController") as! AddMembersViewController
-        addMembersVC.userEmail = self.userEmail
+         addMembersVC.userEmail = self.userEmail
+       
         self.navigationController?.pushViewController(addMembersVC, animated: true)
         
         
@@ -92,6 +94,10 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MembersCell
         cell.memberNameLbl.text = member[indexPath.row].name
         cell.memberEmailLbl.text = member[indexPath.row].email
+        
+        
+       
+        
      
         return cell
     }
@@ -100,6 +106,8 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
         
         let memberDetailVC = storyboard?.instantiateViewController(identifier: "MemberDetailTableViewController") as! MemberDetailTableViewController
          memberDetailVC.memberDetails = member[indexPath.row]
+         memberDetailVC.userEmail = userEmail
+        
       
         self.navigationController?.pushViewController(memberDetailVC, animated: true)
         

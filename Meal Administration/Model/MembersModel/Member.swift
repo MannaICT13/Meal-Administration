@@ -38,7 +38,7 @@ class Member {
            self.current = current
            self.water = water
            self.others = others
-          self.id = id
+           self.id = id
        }
        
     

@@ -45,11 +45,45 @@ class AddMembersViewController: UIViewController {
     
     var userEmail = String()
     
+    var isUpdate : Bool = false
+   
+    var memberDetails : Member?
+    var member = [Member]()
+   
+    
     //MARK: - init
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if isUpdate{
+            
+            saveBtnOutlets.setTitle("Update", for: .normal)
+            
+        }else{
+            
+            saveBtnOutlets.setTitle("Save", for: .normal)
+            
+        }
      
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+                     nameTextField.text = memberDetails?.name
+                     phoneTextField.text = String(memberDetails!.phone)
+                     addressTextField.text = memberDetails?.address
+                     emailTextField.text = memberDetails?.email
+                     rentTextField.text = String(memberDetails!.rent)
+                     netTextField.text = String(memberDetails!.net)
+                     gassTextField.text = String(memberDetails!.gass)
+                     khalaTextField.text = String(memberDetails!.khala)
+                     currentTextField.text = String(memberDetails!.current)
+                     waterTextField.text = String(memberDetails!.water)
+                     othersTextField.text = String(memberDetails!.others)
+        
         
     }
     
@@ -79,9 +113,15 @@ class AddMembersViewController: UIViewController {
          guard let water  =  Int(waterTextField.text!) else { return}
          guard let others  =  Int(othersTextField.text!) else { return}
         
-        MemberDbHelper.instanceMemberDb.writeMember(userEmail: userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others)
+        if isUpdate{
+            
+            MemberDbHelper.instanceMemberDb.updateMember(userEmail:userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others,id: "uid")
+            
+        }else{
+            
+        MemberDbHelper.instanceMemberDb.writeMember(userEmail:userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others)
         
-        
+        }
         
     }
     

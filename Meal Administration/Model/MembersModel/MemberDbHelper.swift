@@ -105,6 +105,40 @@ class MemberDbHelper {
         })
             
         }
+    
+    
+    
+    func updateMember(userEmail:String,name: String,phone:Int,address:String,email:String,rent : Int,net:Int,gass:Int,khala:Int,current:Int,water:Int,others:Int,id: String){
+        
+             let dic : [String : Any] = [
+               
+                   "name"   : name,
+                   "phone"  : phone,
+                   "address": address,
+                   "email"  : email,
+                   "rent"   : rent,
+                   "net"    : net,
+                   "gass"   : gass,
+                   "khala"  : khala,
+                   "current": current,
+                   "water"  : water,
+                   "others" : others
+                   
+                   
+               
+               ]
+               
+        self.db.collection(userEmail).document("memberDocument").collection("memberCollection").document(id).updateData(dic) { (error) in
+         
+            if let err = error{
+                
+                print(err.localizedDescription)
+            }
+        }
+        
+        
+        
+    }
  
 
 }

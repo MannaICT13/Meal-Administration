@@ -27,6 +27,7 @@ class MemberDetailTableViewController: UITableViewController {
     
     
     var memberDetails : Member?
+    var userEmail = String()
     
     
     //MARK: - init
@@ -34,16 +35,12 @@ class MemberDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
-              
-              //  self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        addNavBarEditBtn()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
              nameLbl.text = memberDetails?.name
              phoneLbl.text = String(memberDetails!.phone)
              addressLbl.text = memberDetails?.address
@@ -57,6 +54,39 @@ class MemberDetailTableViewController: UITableViewController {
              othersLbl.text = String( memberDetails!.others)
     }
 
+    
+    //MARK: - Handler
+    
+    func addNavBarEditBtn(){
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editBtnAction(_ :)))
+        
+        
+        
+    }
+    
+    @objc func editBtnAction(_ sender: UIBarButtonItem){
+        
+        
+        let editMemberVC = storyboard?.instantiateViewController(identifier: "AddMembersViewController") as! AddMembersViewController
+        editMemberVC.isUpdate = true
+        
+        editMemberVC.memberDetails = memberDetails
+        editMemberVC.userEmail = userEmail
+        
+        navigationController?.pushViewController(editMemberVC, animated: true)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // MARK: - Table view data source
     
     
