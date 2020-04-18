@@ -10,6 +10,27 @@ import UIKit
 
 class MemberDetailTableViewController: UITableViewController {
 
+    
+    //MARK: - Properties
+    
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var phoneLbl: UILabel!
+    @IBOutlet weak var addressLbl: UILabel!
+    @IBOutlet weak var emailLbl: UILabel!
+    
+    @IBOutlet weak var rentLbl: UILabel!
+    @IBOutlet weak var netLbl: UILabel!
+    @IBOutlet weak var gassLbl: UILabel!
+    @IBOutlet weak var khalaLbl: UILabel!
+    @IBOutlet weak var electricityLbl: UILabel!
+    @IBOutlet weak var waterLbl: UILabel!
+    @IBOutlet weak var othersLbl: UILabel!
+    
+    
+    
+    
+    //MARK: - init
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
