@@ -533,13 +533,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKV-pZ-UKz">
                                                     <rect key="frame" x="105" y="20" width="289" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzC-gU-1t2">
                                                     <rect key="frame" x="105" y="46" width="309" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1206,6 +1206,10 @@
                                 </cells>
                             </tableViewSection>
                         </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="DWz-dr-0xd" id="Okp-uv-1H8"/>
+                            <outlet property="delegate" destination="DWz-dr-0xd" id="jSd-WB-FFM"/>
+                        </connections>
                     </tableView>
                     <connections>
                         <outlet property="addressLbl" destination="EBd-7H-ced" id="8E7-1Z-TSA"/>
@@ -1341,9 +1345,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="envelope.fill" catalog="system" width="64" height="46"/>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
-        <image name="lock.fill" catalog="system" width="64" height="64"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="envelope.fill" catalog="system" width="32" height="32"/>
+        <image name="house.fill" catalog="system" width="32" height="32"/>
+        <image name="lock.fill" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
     </resources>
 </document>

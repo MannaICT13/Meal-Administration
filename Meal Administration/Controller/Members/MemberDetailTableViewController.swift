@@ -28,6 +28,7 @@ class MemberDetailTableViewController: UITableViewController {
     
     var memberDetails : Member?
     var userEmail = String()
+    var member = [Member]()
     
     
     //MARK: - init
@@ -36,10 +37,22 @@ class MemberDetailTableViewController: UITableViewController {
         super.viewDidLoad()
 
         addNavBarEditBtn()
+      
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+      
+        loadMemberDerails()
+    }
+
+    
+    
+    //MARK: - Handler
+    
+    func loadMemberDerails(){
         
              nameLbl.text = memberDetails?.name
              phoneLbl.text = String(memberDetails!.phone)
@@ -52,10 +65,8 @@ class MemberDetailTableViewController: UITableViewController {
              electricityLbl.text = String(memberDetails!.current)
              waterLbl.text = String(memberDetails!.water)
              othersLbl.text = String( memberDetails!.others)
+        
     }
-
-    
-    //MARK: - Handler
     
     func addNavBarEditBtn(){
         

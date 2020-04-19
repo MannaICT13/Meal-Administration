@@ -61,9 +61,10 @@ class MembersViewController: UIViewController {
     @objc func addNavBtnAction(_ sender : UIBarButtonItem){
         
         let addMembersVC = storyboard?.instantiateViewController(identifier: "AddMembersViewController") as! AddMembersViewController
+     
          addMembersVC.userEmail = self.userEmail
        
-        self.navigationController?.pushViewController(addMembersVC, animated: true)
+       self.navigationController?.pushViewController(addMembersVC, animated: true)
         
         
     }
@@ -87,6 +88,30 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.backgroundColor = .clear
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 15.0
+        cell.layer.shadowOpacity = 0.23
+        cell.layer.shadowRadius = 8
+        cell.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        cell.layer.shadowColor = UIColor.white.cgColor
+        
+        cell.contentView.backgroundColor = Utilities.color
+       // cell.contentView.layer.cornerRadius = 8
+        
+        //cell.contentView.layer.masksToBounds = true
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2.0
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 2.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

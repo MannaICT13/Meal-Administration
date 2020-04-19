@@ -30,7 +30,7 @@ class Utilities {
     
     // for coloring button/navigationbar/textfield
     static let color : UIColor =  UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
-    
+    static let cgColor : CGColor = CGColor(srgbRed: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
     
     static func roundBtnFill(button : UIButton,color : UIColor){
         

@@ -47,15 +47,20 @@ class AddMembersViewController: UIViewController {
     
     var isUpdate : Bool = false
    
-    var memberDetails : Member?
+   // var memberDetails : Member?
     var member = [Member]()
    
+  
+    var memberDetails : Member?
+    var uid = String()
+      
     
     //MARK: - init
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         if isUpdate{
             
             saveBtnOutlets.setTitle("Update", for: .normal)
@@ -65,26 +70,13 @@ class AddMembersViewController: UIViewController {
             saveBtnOutlets.setTitle("Save", for: .normal)
             
         }
+      
      
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-                     nameTextField.text = memberDetails?.name
-                     phoneTextField.text = String(memberDetails!.phone)
-                     addressTextField.text = memberDetails?.address
-                     emailTextField.text = memberDetails?.email
-                     rentTextField.text = String(memberDetails!.rent)
-                     netTextField.text = String(memberDetails!.net)
-                     gassTextField.text = String(memberDetails!.gass)
-                     khalaTextField.text = String(memberDetails!.khala)
-                     currentTextField.text = String(memberDetails!.current)
-                     waterTextField.text = String(memberDetails!.water)
-                     othersTextField.text = String(memberDetails!.others)
-        
-        
+        loadMemberDetails()
     }
     
     override func viewDidLayoutSubviews() {
@@ -92,7 +84,33 @@ class AddMembersViewController: UIViewController {
         
         setUpIconImg()
         utlilitieManager()
+    
+       
     }
+    
+    func loadMemberDetails(){
+        
+        if isUpdate{
+            
+            
+            nameTextField.text = memberDetails?.name
+            phoneTextField.text = String(memberDetails!.phone)
+            addressTextField.text = memberDetails?.address
+            emailTextField.text = memberDetails?.email
+            rentTextField.text = String(memberDetails!.rent)
+            netTextField.text = String(memberDetails!.net)
+            gassTextField.text = String(memberDetails!.gass)
+            khalaTextField.text = String(memberDetails!.khala)
+            currentTextField.text = String(memberDetails!.current)
+            waterTextField.text = String(memberDetails!.water)
+            othersTextField.text = String(memberDetails!.others)
+            uid = memberDetails!.id
+            
+            
+            
+        }
+        
+}
     
     
     
@@ -115,11 +133,16 @@ class AddMembersViewController: UIViewController {
         
         if isUpdate{
             
-            MemberDbHelper.instanceMemberDb.updateMember(userEmail:userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others,id: "uid")
+            MemberDbHelper.instanceMemberDb.updateMember(userEmail:userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others,id:uid)
+          
+            self.navigationController?.popViewController(animated: true)
+          
+               
             
         }else{
             
         MemberDbHelper.instanceMemberDb.writeMember(userEmail:userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others)
+            self.navigationController?.popViewController(animated: true)
         
         }
         
@@ -151,7 +174,7 @@ class AddMembersViewController: UIViewController {
          Utilities.lineTextFieldStyle(textField: phoneTextField)
          Utilities.lineTextFieldStyle(textField: addressTextField)
          Utilities.lineTextFieldStyle(textField: emailTextField)
-        Utilities.lineTextFieldStyle(textField:  rentTextField)
+         Utilities.lineTextFieldStyle(textField:  rentTextField)
          Utilities.lineTextFieldStyle(textField: netTextField)
          Utilities.lineTextFieldStyle(textField: gassTextField)
          Utilities.lineTextFieldStyle(textField: khalaTextField)

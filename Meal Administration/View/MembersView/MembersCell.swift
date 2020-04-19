@@ -21,12 +21,11 @@ class MembersCell: UITableViewCell {
     var img : UIImageView = {
         let icon = UIImageView()
         icon.contentMode = .scaleAspectFit
-        icon.image = UIImage(systemName: "person.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        icon.image = UIImage(systemName: "person.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.white)
         icon.clipsToBounds = true
         return icon
     }()
-    
-    
+  
     
     //MARK: - init
     
@@ -35,8 +34,12 @@ class MembersCell: UITableViewCell {
         super.awakeFromNib()
        
         memberImg.image = img.image
+      
         
     }
+  
+   
+    
 
   
 
