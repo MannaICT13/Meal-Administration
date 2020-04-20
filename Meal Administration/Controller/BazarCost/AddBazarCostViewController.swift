@@ -31,6 +31,11 @@ class AddBazarCostViewController: UIViewController {
     
     
     var datePicker : UIDatePicker!
+    var pickerView : UIPickerView!
+    
+    var member = [Member]()
+    var userEmail = String()
+    
     //MARK: - init
     
     override func viewDidLoad() {
@@ -39,13 +44,23 @@ class AddBazarCostViewController: UIViewController {
         utilitieManager()
         setUpImageIcon()
         manageDatePicker()
+        managePickerView()
+        
+             MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
+                 self.member = member
+             }
 
       
     }
     
     //MARK: - Hanler
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        
+             MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
+                 self.member = member
+             }
+    }
    
     @IBAction func saveBtnAction(_ sender: Any) {
         
@@ -115,6 +130,76 @@ class AddBazarCostViewController: UIViewController {
         }
         
         self.view.endEditing(true)
+        
+        
+    }
+    
+    
+    
+    
+    
+}
+
+extension AddBazarCostViewController : UIPickerViewDelegate,UIPickerViewDataSource{
+    
+    
+    
+    func managePickerView(){
+        
+        pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        
+        //toolbar
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action:#selector(action))
+        toolBar.setItems([done], animated: true)
+        nameTextField.inputView = pickerView
+        nameTextField.inputAccessoryView = toolBar
+        
+        emailTextField.inputView = pickerView
+        emailTextField.inputAccessoryView = toolBar
+         
+        
+    }
+    
+
+    @objc func action(){
+        
+        self.view.endEditing(true)
+    }
+    
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return member.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if nameTextField.isFirstResponder{
+            return member[row].name
+        }else if emailTextField.isFirstResponder{
+            return member[row].email
+        }
+        return nil
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if nameTextField.isFirstResponder{
+            let selectName = member[row].name
+            nameTextField.text = selectName
+        }else if emailTextField.isFirstResponder{
+            let selectedEmail = member[row].email
+            emailTextField.text = selectedEmail
+            
+        }
+        
         
         
     }

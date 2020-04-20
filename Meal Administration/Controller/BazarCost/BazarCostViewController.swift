@@ -12,7 +12,8 @@ class BazarCostViewController: UIViewController {
 
     
     //MARK: - Properties
-    
+    var userEmail = String()
+ 
     
     //MARK: - init
     
@@ -22,7 +23,7 @@ class BazarCostViewController: UIViewController {
         addCostNavBarBtn()
         
     }
-    
+  
     
     //MARK: - Handler
     
@@ -35,6 +36,7 @@ class BazarCostViewController: UIViewController {
     @objc func addCostAction(_ sender : UIBarButtonItem){
         
         let addBazarCostVC = storyboard?.instantiateViewController(identifier: "AddBazarCostViewController") as! AddBazarCostViewController
+        addBazarCostVC.userEmail = self.userEmail
         self.navigationController?.pushViewController(addBazarCostVC, animated: true)
         
         
@@ -44,3 +46,6 @@ class BazarCostViewController: UIViewController {
 
 
 }
+
+
+

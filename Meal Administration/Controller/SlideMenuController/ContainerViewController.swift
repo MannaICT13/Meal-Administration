@@ -205,6 +205,7 @@ extension ContainerViewController {
    func  didSlectBazarCost(){
         
           let bazarCostVC = storyboard?.instantiateViewController(identifier: "BazarCostViewController") as! BazarCostViewController
+             bazarCostVC.userEmail = self.userEmail
               self.navigationController?.pushViewController(bazarCostVC, animated: true)
                      
                      
