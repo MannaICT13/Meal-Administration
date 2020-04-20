@@ -10,12 +10,34 @@ import UIKit
 
 class DailyMealCountViewController: UIViewController {
 
+    //MARK: - Properties
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var mealNumberTextField: UITextField!
+   
+    @IBOutlet weak var nameImg: UIImageView!
+    @IBOutlet weak var emailImg: UIImageView!
+    @IBOutlet weak var mealNumberImg: UIImageView!
+    @IBOutlet weak var dateImg: UIImageView!
+    
+    
+    @IBOutlet weak var submitBtnOutlets: UIButton!
+    
+    //MARK: - init
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
+    
+    //MARK: - Handler
+    
+    
+    @IBAction func submitBtnAction(_ sender: Any) {
+    }
+    
     
 
 
