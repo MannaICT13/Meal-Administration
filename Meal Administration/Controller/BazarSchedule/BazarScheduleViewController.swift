@@ -12,6 +12,7 @@ class BazarScheduleViewController: UIViewController {
 
     
     //MARK: - Properties
+    var userEmail = String()
     
     
     //MARK: - init
@@ -34,6 +35,7 @@ class BazarScheduleViewController: UIViewController {
     @objc func addScheduleAction( _ sender : UIBarButtonItem){
         
         let addBazarScheduleVC = storyboard?.instantiateViewController(identifier: "AddBazarScheduleViewController") as! AddBazarScheduleViewController
+        addBazarScheduleVC.userEmail = self.userEmail
         self.navigationController?.pushViewController(addBazarScheduleVC, animated: true)
         
     }

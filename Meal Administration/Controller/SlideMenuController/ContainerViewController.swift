@@ -192,6 +192,7 @@ extension ContainerViewController {
     func didSelectBazarSchedule(){
          
         let addScheduleVC = storyboard?.instantiateViewController(identifier: "BazarScheduleViewController") as! BazarScheduleViewController
+        addScheduleVC.userEmail = self.userEmail
         self.navigationController?.pushViewController(addScheduleVC, animated: true)
                
                
