@@ -97,6 +97,7 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
         cell.layer.borderColor = UIColor.white.cgColor
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 15.0
+     
         cell.layer.shadowOpacity = 0.23
         cell.layer.shadowRadius = 8
         cell.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)

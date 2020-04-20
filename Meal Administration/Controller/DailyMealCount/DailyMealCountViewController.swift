@@ -26,6 +26,11 @@ class DailyMealCountViewController: UIViewController {
     @IBOutlet weak var submitBtnOutlets: UIButton!
     
     @IBOutlet weak var subView: UIView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     //MARK: - init
     
     override func viewDidLoad() {
@@ -70,4 +75,57 @@ class DailyMealCountViewController: UIViewController {
     
 
 
+}
+
+extension DailyMealCountViewController : UITableViewDataSource,UITableViewDelegate{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 4
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.backgroundColor = .clear
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor.white.cgColor
+        
+        cell.layer.cornerRadius = 15
+        cell.layer.masksToBounds = true
+        cell.contentView.backgroundColor = Utilities.color
+        
+        cell.layer.shadowOpacity = 0.23
+        cell.layer.shadowRadius = 8
+        cell.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        cell.layer.shadowColor = UIColor.black.cgColor
+        
+        
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DailyMealCell
+      
+        
+        return cell
+    }
+    
+    
+    
 }
