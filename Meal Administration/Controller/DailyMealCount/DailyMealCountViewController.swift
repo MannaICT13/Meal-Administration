@@ -37,6 +37,7 @@ class DailyMealCountViewController: UIViewController {
     var pickerView : UIPickerView!
     var datePicker : UIDatePicker!
     
+    var mealNumber = [Double]()
     
     
     
@@ -49,6 +50,7 @@ class DailyMealCountViewController: UIViewController {
         view.addSubview(subView)
         manageDatePicker()
         managePickerView()
+        mealNumber = [0.5,1.0,1.5,2.0,2.5,3.0,3.5,4.0]
         
         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
             self.member = member
@@ -162,8 +164,10 @@ extension DailyMealCountViewController : UIPickerViewDelegate,UIPickerViewDataSo
         toolBar.setItems([done], animated: true)
         nameTextField.inputView = pickerView
         emailTextField.inputView = pickerView
+        mealNumberTextField.inputView = pickerView
         nameTextField.inputAccessoryView = toolBar
         emailTextField.inputAccessoryView = toolBar
+        mealNumberTextField.inputAccessoryView = toolBar
         
         
     }
@@ -178,7 +182,14 @@ extension DailyMealCountViewController : UIPickerViewDelegate,UIPickerViewDataSo
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return member.count
+        
+        if mealNumberTextField.isFirstResponder{
+            return mealNumber.count
+        }else if nameTextField.isFirstResponder || emailTextField.isFirstResponder {
+            return member.count
+        }
+        return 0
+        
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
@@ -186,6 +197,8 @@ extension DailyMealCountViewController : UIPickerViewDelegate,UIPickerViewDataSo
             return member[row].name
         }else if emailTextField.isFirstResponder{
             return member[row].email
+        }else if mealNumberTextField.isFirstResponder{
+            return String(mealNumber[row])
         }
         return nil
     }
@@ -203,6 +216,10 @@ extension DailyMealCountViewController : UIPickerViewDelegate,UIPickerViewDataSo
             emailTextField.text = selectedEmail
             
             
+        }else if mealNumberTextField.isFirstResponder{
+            
+            let selectedMeal = mealNumber[row]
+            mealNumberTextField.text = String(selectedMeal)
         }
    
     }
