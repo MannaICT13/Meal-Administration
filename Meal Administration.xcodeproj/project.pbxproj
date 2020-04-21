@@ -10,6 +10,7 @@
 		2A25CB8B2447458D0068E249 /* DailyMealCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25CB8A2447458D0068E249 /* DailyMealCountViewController.swift */; };
 		2A25CB8D2447459F0068E249 /* AddDailyMealCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25CB8C2447459F0068E249 /* AddDailyMealCountViewController.swift */; };
 		2A26BEEA244A1DBE002D42C5 /* MembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26BEE9244A1DBE002D42C5 /* MembersCell.swift */; };
+		2A547811244F4A8D00A85FCE /* DailyMealDbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A547810244F4A8D00A85FCE /* DailyMealDbHelper.swift */; };
 		2A54A50D2448C4670044AD9A /* MemberDbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A54A50C2448C4670044AD9A /* MemberDbHelper.swift */; };
 		2A54A50F2448C4DB0044AD9A /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A54A50E2448C4DB0044AD9A /* Member.swift */; };
 		2A6798F12444771000700604 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F02444771000700604 /* ContainerViewController.swift */; };
@@ -69,6 +70,7 @@
 		2A25CB8C2447459F0068E249 /* AddDailyMealCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDailyMealCountViewController.swift; sourceTree = "<group>"; };
 		2A25CB8E244754710068E249 /* Meal AdministrationDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Meal AdministrationDebug.entitlements"; sourceTree = "<group>"; };
 		2A26BEE9244A1DBE002D42C5 /* MembersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
+		2A547810244F4A8D00A85FCE /* DailyMealDbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealDbHelper.swift; sourceTree = "<group>"; };
 		2A54A50C2448C4670044AD9A /* MemberDbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDbHelper.swift; sourceTree = "<group>"; };
 		2A54A50E2448C4DB0044AD9A /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		2A6798F02444771000700604 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 				2A26BEE9244A1DBE002D42C5 /* MembersCell.swift */,
 			);
 			path = MembersView;
+			sourceTree = "<group>";
+		};
+		2A54780F244F4A5400A85FCE /* DailyMealModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A547810244F4A8D00A85FCE /* DailyMealDbHelper.swift */,
+			);
+			path = DailyMealModel;
 			sourceTree = "<group>";
 		};
 		2A54A50B2448C4380044AD9A /* MembersModel */ = {
@@ -321,6 +331,7 @@
 		2AB1E8DF243F12B200A07BBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A54780F244F4A5400A85FCE /* DailyMealModel */,
 				2AB1E8E6243F542500A07BBA /* Utilities.swift */,
 				2A6798FA2445056F00700604 /* SlideMenuModel */,
 				2A54A50B2448C4380044AD9A /* MembersModel */,
@@ -611,6 +622,7 @@
 				2A7061D02445B8BB00C55D5A /* MemberDetailTableViewController.swift in Sources */,
 				2AB1E8E1243F131200A07BBA /* LoginViewController.swift in Sources */,
 				2A54A50D2448C4670044AD9A /* MemberDbHelper.swift in Sources */,
+				2A547811244F4A8D00A85FCE /* DailyMealDbHelper.swift in Sources */,
 				2A25CB8D2447459F0068E249 /* AddDailyMealCountViewController.swift in Sources */,
 				2A6798F12444771000700604 /* ContainerViewController.swift in Sources */,
 				2A7061D3244626D600C55D5A /* BazarScheduleViewController.swift in Sources */,

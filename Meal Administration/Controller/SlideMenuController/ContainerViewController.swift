@@ -216,8 +216,10 @@ extension ContainerViewController {
     func didSelectDailyMealCount(){
         
         let mealCountVC = storyboard?.instantiateViewController(identifier: "DailyMealCountViewController") as! DailyMealCountViewController
-          // bazarCostVC.userEmail = self.userEmail
-            self.navigationController?.pushViewController(mealCountVC, animated: true)    }
+           mealCountVC.userEmail = self.userEmail
+            self.navigationController?.pushViewController(mealCountVC, animated: true)
+        
+    }
     
     
     

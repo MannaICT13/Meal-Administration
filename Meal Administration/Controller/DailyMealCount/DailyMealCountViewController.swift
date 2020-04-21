@@ -26,27 +26,45 @@ class DailyMealCountViewController: UIViewController {
     @IBOutlet weak var submitBtnOutlets: UIButton!
     
     @IBOutlet weak var subView: UIView!
-    
+
     @IBOutlet weak var tableView: UITableView!
     
     
+    
+    
+    var member = [Member]()
+    
+    var userEmail = String()
     
     //MARK: - init
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(subView)
+        
+        MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
+            self.member = member
+            self.tableView.reloadData()
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
          mangeIcon()
          utilitiManager()
+         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
+                   self.member = member
+            self.tableView.reloadData()
+               }
+        
     }
+    
+    
     //MARK: - Handler
     
     
     @IBAction func submitBtnAction(_ sender: Any) {
+        
         
         
     }
@@ -84,7 +102,7 @@ extension DailyMealCountViewController : UITableViewDataSource,UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return member.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -121,6 +139,8 @@ extension DailyMealCountViewController : UITableViewDataSource,UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DailyMealCell
+        cell.nameLbl.text = member[indexPath.row].name
+        cell.emailLbl.text = member[indexPath.row].email
       
         
         return cell
