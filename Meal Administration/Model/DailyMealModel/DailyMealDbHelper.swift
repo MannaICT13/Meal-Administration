@@ -16,7 +16,7 @@ class DailyMealDbHelper {
     
     let db = Firestore.firestore()
     
-    func writeMeal(userEmail:String,name:String,email:String,meal:Int,date : String){
+    func writeMeal(userEmail:String,name:String,email:String,meal:Double,date : String){
         
         
         let dic : [String:Any] = [
@@ -44,6 +44,48 @@ class DailyMealDbHelper {
             
             
         }
+    
+    
+    
+    
+    func readMeal(userEmail:String,email:String,completed : @escaping ([Meal]) ->Void ){
+        
+       
+        let dispatch = DispatchGroup()
+        dispatch.enter()
+         var meal = [Meal]()
+        self.db.collection(userEmail).document("mealDocument").collection("mealCollection").document("document").collection(email).getDocuments{ (snapshot, error) in
+            
+            if let err = error{
+                
+                print(err.localizedDescription)
+                
+                
+            }else{
+                
+                for results in snapshot!.documents{
+                    
+                    meal.append(Meal(name: results.data()["name"] as! String, email: results.data()["email"] as! String, meal: results.data()["meal"] as! Double, date: results.data()["date"] as! String))
+                }
+                
+                
+                
+                
+            }
+            dispatch.leave()
+            
+            
+        
+        }
+        dispatch.notify(queue: .main, execute: {
+            print(meal.count)
+            completed(meal)
+        })
+        
+        
+        
+    }
+    
         
         
         

@@ -75,7 +75,7 @@ class DailyMealCountViewController: UIViewController {
         
         guard let name = nameTextField.text else{return}
         guard let email = emailTextField.text else{return}
-        guard let meal = Int(mealNumberTextField.text!) else{return}
+        guard let meal = Double(mealNumberTextField.text!) else{return}
         guard let date = dateTextField.text else{return}
         
         DailyMealDbHelper.dailyMealDbInstance.writeMeal(userEmail: userEmail, name: name, email: email, meal: meal, date: date)
@@ -262,6 +262,17 @@ extension DailyMealCountViewController : UITableViewDataSource,UITableViewDelega
       
         
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailDailyMealVC = storyboard?.instantiateViewController(identifier: "DetailDailyMealCountViewController") as! DetailDailyMealCountViewController
+        
+        detailDailyMealVC.email = member[indexPath.row].email
+        detailDailyMealVC.userEmail = self.userEmail
+        
+        navigationController?.pushViewController(detailDailyMealVC, animated: true)
     }
     
     
