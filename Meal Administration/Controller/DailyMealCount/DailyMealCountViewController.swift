@@ -65,7 +65,12 @@ class DailyMealCountViewController: UIViewController {
     
     @IBAction func submitBtnAction(_ sender: Any) {
         
+        guard let name = nameTextField.text else{return}
+        guard let email = emailTextField.text else{return}
+        guard let meal = Int(mealNumberTextField.text!) else{return}
+        guard let date = dateTextField.text else{return}
         
+        DailyMealDbHelper.dailyMealDbInstance.writeMeal(userEmail: userEmail, name: name, email: email, meal: meal, date: date)
         
     }
     

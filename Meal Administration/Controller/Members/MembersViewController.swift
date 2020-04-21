@@ -131,6 +131,7 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let memberDetailVC = storyboard?.instantiateViewController(identifier: "MemberDetailTableViewController") as! MemberDetailTableViewController
+        
          memberDetailVC.memberDetails = member[indexPath.row]
          memberDetailVC.userEmail = userEmail
         

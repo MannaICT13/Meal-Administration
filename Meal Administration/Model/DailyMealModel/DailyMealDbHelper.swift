@@ -29,7 +29,7 @@ class DailyMealDbHelper {
        
         ]
         
-        self.db.collection(userEmail).document("mealDocument").collection("mealCollection").document(email+"document").collection(email).addDocument(data: dic) { (error) in
+        self.db.collection(userEmail).document("mealDocument").collection("mealCollection").document("document").collection(email).addDocument(data: dic) { (error) in
             
             if let err = error{
                 
