@@ -22,25 +22,33 @@ class DailyMealCountViewController: UIViewController {
     @IBOutlet weak var mealNumberImg: UIImageView!
     @IBOutlet weak var dateImg: UIImageView!
     
-    
     @IBOutlet weak var submitBtnOutlets: UIButton!
     
     @IBOutlet weak var subView: UIView!
-
     @IBOutlet weak var tableView: UITableView!
     
     
     
     
     var member = [Member]()
-    
     var userEmail = String()
+    
+    
+    var pickerView : UIPickerView!
+    var datePicker : UIDatePicker!
+    
+    
+    
+    
+    
     
     //MARK: - init
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(subView)
+        manageDatePicker()
+        managePickerView()
         
         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
             self.member = member
@@ -93,11 +101,116 @@ class DailyMealCountViewController: UIViewController {
         
     }
     
+    func manageDatePicker(){
+        
+        datePicker = UIDatePicker()
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(action))
+        toolBar.setItems([done], animated: true)
+        
+        dateTextField.inputView = datePicker
+        dateTextField.inputAccessoryView = toolBar
+        
+        datePicker.datePickerMode = .date
+        
+        
+        
+        
+        
+    }
     
+    @objc func action(){
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        if dateTextField.isFirstResponder{
+            dateTextField.text = formatter.string(from: datePicker.date)
+            
+            
+        }
+        self.view.endEditing(true)
+        
+        
+        
+    }
     
     
 
 
+}
+
+
+extension DailyMealCountViewController : UIPickerViewDelegate,UIPickerViewDataSource{
+    
+    func managePickerView(){
+        
+        pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        
+
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(pickerAction(_  :)))
+        toolBar.setItems([done], animated: true)
+        nameTextField.inputView = pickerView
+        emailTextField.inputView = pickerView
+        nameTextField.inputAccessoryView = toolBar
+        emailTextField.inputAccessoryView = toolBar
+        
+        
+    }
+    
+    
+    @objc func pickerAction(_ sender:UIBarButtonItem){
+        
+        self.view.endEditing(true)
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return member.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if nameTextField.isFirstResponder{
+            return member[row].name
+        }else if emailTextField.isFirstResponder{
+            return member[row].email
+        }
+        return nil
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+     
+        if nameTextField.isFirstResponder{
+            
+            let selectedName = member[row].name
+            nameTextField.text = selectedName
+            
+        }else if emailTextField.isFirstResponder{
+            
+            let selectedEmail = member[row].email
+            emailTextField.text = selectedEmail
+            
+            
+        }
+   
+    }
+    
+    
+    
+    
+    
 }
 
 extension DailyMealCountViewController : UITableViewDataSource,UITableViewDelegate{
