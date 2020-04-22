@@ -139,6 +139,26 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
         
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, nil) in
+            
+            MemberDbHelper.instanceMemberDb.removeMember(userEmail: self.userEmail, id: self.member[indexPath.row].id)
+            self.member.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+        }
+        
+        let config = UISwipeActionsConfiguration(actions: [delete])
+        config.performsFirstActionWithFullSwipe = false
+        return config
+        
+        
+        
+    }
+    
+    
     
     
     

@@ -21,8 +21,10 @@ class MemberDbHelper {
     
     
     //MARK: - init
+    
+    
 
-    //MARk: - Handler
+    //MARK: - Handler
     
     
     // write member data to firebase firestore
@@ -139,6 +141,16 @@ class MemberDbHelper {
         
         
     }
+    func removeMember(userEmail:String,id:String){
+        self.db.collection(userEmail).document("memberDocument").collection("memberCollection").document(id).delete { (error) in
+            if let err = error{
+                print(err.localizedDescription)
+            }
+        }
+        
+    }
+    
+    
  
 
 }

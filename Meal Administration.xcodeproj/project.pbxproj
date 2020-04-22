@@ -388,9 +388,9 @@
 		2AB1E8DF243F12B200A07BBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2AB1E8E6243F542500A07BBA /* Utilities.swift */,
 				2A401EBA2450C5E1003F8544 /* BazarCostModel */,
 				2A401EB22450AEDA003F8544 /* BazarScheduleModel */,
-				2AB1E8E6243F542500A07BBA /* Utilities.swift */,
 				2A54780F244F4A5400A85FCE /* DailyMealModel */,
 				2A6798FA2445056F00700604 /* SlideMenuModel */,
 				2A54A50B2448C4380044AD9A /* MembersModel */,
