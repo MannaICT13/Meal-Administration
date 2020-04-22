@@ -73,6 +73,7 @@ class AddBazarScheduleViewController: UIViewController {
         guard let end = endDateTextField.text else{return}
         
         BazarScheduleDbModel.bazarScheduleInstance.writeSchedule(userEmail: userEmail, name: name, email: email, start: start, end: end)
+        self.navigationController?.popViewController(animated: true)
         
         
     }

@@ -69,7 +69,7 @@ class AddBazarCostViewController: UIViewController {
         guard let date = bazarDateTextField.text else{return}
         
         BazarCostModel.bazarCostInstance.writeCost(userEmail: userEmail, name: name, email: email, cost: cost, date: date)
-        
+        self.navigationController?.popViewController(animated: true)
         
     }
     

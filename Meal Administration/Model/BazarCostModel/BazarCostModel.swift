@@ -62,7 +62,7 @@ class BazarCostModel {
                 
                 for results in snapshot!.documents{
                     
-                    cost.append(Cost(name: results.data()["name"] as! String, email: results.data()["email"] as! String, cost: results.data()["cost"] as! Double, date: results.data()["date"] as! String))
+                    cost.append(Cost(name: results.data()["name"] as! String, email: results.data()["email"] as! String, cost: (results.data()["cost"] as! Double), date: results.data()["date"] as! String,id:results.documentID))
                     
                     
                     
@@ -81,6 +81,32 @@ class BazarCostModel {
         
         
         
+    }
+    func removeCost(userEmail:String,email:String,id:String){
+        self.db.collection(userEmail).document("costDocument").collection("costCollection").document("document").collection(email).document(id).delete { (error) in
+            
+            if let err = error{
+                print(err.localizedDescription)
+                
+                
+            }
+        }
+    }
+    
+    func updateCost(userEmail:String,email:String,cost:Double,id:String){
+
+        self.db.collection(userEmail).document("costDocument").collection("costCollection").document("document").collection(email).document(id).updateData([
+            
+            "cost":cost
+            ]
+
+            ) { (error) in
+                if let err = error{
+                    print(err.localizedDescription)
+                }
+            
+            
+        }
     }
     
     

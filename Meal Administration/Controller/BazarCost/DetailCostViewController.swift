@@ -63,6 +63,52 @@ extension DetailCostViewController : UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+  
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, nil) in
+            BazarCostModel.bazarCostInstance.removeCost(userEmail: self.userEmail, email: self.email, id: self.cost[indexPath.row].id)
+            self.cost.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+        }
+        
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, nil) in
+            
+            
+            let alertController = UIAlertController(title: "Update Cost", message: "Want to updat cost?", preferredStyle: .alert)
+            
+            alertController.addTextField { (costTextField) in
+                costTextField.placeholder = "Cost"
+                costTextField.text = String(self.cost[indexPath.row].cost)
+            }
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            alertController.addAction(cancel)
+            
+            let update = UIAlertAction(title: "Update", style: .default) { (action) in
+                
+                guard let cost = Double(alertController.textFields![0].text!) else{return}
+                
+                BazarCostModel.bazarCostInstance.updateCost(userEmail: self.userEmail, email: self.email,cost: cost, id:self.cost[indexPath.row].id)
+                self.navigationController?.popViewController(animated: true)
+            }
+            alertController.addAction(update)
+            self.present(alertController, animated: true, completion: nil)
+            
+            
+            
+            
+        }
+        let config = UISwipeActionsConfiguration(actions: [delete,edit])
+        config.performsFirstActionWithFullSwipe = false
+        return config
+        
+        
+        
+    }
     
     
     

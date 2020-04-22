@@ -15,13 +15,15 @@ class Cost{
     var email :String = ""
     var cost :Double = 0.0
     var date :String = ""
+    var id : String = ""
        
     
-      init(name: String, email: String, cost: Double, date: String) {
+    init(name: String, email: String, cost: Double, date: String,id:String) {
            self.name = name
            self.email = email
            self.cost = cost
            self.date = date
+           self.id = id
        }
        
     

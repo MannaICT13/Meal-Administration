@@ -31,6 +31,7 @@ class BazarScheduleViewController: UIViewController {
 
         addScheduleNavBarBtn()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
              BazarScheduleDbModel.bazarScheduleInstance.readSchedule(userEmail: userEmail) { (schedule) in
                self.schedule = schedule
@@ -41,7 +42,7 @@ class BazarScheduleViewController: UIViewController {
     //MARK: - Handler
     func addScheduleNavBarBtn(){
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Schedule", style: .plain, target: self, action: #selector(addScheduleAction( _ :)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add/Update Schedule", style: .plain, target: self, action: #selector(addScheduleAction( _ :)))
         
         
     }
