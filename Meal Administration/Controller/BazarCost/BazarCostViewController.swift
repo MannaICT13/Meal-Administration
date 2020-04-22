@@ -106,6 +106,17 @@ extension BazarCostViewController : UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailCostVC = storyboard?.instantiateViewController(identifier: "DetailCostViewController") as! DetailCostViewController
+        detailCostVC.email = member[indexPath.row].email
+        detailCostVC.userEmail = self.userEmail
+        navigationController?.pushViewController(detailCostVC, animated: true)
+        
+    }
+    
+    
     
 }
 
