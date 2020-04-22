@@ -66,6 +66,15 @@ class AddBazarScheduleViewController: UIViewController {
 
     @IBAction func saveBtnAction(_ sender: Any) {
         
+        
+        guard let name = nameTextField.text else{return}
+        guard let email = emailTextField.text else{return}
+        guard let start = startDateTextField.text else{return}
+        guard let end = endDateTextField.text else{return}
+        
+        BazarScheduleDbModel.bazarScheduleInstance.readSchedule(userEmail: userEmail, name: name, email: email, start: start, end: end)
+        
+        
     }
     
     
