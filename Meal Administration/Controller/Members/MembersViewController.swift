@@ -122,9 +122,6 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
         cell.memberEmailLbl.text = member[indexPath.row].email
         
         
-       
-        
-     
         return cell
     }
     

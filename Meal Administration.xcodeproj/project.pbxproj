@@ -12,6 +12,8 @@
 		2A401EB42450AF06003F8544 /* BazarScheduleDbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A401EB32450AF06003F8544 /* BazarScheduleDbModel.swift */; };
 		2A401EB62450B2E8003F8544 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A401EB52450B2E8003F8544 /* Schedule.swift */; };
 		2A401EB92450B615003F8544 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A401EB82450B615003F8544 /* ScheduleCell.swift */; };
+		2A401EBD2450C617003F8544 /* BazarCostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A401EBC2450C617003F8544 /* BazarCostCell.swift */; };
+		2A401EC02450CF8C003F8544 /* BazarCostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A401EBF2450CF8C003F8544 /* BazarCostModel.swift */; };
 		2A547811244F4A8D00A85FCE /* DailyMealDbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A547810244F4A8D00A85FCE /* DailyMealDbHelper.swift */; };
 		2A547813244F764E00A85FCE /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A547812244F764E00A85FCE /* Meal.swift */; };
 		2A54781D244F860B00A85FCE /* DetailDailyMealCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A54781C244F860B00A85FCE /* DetailDailyMealCountViewController.swift */; };
@@ -77,6 +79,8 @@
 		2A401EB32450AF06003F8544 /* BazarScheduleDbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazarScheduleDbModel.swift; sourceTree = "<group>"; };
 		2A401EB52450B2E8003F8544 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		2A401EB82450B615003F8544 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		2A401EBC2450C617003F8544 /* BazarCostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazarCostCell.swift; sourceTree = "<group>"; };
+		2A401EBF2450CF8C003F8544 /* BazarCostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazarCostModel.swift; sourceTree = "<group>"; };
 		2A547810244F4A8D00A85FCE /* DailyMealDbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealDbHelper.swift; sourceTree = "<group>"; };
 		2A547812244F764E00A85FCE /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		2A54781C244F860B00A85FCE /* DetailDailyMealCountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDailyMealCountViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +187,22 @@
 			path = ScheduleView;
 			sourceTree = "<group>";
 		};
+		2A401EBA2450C5E1003F8544 /* BazarCostModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A401EBF2450CF8C003F8544 /* BazarCostModel.swift */,
+			);
+			path = BazarCostModel;
+			sourceTree = "<group>";
+		};
+		2A401EBB2450C601003F8544 /* BazarCostView */ = {
+			isa = PBXGroup;
+			children = (
+				2A401EBC2450C617003F8544 /* BazarCostCell.swift */,
+			);
+			path = BazarCostView;
+			sourceTree = "<group>";
+		};
 		2A54780F244F4A5400A85FCE /* DailyMealModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +224,7 @@
 		2A6798E4244469CE00700604 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A401EBB2450C601003F8544 /* BazarCostView */,
 				2A401EB72450B5F3003F8544 /* ScheduleView */,
 				2AC52EC7244E38CB004F923C /* DailyMealCountView */,
 				2A26BEE8244A1933002D42C5 /* MembersView */,
@@ -361,6 +382,7 @@
 		2AB1E8DF243F12B200A07BBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A401EBA2450C5E1003F8544 /* BazarCostModel */,
 				2A401EB22450AEDA003F8544 /* BazarScheduleModel */,
 				2AB1E8E6243F542500A07BBA /* Utilities.swift */,
 				2A54780F244F4A5400A85FCE /* DailyMealModel */,
@@ -662,6 +684,7 @@
 				2A26BEEA244A1DBE002D42C5 /* MembersCell.swift in Sources */,
 				2A7061D02445B8BB00C55D5A /* MemberDetailTableViewController.swift in Sources */,
 				2AB1E8E1243F131200A07BBA /* LoginViewController.swift in Sources */,
+				2A401EC02450CF8C003F8544 /* BazarCostModel.swift in Sources */,
 				2A54A50D2448C4670044AD9A /* MemberDbHelper.swift in Sources */,
 				2A547811244F4A8D00A85FCE /* DailyMealDbHelper.swift in Sources */,
 				2A6798F12444771000700604 /* ContainerViewController.swift in Sources */,
@@ -672,6 +695,7 @@
 				2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */,
 				2A54A50F2448C4DB0044AD9A /* Member.swift in Sources */,
 				2A7061D824464F6F00C55D5A /* BazarCostViewController.swift in Sources */,
+				2A401EBD2450C617003F8544 /* BazarCostCell.swift in Sources */,
 				2A7061D5244626EC00C55D5A /* AddBazarScheduleViewController.swift in Sources */,
 				2A6798F32444774000700604 /* MenuViewController.swift in Sources */,
 				2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */,
