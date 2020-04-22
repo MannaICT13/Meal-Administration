@@ -72,7 +72,7 @@ class AddBazarScheduleViewController: UIViewController {
         guard let start = startDateTextField.text else{return}
         guard let end = endDateTextField.text else{return}
         
-        BazarScheduleDbModel.bazarScheduleInstance.readSchedule(userEmail: userEmail, name: name, email: email, start: start, end: end)
+        BazarScheduleDbModel.bazarScheduleInstance.writeSchedule(userEmail: userEmail, name: name, email: email, start: start, end: end)
         
         
     }

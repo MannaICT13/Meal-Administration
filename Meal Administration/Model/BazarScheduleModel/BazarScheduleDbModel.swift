@@ -17,8 +17,7 @@ static let bazarScheduleInstance = BazarScheduleDbModel()
     
     let db = Firestore.firestore()
     
-    
-    func readSchedule(userEmail:String,name:String,email:String,start:String,end:String){
+    func writeSchedule(userEmail:String,name:String,email:String,start:String,end:String){
         
         let dic : [String :Any ] = [
         
@@ -35,6 +34,53 @@ static let bazarScheduleInstance = BazarScheduleDbModel()
                 
             }
         }
+        
+        
+        
+        
+        
+        
+    }
+    
+    func readSchedule(userEmail:String,completed : @escaping ([Schedule]) -> Void){
+        
+        
+        
+        let dispatch = DispatchGroup()
+        dispatch.enter()
+        var schedule = [Schedule]()
+        
+        self.db.collection(userEmail).document("scheduleDocument").collection("scheduleCollection").getDocuments { (snapshot, error) in
+            
+            if let err = error {
+                
+                print(err.localizedDescription)
+            }else{
+                
+                for results in snapshot!.documents{
+                    
+                    
+                    schedule.append(Schedule(name: results.data()["name"] as! String, email: results.data()["email"] as! String, start: results.data()["start"] as! String, end: results.data()["end"] as! String))
+                    
+                    
+                }
+                
+                
+                
+                
+            }
+            
+            dispatch.leave()
+            
+            
+        }
+        
+        dispatch.notify(queue: .main, execute: {
+            print(schedule.count)
+            completed(schedule)
+            
+        })
+        
         
         
         
