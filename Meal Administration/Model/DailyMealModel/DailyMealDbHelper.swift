@@ -65,7 +65,7 @@ class DailyMealDbHelper {
                 
                 for results in snapshot!.documents{
                     
-                    meal.append(Meal(name: results.data()["name"] as! String, email: results.data()["email"] as! String, meal: results.data()["meal"] as! Double, date: results.data()["date"] as! String))
+                    meal.append(Meal(name: results.data()["name"] as! String, email: results.data()["email"] as! String, meal: results.data()["meal"] as! Double, date: results.data()["date"] as! String, id: results.documentID))
                 }
                 
                 
@@ -85,6 +85,47 @@ class DailyMealDbHelper {
         
         
     }
+    
+    
+    
+    func removeMeal(userEmail:String,email:String,id:String){
+        
+        self.db.collection(userEmail).document("mealDocument").collection("mealCollection").document("document").collection(email).document(id).delete { (error) in
+            
+            if let err = error{
+                print(err.localizedDescription)
+            }
+        }
+        
+        
+        
+        
+        
+    }
+    
+    
+    func updateMeal(userEmail:String,email:String,meal: Double,id:String){
+        
+        
+        self.db.collection(userEmail).document("mealDocument").collection("mealCollection").document("document").collection(email).document(id).updateData([
+         
+            "meal":meal
+            
+            
+        ]) { (error) in
+            if let err = error{
+                print(err.localizedDescription)
+                
+            }
+        }
+               
+               
+        
+        
+        
+        
+    }
+    
     
         
         

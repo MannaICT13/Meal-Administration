@@ -174,6 +174,14 @@
 			path = MembersView;
 			sourceTree = "<group>";
 		};
+		2A2D678F2453390D00F10C9B /* UtilitiesModel */ = {
+			isa = PBXGroup;
+			children = (
+				2AB1E8E6243F542500A07BBA /* Utilities.swift */,
+			);
+			path = UtilitiesModel;
+			sourceTree = "<group>";
+		};
 		2A401EB22450AEDA003F8544 /* BazarScheduleModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,7 +396,7 @@
 		2AB1E8DF243F12B200A07BBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2AB1E8E6243F542500A07BBA /* Utilities.swift */,
+				2A2D678F2453390D00F10C9B /* UtilitiesModel */,
 				2A401EBA2450C5E1003F8544 /* BazarCostModel */,
 				2A401EB22450AEDA003F8544 /* BazarScheduleModel */,
 				2A54780F244F4A5400A85FCE /* DailyMealModel */,

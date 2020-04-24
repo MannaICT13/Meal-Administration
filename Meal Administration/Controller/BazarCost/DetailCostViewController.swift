@@ -63,6 +63,10 @@ extension DetailCostViewController : UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+    
+    
+    
+    
   
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
@@ -91,9 +95,18 @@ extension DetailCostViewController : UITableViewDataSource,UITableViewDelegate{
             let update = UIAlertAction(title: "Update", style: .default) { (action) in
                 
                 guard let cost = Double(alertController.textFields![0].text!) else{return}
+               
                 
                 BazarCostModel.bazarCostInstance.updateCost(userEmail: self.userEmail, email: self.email,cost: cost, id:self.cost[indexPath.row].id)
-                self.navigationController?.popViewController(animated: true)
+                
+                //self.navigationController?.popViewController(animated: true)
+              
+                BazarCostModel.bazarCostInstance.readCost(userEmail:self.userEmail , email: self.email) { (cost) in
+                           self.cost = cost
+                           self.tableView.reloadData()
+                       }
+                
+                
             }
             alertController.addAction(update)
             self.present(alertController, animated: true, completion: nil)

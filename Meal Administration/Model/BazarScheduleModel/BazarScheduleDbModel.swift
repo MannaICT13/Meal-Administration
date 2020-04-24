@@ -60,7 +60,7 @@ static let bazarScheduleInstance = BazarScheduleDbModel()
                 for results in snapshot!.documents{
                     
                     
-                    schedule.append(Schedule(name: results.data()["name"] as! String, email: results.data()["email"] as! String, start: results.data()["start"] as! String, end: results.data()["end"] as! String))
+                    schedule.append(Schedule(name: results.data()["name"] as! String, email: results.data()["email"] as! String, start: results.data()["start"] as! String, end: results.data()["end"] as! String, id: results.documentID))
                     
                     
                 }
@@ -88,7 +88,7 @@ static let bazarScheduleInstance = BazarScheduleDbModel()
         
         
     }
-    
+   
     
     
     

@@ -14,12 +14,14 @@ class Meal {
     var email :String = ""
     var meal : Double = 0.0
     var date :String = ""
-    
-      init(name: String, email: String, meal: Double, date: String) {
+    var id : String = ""
+    init(name: String, email: String, meal: Double, date: String,id:String) {
            self.name = name
            self.email = email
            self.meal = meal
            self.date = date
+           self.id = id
+        
        }
     
     

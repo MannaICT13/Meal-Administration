@@ -16,12 +16,14 @@ class Schedule {
     var email: String = ""
     var start :String = ""
     var end :String = ""
+    var id :String = ""
     
-    init(name: String, email: String, start: String, end: String) {
+    init(name: String, email: String, start: String, end: String,id:String) {
         self.name = name
         self.email = email
         self.start = start
         self.end = end
+        self.id = id 
     }
     
 }
