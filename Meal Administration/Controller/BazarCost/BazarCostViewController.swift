@@ -26,9 +26,11 @@ class BazarCostViewController: UIViewController {
         super.viewDidLoad()
         
         addCostNavBarBtn()
+        ActivityIndicator.showActivityIndicator(uiView: view, targetVC: self)
         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
             self.member = member
-            self.tableView.reloadData()
+            UIView.transition(with: self.tableView, duration: 1.0, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+            
         }
         
     }
@@ -37,7 +39,8 @@ class BazarCostViewController: UIViewController {
         
          MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
                    self.member = member
-                   self.tableView.reloadData()
+            UIView.transition(with: self.tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+                  
                }
         
     }

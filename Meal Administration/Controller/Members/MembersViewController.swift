@@ -26,14 +26,18 @@ class MembersViewController: UIViewController {
         
         super.viewDidLoad()
 
-       // self.view.backgroundColor = .opaqueSeparator
+        ActivityIndicator.showActivityIndicator(uiView: view, targetVC: self)
+      
         addMembersNavBarBtn()
 
         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { member in
                    
                     self.member = member
-                    self.tableView.reloadData()
-                    
+            UIView.transition(with: self.tableView, duration: 1.0, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+          
+            ActivityIndicator.hideActivityIndicator(uiView: self.view)
+              
+            
                 }
     
         
@@ -44,7 +48,9 @@ class MembersViewController: UIViewController {
         super.viewWillAppear(true)
         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { member in
             self.member = member
-            self.tableView.reloadData()
+            
+            UIView.transition(with: self.tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+          
         }
     }
     
@@ -118,6 +124,7 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MembersCell
+        
         cell.memberNameLbl.text = member[indexPath.row].name
         cell.memberEmailLbl.text = member[indexPath.row].email
         

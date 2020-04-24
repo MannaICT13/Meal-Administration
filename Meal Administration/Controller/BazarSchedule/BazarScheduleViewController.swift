@@ -24,9 +24,15 @@ class BazarScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ActivityIndicator.showActivityIndicator(uiView: view, targetVC: self)
+        
         BazarScheduleDbModel.bazarScheduleInstance.readSchedule(userEmail: userEmail) { (schedule) in
+           
             self.schedule = schedule
-            self.tableView.reloadData()
+            
+            UIView.transition(with: self.tableView, duration: 1.0, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+            ActivityIndicator.hideActivityIndicator(uiView: self.view)
+        
         }
 
         addScheduleNavBarBtn()
@@ -35,8 +41,11 @@ class BazarScheduleViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
              BazarScheduleDbModel.bazarScheduleInstance.readSchedule(userEmail: userEmail) { (schedule) in
                self.schedule = schedule
-               self.tableView.reloadData()
-           }    }
+                
+                UIView.transition(with: self.tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+           }
+        
+    }
     
     
     //MARK: - Handler

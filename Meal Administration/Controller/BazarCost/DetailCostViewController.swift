@@ -25,7 +25,8 @@ class DetailCostViewController: UIViewController {
         super.viewDidLoad()
         BazarCostModel.bazarCostInstance.readCost(userEmail:userEmail , email: email) { (cost) in
             self.cost = cost
-            self.tableView.reloadData()
+            UIView.transition(with: self.tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+            
         }
 
       
@@ -34,7 +35,8 @@ class DetailCostViewController: UIViewController {
         
          BazarCostModel.bazarCostInstance.readCost(userEmail:userEmail , email: email) { (cost) in
                    self.cost = cost
-                   self.tableView.reloadData()
+            UIView.transition(with: self.tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+                  
                }
         
     }
@@ -103,7 +105,8 @@ extension DetailCostViewController : UITableViewDataSource,UITableViewDelegate{
               
                 BazarCostModel.bazarCostInstance.readCost(userEmail:self.userEmail , email: self.email) { (cost) in
                            self.cost = cost
-                           self.tableView.reloadData()
+                    UIView.transition(with: self.tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+                           
                        }
                 
                 

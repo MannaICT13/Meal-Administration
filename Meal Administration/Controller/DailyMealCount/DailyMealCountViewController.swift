@@ -52,9 +52,15 @@ class DailyMealCountViewController: UIViewController {
         managePickerView()
         mealNumber = [0.5,1.0,1.5,2.0,2.5,3.0,3.5,4.0]
         
+        ActivityIndicator.showActivityIndicator(uiView: view, targetVC: self)
+        
         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
+            
             self.member = member
-            self.tableView.reloadData()
+            UIView.transition(with: self.tableView, duration: 1.0, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+            ActivityIndicator.hideActivityIndicator(uiView: self.view)
+            
+            
         }
     }
     

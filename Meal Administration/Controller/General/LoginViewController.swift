@@ -70,8 +70,9 @@ class LoginViewController: UIViewController {
         guard let email = emailTextField.text else{return}
         guard let password = passwordTextField.text else {return}
         
-    
+        ActivityIndicator.showActivityIndicator(uiView: view, targetVC: self)
         login(email: email, password: password)
+        
     }
     
     
@@ -126,6 +127,8 @@ extension LoginViewController{
             if let err = error{
                 
                 print(err.localizedDescription)
+                ActivityIndicator.hideActivityIndicator(uiView: self.view)
+                
             }else{
                 
                 if result != nil && !self.authUser!.isEmailVerified{
@@ -139,6 +142,7 @@ extension LoginViewController{
                     self.navigationController?.pushViewController(containerVC, animated: true)
                  
                     containerVC.userEmail = (result?.user.email)!
+                    ActivityIndicator.hideActivityIndicator(uiView: self.view)
                     
                     
                     
@@ -168,6 +172,7 @@ extension LoginViewController{
                 print(err.localizedDescription)
                 
             }else{
+                
                 print("Successfully send a link to your email...")
             }
             

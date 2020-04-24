@@ -26,7 +26,8 @@ class DetailDailyMealCountViewController: UIViewController {
         DailyMealDbHelper.dailyMealDbInstance.readMeal(userEmail: userEmail, email: email) { (meal) in
         
             self.meal = meal
-            self.tableView.reloadData()
+            
+            UIView.transition(with: self.tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
         }
     
 
@@ -38,7 +39,9 @@ class DetailDailyMealCountViewController: UIViewController {
         DailyMealDbHelper.dailyMealDbInstance.readMeal(userEmail: userEmail, email: email) { (meal) in
         
             self.meal = meal
-            self.tableView.reloadData()
+            
+            UIView.transition(with: self.tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+            
         }
     }
     
@@ -107,7 +110,8 @@ extension DetailDailyMealCountViewController : UITableViewDataSource,UITableView
                 DailyMealDbHelper.dailyMealDbInstance.readMeal(userEmail: self.userEmail, email: self.email) { (meal) in
                 
                     self.meal = meal
-                    self.tableView.reloadData()
+                    UIView.transition(with: self.tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+                   
                 }
                 
                 
