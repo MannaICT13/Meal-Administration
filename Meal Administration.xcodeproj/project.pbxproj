@@ -34,8 +34,8 @@
 		2A7061D824464F6F00C55D5A /* BazarCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061D724464F6F00C55D5A /* BazarCostViewController.swift */; };
 		2A7061DA24464F8000C55D5A /* AddBazarCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7061D924464F8000C55D5A /* AddBazarCostViewController.swift */; };
 		2A7BAED32456EBEC00A7CE05 /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BAED22456EBEC00A7CE05 /* CalculationViewController.swift */; };
-		2A7BAED52456EC0B00A7CE05 /* DetailCalulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BAED42456EC0B00A7CE05 /* DetailCalulationViewController.swift */; };
 		2A7BAED8245710C000A7CE05 /* CalculationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BAED7245710C000A7CE05 /* CalculationCell.swift */; };
+		2A7BAEDA2457297A00A7CE05 /* DetailCalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BAED92457297A00A7CE05 /* DetailCalculationViewController.swift */; };
 		2AAC2A832443A55900FD9AEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC2A822443A55900FD9AEB /* HomeViewController.swift */; };
 		2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */; };
 		2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */; };
@@ -107,8 +107,8 @@
 		2A7061D724464F6F00C55D5A /* BazarCostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazarCostViewController.swift; sourceTree = "<group>"; };
 		2A7061D924464F8000C55D5A /* AddBazarCostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBazarCostViewController.swift; sourceTree = "<group>"; };
 		2A7BAED22456EBEC00A7CE05 /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
-		2A7BAED42456EC0B00A7CE05 /* DetailCalulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalulationViewController.swift; sourceTree = "<group>"; };
 		2A7BAED7245710C000A7CE05 /* CalculationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationCell.swift; sourceTree = "<group>"; };
+		2A7BAED92457297A00A7CE05 /* DetailCalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalculationViewController.swift; sourceTree = "<group>"; };
 		2AAC2A822443A55900FD9AEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AB1E8AB243F121A00A07BBA /* Meal Administration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Administration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7BAED22456EBEC00A7CE05 /* CalculationViewController.swift */,
-				2A7BAED42456EC0B00A7CE05 /* DetailCalulationViewController.swift */,
+				2A7BAED92457297A00A7CE05 /* DetailCalculationViewController.swift */,
 			);
 			path = Calculation;
 			sourceTree = "<group>";
@@ -720,7 +720,6 @@
 				2AB1E8E9243F70F500A07BBA /* RegistrationViewController.swift in Sources */,
 				2A25CB8B2447458D0068E249 /* DailyMealCountViewController.swift in Sources */,
 				2AC52EC9244E3968004F923C /* DailyMealCell.swift in Sources */,
-				2A7BAED52456EC0B00A7CE05 /* DetailCalulationViewController.swift in Sources */,
 				2A7061CC2445B81400C55D5A /* MembersViewController.swift in Sources */,
 				2A6798F924448D1800700604 /* MenuOption.swift in Sources */,
 				2A6798F72444897800700604 /* MenuOptionCell.swift in Sources */,
@@ -740,6 +739,7 @@
 				2A54A50F2448C4DB0044AD9A /* Member.swift in Sources */,
 				2A7061D824464F6F00C55D5A /* BazarCostViewController.swift in Sources */,
 				2A401EBD2450C617003F8544 /* BazarCostCell.swift in Sources */,
+				2A7BAEDA2457297A00A7CE05 /* DetailCalculationViewController.swift in Sources */,
 				2A7061D5244626EC00C55D5A /* AddBazarScheduleViewController.swift in Sources */,
 				2A6798F32444774000700604 /* MenuViewController.swift in Sources */,
 				2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */,

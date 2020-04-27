@@ -49,7 +49,7 @@ class MemberDetailTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
       
-        loadMemberDerails()
+        loadMemberDetails()
         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
                   self.member = member
               }
@@ -61,7 +61,7 @@ class MemberDetailTableViewController: UITableViewController {
     
     //MARK: - Handler
     
-    func loadMemberDerails(){
+    func loadMemberDetails(){
         
              nameLbl.text = memberDetails?.name
              phoneLbl.text = String(memberDetails!.phone)
@@ -96,6 +96,19 @@ class MemberDetailTableViewController: UITableViewController {
         
         navigationController?.pushViewController(editMemberVC, animated: true)
         
+    }
+    
+    
+    
+}
+extension MemberDetailTableViewController{
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.backgroundColor = Utilities.color
+        
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+        header.textLabel?.font = UIFont.systemFont(ofSize: 25.0)
     }
     
     

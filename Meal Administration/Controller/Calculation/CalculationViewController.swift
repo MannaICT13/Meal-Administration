@@ -87,6 +87,21 @@ extension CalculationViewController : UITableViewDataSource,UITableViewDelegate{
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailCalculationVC = storyboard?.instantiateViewController(identifier: "DetailCalculationViewController") as! DetailCalculationViewController
+        detailCalculationVC.userEmail = self.userEmail
+        detailCalculationVC.memberDeatils = member[indexPath.row]
+        
+        self.navigationController?.pushViewController(detailCalculationVC, animated: true)
+
+        
+        
+    }
+    
+    
+    
+    
     
     
     
