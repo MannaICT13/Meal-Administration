@@ -15,13 +15,14 @@ class CalculationCell: UITableViewCell {
     @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
+   
     
     
     var personImg : UIImageView = {
        
         let img = UIImageView()
         img.contentMode = .scaleAspectFit
-        img.image = UIImage(systemName: "person.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+        img.image = UIImage(systemName: "person.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor.white)
         img.layer.masksToBounds = true
         
         return img

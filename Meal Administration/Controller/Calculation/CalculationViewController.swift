@@ -49,6 +49,31 @@ extension CalculationViewController : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return member.count
     }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.backgroundColor = .clear
+        cell.layer.borderWidth = 2.0
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 15.0
+        
+        cell.layer.shadowOpacity = 0.23
+        cell.layer.shadowRadius = 8
+        cell.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        cell.layer.shadowColor = UIColor.white.cgColor
+           
+          
+        cell.contentView.backgroundColor = Utilities.color
+        
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -56,7 +81,7 @@ extension CalculationViewController : UITableViewDataSource,UITableViewDelegate{
         cell.nameLbl.text = member[indexPath.row].name
         cell.emailLbl.text = member[indexPath.row].email
         
-        return cell 
+        return cell
         
         
     }
