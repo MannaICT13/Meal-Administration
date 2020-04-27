@@ -584,6 +584,36 @@
             </objects>
             <point key="canvasLocation" x="5733.3333333333339" y="1267.6339285714284"/>
         </scene>
+        <!--Calculation View Controller-->
+        <scene sceneID="FuY-m1-uOK">
+            <objects>
+                <viewController storyboardIdentifier="CalculationViewController" id="2Jb-S9-G0u" customClass="CalculationViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Mk-Zz-0Ic">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="DPL-js-GB7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXg-8V-siw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5759" y="2052"/>
+        </scene>
+        <!--Detail Calulation View Controller-->
+        <scene sceneID="Mjp-Mo-Bxp">
+            <objects>
+                <viewController storyboardIdentifier="DetailCalulationViewController" id="Jb3-jm-8yy" customClass="DetailCalulationViewController" customModule="Meal_Administration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uNb-BP-SWK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Qn3-UH-6Ov"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZ3-JK-Q3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6609" y="2052"/>
+        </scene>
         <!--Detail Daily Meal Count View Controller-->
         <scene sceneID="1Bh-ba-c5F">
             <objects>

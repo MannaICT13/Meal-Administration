@@ -17,14 +17,15 @@ class MembersViewController: UIViewController {
     
     var member =  [Member]()
     var userEmail = String()
-   
     
+ 
     
     //MARK: - init
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
 
         ActivityIndicator.showActivityIndicator(uiView: view, targetVC: self)
       
@@ -39,7 +40,8 @@ class MembersViewController: UIViewController {
               
             
                 }
-    
+        
+      
         
     }
     
@@ -60,6 +62,7 @@ class MembersViewController: UIViewController {
     func addMembersNavBarBtn(){
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Members", style: .plain, target: self, action: #selector(addNavBtnAction(_ :)))
+       
         
         
     }
@@ -70,7 +73,11 @@ class MembersViewController: UIViewController {
      
          addMembersVC.userEmail = self.userEmail
        
+        //let sum = MemberDbHelper.defaults.integer(forKey: "sum")
+       // print("Sum = \(sum)")
+       
        self.navigationController?.pushViewController(addMembersVC, animated: true)
+        
         
         
     }
@@ -109,7 +116,9 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
         cell.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         cell.layer.shadowColor = UIColor.white.cgColor
         
-        cell.contentView.backgroundColor = Utilities.color
+       
+       cell.contentView.backgroundColor = Utilities.color
+     //   cell.contentView.superview?.backgroundColor = UIColor.cyan
        // cell.contentView.layer.cornerRadius = 8
         
         //cell.contentView.layer.masksToBounds = true
@@ -129,6 +138,17 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
         cell.memberEmailLbl.text = member[indexPath.row].email
         
         
+      /*  var sum = 0
+        
+        for _ in String(member.count) {
+            
+            sum += (member[indexPath.row].net + member[indexPath.row].current)
+        }
+        
+        print("sum\(sum)")
+ */
+        
+        
         return cell
     }
     
@@ -138,6 +158,7 @@ extension MembersViewController : UITableViewDataSource,UITableViewDelegate{
         
          memberDetailVC.memberDetails = member[indexPath.row]
          memberDetailVC.userEmail = userEmail
+        
         
       
         self.navigationController?.pushViewController(memberDetailVC, animated: true)

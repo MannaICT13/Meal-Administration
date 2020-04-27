@@ -31,6 +31,8 @@ class BazarCostViewController: UIViewController {
             self.member = member
             UIView.transition(with: self.tableView, duration: 1.0, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
             
+            ActivityIndicator.hideActivityIndicator(uiView: self.view)
+            
         }
         
     }

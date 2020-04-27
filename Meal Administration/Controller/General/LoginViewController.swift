@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
     //to get Admin user email
     
     var userEmail = String()
+    static let userEmailDefaults = UserDefaults.standard
     
     
     
@@ -142,6 +143,7 @@ extension LoginViewController{
                     self.navigationController?.pushViewController(containerVC, animated: true)
                  
                     containerVC.userEmail = (result?.user.email)!
+                
                     ActivityIndicator.hideActivityIndicator(uiView: self.view)
                     
                     

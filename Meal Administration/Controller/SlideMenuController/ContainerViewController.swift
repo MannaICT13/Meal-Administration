@@ -94,6 +94,8 @@ class ContainerViewController: UIViewController {
             
         case .calculation:
             print("Calculation")
+            didSelectCalculation()
+            
             
         case .logout:
             print("Logout")
@@ -221,7 +223,12 @@ extension ContainerViewController {
         
     }
     
-    
+    func didSelectCalculation(){
+        
+        let calculationVC = storyboard?.instantiateViewController(identifier: "CalculationViewController") as! CalculationViewController
+        calculationVC.userEmail = self.userEmail
+        self.navigationController?.pushViewController(calculationVC, animated: true)
+    }
     
     
     

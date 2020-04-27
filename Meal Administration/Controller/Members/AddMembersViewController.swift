@@ -134,6 +134,7 @@ class AddMembersViewController: UIViewController {
         if isUpdate{
             
             MemberDbHelper.instanceMemberDb.updateMember(userEmail:userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others,id:uid)
+            
           
             self.navigationController?.popViewController(animated: true)
           

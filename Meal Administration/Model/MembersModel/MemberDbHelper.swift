@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseFirestore
 import Firebase
-
+import UIKit
 class MemberDbHelper {
     
     
@@ -17,14 +17,21 @@ class MemberDbHelper {
     static let instanceMemberDb = MemberDbHelper()
     
     var db = Firestore.firestore()
+    static let  defaults = UserDefaults.standard
+   
+    
+    
    
     
     
     //MARK: - init
-    
+   
     
 
     //MARK: - Handler
+    
+
+    
     
     
     // write member data to firebase firestore
@@ -82,14 +89,40 @@ class MemberDbHelper {
                 
             }else{
                 
+                var sum = 0
+                var rent = 0
+                var net = 0
+                var gass = 0
+                var khala = 0
+                var current = 0
+                var water =  0
+                var others = 0
+                
+               
                 
                 for result in snapshort!.documents{
                     
-                    member.append(Member(name: result.data()["name"]! as! String, phone: result.data()["phone"]! as! Int, address: result.data()["address"]! as! String, email: result.data()["email"]! as! String, rent: result.data()["rent"]! as! Int , net: result.data()["net"]! as! Int, gass: result.data()["gass"]! as! Int, khala: result.data()["khala"]! as! Int, current: result.data()["khala"]! as! Int, water: result.data()["water"]! as! Int, others: result.data()["others"]! as! Int, id: result.documentID))
+                    member.append(Member(name: result.data()["name"]! as! String, phone: result.data()["phone"]! as! Int, address: result.data()["address"]! as! String, email: result.data()["email"]! as! String, rent: result.data()["rent"]! as! Int , net: result.data()["net"]! as! Int, gass: result.data()["gass"]! as! Int, khala: result.data()["khala"]! as! Int, current: result.data()["current"]! as! Int, water: result.data()["water"]! as! Int, others: result.data()["others"]! as! Int, id: result.documentID))
+                   
                     
-                    //print(result.data())
+                              
+                    rent += result.data()["rent"] as! Int
+                    net += result.data()["net"] as! Int
+                    gass += result.data()["gass"] as! Int
+                    khala += result.data()["khala"] as! Int
+                    current += result.data()["current"] as! Int
+                    water += result.data()["water"] as! Int
+                    others += result.data()["others"] as! Int
+                   
+                  
+                    
+
                 }
                 
+                sum = (rent+net+gass+khala+current+water+others)
+                MemberDbHelper.self.defaults.set(sum, forKey: "sum")
+                print(sum)
+                               
                 
             }
                 

@@ -8,13 +8,14 @@
 
 import UIKit
 
+private let reuseIdentifier = "reuseIdentifier"
 class HomeViewController: UIViewController {
 
     //MARK: - Properties
     
     var delegate : HomeControllerDelegate!
     
-    
+   
     //MARK: - init
     
     override func viewDidLoad() {
@@ -22,11 +23,9 @@ class HomeViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.white
         navBarConfiguration()
-
-       // self.navigationItem.hidesBackButton = true
-        
-    }
+     
     
+    }
     //MARK: - Handler
     
     @objc func handleToggle(_ sender: UIBarButtonItem){
@@ -59,10 +58,4 @@ class HomeViewController: UIViewController {
 
    
 
-}
-extension HomeViewController{
-    
-
-    
-    
 }
