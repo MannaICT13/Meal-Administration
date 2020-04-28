@@ -104,7 +104,8 @@ class MemberDetailTableViewController: UITableViewController {
 extension MemberDetailTableViewController{
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.backgroundColor = Utilities.color
+        
+        view.tintColor = Utilities.color
         
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white

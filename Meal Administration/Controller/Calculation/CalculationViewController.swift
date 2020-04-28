@@ -31,6 +31,7 @@ class CalculationViewController: UIViewController {
             UIView.transition(with: self.tableView, duration: 1.0, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
             ActivityIndicator.hideActivityIndicator(uiView: self.view)
         }
+    
 
   
     }
@@ -80,6 +81,7 @@ extension CalculationViewController : UITableViewDataSource,UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CalculationCell
         cell.nameLbl.text = member[indexPath.row].name
         cell.emailLbl.text = member[indexPath.row].email
+      
         
         return cell
         
@@ -91,11 +93,13 @@ extension CalculationViewController : UITableViewDataSource,UITableViewDelegate{
         
         let detailCalculationVC = storyboard?.instantiateViewController(identifier: "DetailCalculationViewController") as! DetailCalculationViewController
         detailCalculationVC.userEmail = self.userEmail
+        detailCalculationVC.email = member[indexPath.row].email
         detailCalculationVC.memberDeatils = member[indexPath.row]
+
         
         self.navigationController?.pushViewController(detailCalculationVC, animated: true)
 
-        
+       
         
     }
     

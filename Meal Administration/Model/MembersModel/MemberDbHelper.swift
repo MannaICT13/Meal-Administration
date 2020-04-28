@@ -18,6 +18,8 @@ class MemberDbHelper {
     
     var db = Firestore.firestore()
     static let  defaults = UserDefaults.standard
+    
+  
    
     
     
@@ -97,6 +99,7 @@ class MemberDbHelper {
                 var current = 0
                 var water =  0
                 var others = 0
+                var arrayOfEmail = [String]()
                 
                
                 
@@ -113,6 +116,9 @@ class MemberDbHelper {
                     current += result.data()["current"] as! Int
                     water += result.data()["water"] as! Int
                     others += result.data()["others"] as! Int
+                    arrayOfEmail.append(result.data()["email"] as! String)
+                    
+                    
                    
                   
                     
@@ -121,6 +127,7 @@ class MemberDbHelper {
                 
                 sum = (rent+net+gass+khala+current+water+others)
                 MemberDbHelper.self.defaults.set(sum, forKey: "sum")
+                MemberDbHelper.self.defaults.set(arrayOfEmail,forKey: "array")
                 print(sum)
                                
                 

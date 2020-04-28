@@ -16,6 +16,10 @@ class DailyMealDbHelper {
     
     let db = Firestore.firestore()
     
+    static let defaults = UserDefaults.standard
+    
+    
+    
     func writeMeal(userEmail:String,name:String,email:String,meal:Double,date : String){
         
         
@@ -63,11 +67,16 @@ class DailyMealDbHelper {
                 
             }else{
                 
+                var mealNumber = 0.0
+                
                 for results in snapshot!.documents{
                     
                     meal.append(Meal(name: results.data()["name"] as! String, email: results.data()["email"] as! String, meal: results.data()["meal"] as! Double, date: results.data()["date"] as! String, id: results.documentID))
+                    
+                    mealNumber += results.data()["meal"] as! Double
                 }
                 
+                DailyMealDbHelper.defaults.set(mealNumber, forKey: "mealNumber")
                 
                 
                 

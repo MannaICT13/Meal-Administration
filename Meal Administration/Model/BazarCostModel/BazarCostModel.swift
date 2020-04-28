@@ -16,6 +16,8 @@ class BazarCostModel {
     static let bazarCostInstance = BazarCostModel()
     
     let db = Firestore.firestore()
+    static let defaults = UserDefaults.standard
+ 
     
     
     
@@ -60,13 +62,18 @@ class BazarCostModel {
                 print(err.localizedDescription)
             }else{
                 
+                var sum = 0.0
                 for results in snapshot!.documents{
                     
                     cost.append(Cost(name: results.data()["name"] as! String, email: results.data()["email"] as! String, cost: (results.data()["cost"] as! Double), date: results.data()["date"] as! String,id:results.documentID))
                     
+                    sum += results.data()["cost"] as! Double
                     
                     
                 }
+                print("Bazar cost... \(sum)")
+                BazarCostModel.defaults.set(sum, forKey: "bazarCost")
+                
                 
                 
                 
@@ -109,8 +116,8 @@ class BazarCostModel {
         }
     }
     
-    
-    
+ 
+   
     
     
     

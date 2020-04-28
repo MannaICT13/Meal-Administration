@@ -24,8 +24,8 @@ class DetailCalculationViewController: UITableViewController {
     @IBOutlet weak var totalCostLbl: UILabel!
     
     
-    @IBOutlet weak var yourBazarCost: UILabel!
-    @IBOutlet weak var totalBazarCost: UILabel!
+    @IBOutlet weak var yourBazarCostLbl: UILabel!
+    @IBOutlet weak var totalBazarCostLbl: UILabel!
     
     @IBOutlet weak var yourMealNumberLbl: UILabel!
     @IBOutlet weak var totalMealNumberLbl: UILabel!
@@ -37,8 +37,18 @@ class DetailCalculationViewController: UITableViewController {
     
     
     var userEmail = String()
+    var email = String()
+    
     var memberDeatils : Member?
+    
     var member = [Member]()
+    var meal = [Meal]()
+    var cost = [Cost]()
+    
+    
+    var costDetails : Cost?
+    
+   
     
     
     
@@ -46,26 +56,59 @@ class DetailCalculationViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ActivityIndicator.showActivityIndicator(uiView: self.view, targetVC: self)
       
         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
             self.member = member
             self.tableView.reloadData()
+            
         }
         
-
+        BazarCostModel.bazarCostInstance.readCost(userEmail: userEmail, email: email) { (cost) in
+            self.cost = cost
+            self.tableView.reloadData()
+            
+        }
+        
+        DailyMealDbHelper.dailyMealDbInstance.readMeal(userEmail: userEmail, email: email) { (meal) in
+            self.meal = meal
+            self.tableView.reloadData()
+             ActivityIndicator.hideActivityIndicator(uiView: self.view)
+        }
+        
         yourCostFunc()
         totalCostFunc()
+       
+        yourBazarCostFunc()
+        yourMealNumberFunc()
+        
+       
+        
            }
     
     override func viewWillAppear(_ animated: Bool) {
         memberDetails()
+        
         MemberDbHelper.instanceMemberDb.readMember(userEmail: userEmail) { (member) in
                   self.member = member
                   self.tableView.reloadData()
               }
-        
-          yourCostFunc()
-        totalCostFunc()
+         BazarCostModel.bazarCostInstance.readCost(userEmail: userEmail, email: email) { (cost) in
+                   self.cost = cost
+                   self.tableView.reloadData()
+               }
+         
+               DailyMealDbHelper.dailyMealDbInstance.readMeal(userEmail: userEmail, email: email) { (meal) in
+                   self.meal = meal
+                   self.tableView.reloadData()
+               }
+               
+         // yourCostFunc()
+         // totalCostFunc()
+      
+         yourBazarCostFunc()
+      //  totalBazarCostFunc()
         
     }
     
@@ -96,6 +139,7 @@ class DetailCalculationViewController: UITableViewController {
         
         
     }
+    
     func totalCostFunc(){
         
         let totalCost = MemberDbHelper.defaults.integer(forKey: "sum")
@@ -105,6 +149,29 @@ class DetailCalculationViewController: UITableViewController {
         
         
     }
+
+    
+    func yourBazarCostFunc(){
+        
+        let yourBazarCost = BazarCostModel.defaults.double(forKey: "bazarCost")
+        self.yourBazarCostLbl.text = "\(yourBazarCost)"
+        self.tableView.reloadData()
+        
+    }
+    
+    func yourMealNumberFunc(){
+        
+        let yourMeal = DailyMealDbHelper.defaults.double(forKey: "mealNumber")
+        self.yourMealNumberLbl.text = "\(yourMeal)"
+        self.tableView.reloadData()
+        
+        
+        
+        
+        
+    }
+    
+   
    
     
     
@@ -116,6 +183,7 @@ extension DetailCalculationViewController{
     
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
         view.tintColor = Utilities.color
         
         let header = view as! UITableViewHeaderFooterView
