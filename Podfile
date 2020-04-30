@@ -11,7 +11,8 @@ target 'Meal Administration' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
-
+  pod 'IQKeyboardManagerSwift'
+ 
   target 'Meal AdministrationTests' do
     inherit! :search_paths
     # Pods for testing
