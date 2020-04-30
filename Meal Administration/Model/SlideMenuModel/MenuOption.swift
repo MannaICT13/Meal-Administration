@@ -33,10 +33,11 @@ enum MenuOption : Int,CustomStringConvertible {
         case .calculation:
             return "Calculation"
         case .logout:
-            return "Logout"
+           return "Calculation"
             
         }
     }
+    
     var iconDescription : UIImage{
     
         switch self{

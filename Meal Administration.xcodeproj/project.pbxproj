@@ -21,6 +21,8 @@
 		2A547813244F764E00A85FCE /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A547812244F764E00A85FCE /* Meal.swift */; };
 		2A54A50D2448C4670044AD9A /* MemberDbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A54A50C2448C4670044AD9A /* MemberDbHelper.swift */; };
 		2A54A50F2448C4DB0044AD9A /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A54A50E2448C4DB0044AD9A /* Member.swift */; };
+		2A591A8F245B31DA004FC9E5 /* HomeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A591A8E245B31DA004FC9E5 /* HomeOptionCell.swift */; };
+		2A591A91245B362D004FC9E5 /* HomeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A591A90245B362D004FC9E5 /* HomeOption.swift */; };
 		2A6798F12444771000700604 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F02444771000700604 /* ContainerViewController.swift */; };
 		2A6798F32444774000700604 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F22444774000700604 /* MenuViewController.swift */; };
 		2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6798F42444816D00700604 /* ToggleProtocal.swift */; };
@@ -94,6 +96,8 @@
 		2A54781C244F860B00A85FCE /* DetailDailyMealCountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDailyMealCountViewController.swift; sourceTree = "<group>"; };
 		2A54A50C2448C4670044AD9A /* MemberDbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDbHelper.swift; sourceTree = "<group>"; };
 		2A54A50E2448C4DB0044AD9A /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		2A591A8E245B31DA004FC9E5 /* HomeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOptionCell.swift; sourceTree = "<group>"; };
+		2A591A90245B362D004FC9E5 /* HomeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOption.swift; sourceTree = "<group>"; };
 		2A6798F02444771000700604 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2A6798F22444774000700604 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2A6798F42444816D00700604 /* ToggleProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleProtocal.swift; sourceTree = "<group>"; };
@@ -270,6 +274,7 @@
 			children = (
 				2A6798F42444816D00700604 /* ToggleProtocal.swift */,
 				2A6798F824448D1800700604 /* MenuOption.swift */,
+				2A591A90245B362D004FC9E5 /* HomeOption.swift */,
 			);
 			path = SlideMenuModel;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				2A6798F62444897800700604 /* MenuOptionCell.swift */,
+				2A591A8E245B31DA004FC9E5 /* HomeOptionCell.swift */,
 			);
 			path = SlideMenuView;
 			sourceTree = "<group>";
@@ -725,6 +731,7 @@
 				2A6798F72444897800700604 /* MenuOptionCell.swift in Sources */,
 				2A26BEEA244A1DBE002D42C5 /* MembersCell.swift in Sources */,
 				2A2D67912453434700F10C9B /* ActivityIndicator.swift in Sources */,
+				2A591A8F245B31DA004FC9E5 /* HomeOptionCell.swift in Sources */,
 				2A7061D02445B8BB00C55D5A /* MemberDetailTableViewController.swift in Sources */,
 				2A7BAED8245710C000A7CE05 /* CalculationCell.swift in Sources */,
 				2AB1E8E1243F131200A07BBA /* LoginViewController.swift in Sources */,
@@ -740,6 +747,7 @@
 				2A7061D824464F6F00C55D5A /* BazarCostViewController.swift in Sources */,
 				2A401EBD2450C617003F8544 /* BazarCostCell.swift in Sources */,
 				2A7BAEDA2457297A00A7CE05 /* DetailCalculationViewController.swift in Sources */,
+				2A591A91245B362D004FC9E5 /* HomeOption.swift in Sources */,
 				2A7061D5244626EC00C55D5A /* AddBazarScheduleViewController.swift in Sources */,
 				2A6798F32444774000700604 /* MenuViewController.swift in Sources */,
 				2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */,
