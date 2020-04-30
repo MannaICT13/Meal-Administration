@@ -15,7 +15,9 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var loginBtnOutlet: UIButton!
     @IBOutlet weak var registerBtnOutlet: UIButton!
     
+    @IBOutlet weak var logoImg: UIImageView!
     
+    @IBOutlet weak var titleLbl: UILabel!
     //MARK: - init
     
     override func viewDidLoad() {
@@ -45,6 +47,15 @@ class FirstViewController: UIViewController {
             // Utilities.assignBackgroundImage(img: "background.png", view: view)
         Utilities.roundBtnFill(button: loginBtnOutlet, color: Utilities.color)
              Utilities.roundBtn(button: registerBtnOutlet)
+      
+        logoImg.image = #imageLiteral(resourceName: "logo2")
+        logoImg.contentMode = .scaleAspectFit
+        logoImg.clipsToBounds = false
+        
+        
+        titleLbl.textColor = Utilities.color
+        
+        
           
         
         

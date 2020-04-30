@@ -27,6 +27,7 @@ class ContainerViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.hidesBackButton = true
+        self.title = "Meal Administration"
         homeConfiguration()
         
     }
