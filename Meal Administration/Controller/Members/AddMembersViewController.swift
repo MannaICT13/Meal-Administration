@@ -42,6 +42,7 @@ class AddMembersViewController: UIViewController {
     @IBOutlet weak var othersImg: UIImageView!
     
 
+    var validation = TextFieldValidation()
     
     var userEmail = String()
     
@@ -131,7 +132,81 @@ class AddMembersViewController: UIViewController {
          guard let water  =  Int(waterTextField.text!) else { return}
          guard let others  =  Int(othersTextField.text!) else { return}
         
-        if isUpdate{
+        
+        
+        let isNameValidate = self.validation.nameValidation(name)
+     
+        if isNameValidate == false{
+          print("Invalid Name!")
+            return
+        }
+        
+        
+        let isPhoneValidate = self.validation.phoneValidation(String(phone))
+        if isPhoneValidate == false{
+            print("Invalide Phone Number!")
+             return
+            
+        }
+        
+        let isAddressValidate = self.validation.addressValidation(address)
+        
+        if isAddressValidate {
+            print("Invalide Address!")
+             return
+            
+        }
+          let isEmailValidate = self.validation.emailValidation(email)
+
+        if isEmailValidate == false{
+            print("Invalide Email!")
+             return
+            
+        }
+          let isRentValidate = self.validation.costValidation(String(phone))
+        if isRentValidate == false{
+            print("Invalide Rent Cost!")
+             return        }
+        
+          let isNetValidate = self.validation.costValidation(String(net))
+        if isNetValidate == false{
+                   print("Invalide Net Cost!")
+             return      }
+        
+        
+          let isGassValidate = self.validation.costValidation(String(gass))
+        if isGassValidate == false{
+              print("Invalide Gass Amount!")
+             return        }
+        
+        
+          let isKhalaValidate = self.validation.costValidation(String(khala))
+        if isKhalaValidate == false{
+              print("Invalide Khala Cost!")
+             return        }
+        
+          let isCurrentValidate = self.validation.costValidation(String(current))
+        
+        if isCurrentValidate == false{
+              print("Invalide Current Cost!")
+             return        }
+        
+        
+          let isWaterValidate = self.validation.costValidation(String(water))
+        if isWaterValidate == false{
+              print("Invalide Water Cost!")
+             return        }
+        
+          let isOthersValidate = self.validation.costValidation(String(others))
+      
+        if isOthersValidate == false{
+              print("Invalide Others Cost!")
+             return        }
+        
+        
+        if (isNameValidate == true && isAddressValidate == true && isPhoneValidate == true && isEmailValidate == true && isRentValidate == true && isNetValidate == true && isGassValidate == true && isKhalaValidate == true && isCurrentValidate == true && isWaterValidate == true && isOthersValidate == true){
+            
+       if isUpdate{
             
             MemberDbHelper.instanceMemberDb.updateMember(userEmail:userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others,id:uid)
             
@@ -146,6 +221,8 @@ class AddMembersViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         
         }
+            
+  }
         
     }
     

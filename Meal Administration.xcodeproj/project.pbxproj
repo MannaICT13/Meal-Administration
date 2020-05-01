@@ -38,6 +38,7 @@
 		2A7BAED32456EBEC00A7CE05 /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BAED22456EBEC00A7CE05 /* CalculationViewController.swift */; };
 		2A7BAED8245710C000A7CE05 /* CalculationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BAED7245710C000A7CE05 /* CalculationCell.swift */; };
 		2A7BAEDA2457297A00A7CE05 /* DetailCalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BAED92457297A00A7CE05 /* DetailCalculationViewController.swift */; };
+		2A89CEE3245C8351005B4059 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89CEE2245C8351005B4059 /* TextFieldValidation.swift */; };
 		2AAC2A832443A55900FD9AEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC2A822443A55900FD9AEB /* HomeViewController.swift */; };
 		2AB1E8AF243F121A00A07BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */; };
 		2AB1E8B1243F121A00A07BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1E8B0243F121A00A07BBA /* SceneDelegate.swift */; };
@@ -113,6 +114,7 @@
 		2A7BAED22456EBEC00A7CE05 /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
 		2A7BAED7245710C000A7CE05 /* CalculationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationCell.swift; sourceTree = "<group>"; };
 		2A7BAED92457297A00A7CE05 /* DetailCalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalculationViewController.swift; sourceTree = "<group>"; };
+		2A89CEE2245C8351005B4059 /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		2AAC2A822443A55900FD9AEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AB1E8AB243F121A00A07BBA /* Meal Administration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Administration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1E8AE243F121A00A07BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				2AB1E8E6243F542500A07BBA /* Utilities.swift */,
 				2A2D67902453434700F10C9B /* ActivityIndicator.swift */,
+				2A89CEE2245C8351005B4059 /* TextFieldValidation.swift */,
 			);
 			path = UtilitiesModel;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				2A7BAEDA2457297A00A7CE05 /* DetailCalculationViewController.swift in Sources */,
 				2A591A91245B362D004FC9E5 /* HomeOption.swift in Sources */,
 				2A7061D5244626EC00C55D5A /* AddBazarScheduleViewController.swift in Sources */,
+				2A89CEE3245C8351005B4059 /* TextFieldValidation.swift in Sources */,
 				2A6798F32444774000700604 /* MenuViewController.swift in Sources */,
 				2A6798F52444816D00700604 /* ToggleProtocal.swift in Sources */,
 				2A401EC62450D498003F8544 /* DetailCostViewController.swift in Sources */,

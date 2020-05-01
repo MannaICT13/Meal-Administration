@@ -30,6 +30,8 @@ class AddBazarCostViewController: UIViewController {
     @IBOutlet weak var saveBtnOutlet: UIButton!
     
     
+    var validation = TextFieldValidation()
+    
     var datePicker : UIDatePicker!
     var pickerView : UIPickerView!
     
@@ -63,14 +65,20 @@ class AddBazarCostViewController: UIViewController {
     }
    
     @IBAction func saveBtnAction(_ sender: Any) {
+        
         guard let name = nameTextField.text else{return}
         guard let email = emailTextField.text else{return}
         guard let cost = Double(bazarCostTextField.text!) else{return}
         guard let date = bazarDateTextField.text else{return}
         
+        if validation.costValidation(String(cost)) == false{
+            
+            print("Invalide Bazar Cost!")
+        }
+        
         BazarCostModel.bazarCostInstance.writeCost(userEmail: userEmail, name: name, email: email, cost: cost, date: date)
         self.navigationController?.popViewController(animated: true)
-        
+            
     }
     
     
