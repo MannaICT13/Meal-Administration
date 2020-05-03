@@ -133,78 +133,81 @@ class AddMembersViewController: UIViewController {
          guard let others  =  Int(othersTextField.text!) else { return}
         
         
-        
-        let isNameValidate = self.validation.nameValidation(name)
+    
      
-        if isNameValidate == false{
+        if self.validation.nameValidation(nameTextField.text!) == false {
           print("Invalid Name!")
+            self.showAlert(message: "Invalid Name!")
             return
         }
-        
-        
-        let isPhoneValidate = self.validation.phoneValidation(String(phone))
-        if isPhoneValidate == false{
+       else if self.validation.phoneValidation(phoneTextField.text!) == false{
             print("Invalide Phone Number!")
+            self.showAlert(message: "Invalide Phone Number!")
              return
             
         }
-        
-        let isAddressValidate = self.validation.addressValidation(address)
-        
-        if isAddressValidate {
-            print("Invalide Address!")
-             return
-            
-        }
-          let isEmailValidate = self.validation.emailValidation(email)
 
-        if isEmailValidate == false{
-            print("Invalide Email!")
+       else if self.validation.addressValidation(addressTextField.text!) == false {
+            print("Invalide Address!")
+            self.showAlert(message: "Invalide Address!")
              return
             
         }
-          let isRentValidate = self.validation.costValidation(String(phone))
-        if isRentValidate == false{
+  
+        else if self.validation.emailValidation(emailTextField.text!) == false{
+            print("Invalide Email!")
+            self.showAlert(message: "Invalide Email!")
+             return
+            
+        }
+  
+       else if  self.validation.costValidation(rentTextField.text!) == false{
             print("Invalide Rent Cost!")
-             return        }
-        
-          let isNetValidate = self.validation.costValidation(String(net))
-        if isNetValidate == false{
+            self.showAlert(message: "Invalide Rent Cost!")
+             return
+            
+        }
+
+        else if self.validation.costValidation(netTextField.text!) == false{
                    print("Invalide Net Cost!")
-             return      }
+            self.showAlert(message: "Invalide Net Cost!")
+             return
+            
+        }
         
-        
-          let isGassValidate = self.validation.costValidation(String(gass))
-        if isGassValidate == false{
+        else if self.validation.costValidation(gassTextField.text!) == false{
               print("Invalide Gass Amount!")
-             return        }
+            self.showAlert(message: "Invalide Gass Amount!")
+             return
+            
+        }
         
-        
-          let isKhalaValidate = self.validation.costValidation(String(khala))
-        if isKhalaValidate == false{
+        else if self.validation.costValidation(khalaTextField.text!) == false{
               print("Invalide Khala Cost!")
+            self.showAlert(message: "Invalide Khala Cost!")
              return        }
+  
         
-          let isCurrentValidate = self.validation.costValidation(String(current))
-        
-        if isCurrentValidate == false{
+      else  if self.validation.costValidation(currentTextField.text!) == false{
               print("Invalide Current Cost!")
+            self.showAlert(message: "Invalide Current Cost!")
              return        }
         
-        
-          let isWaterValidate = self.validation.costValidation(String(water))
-        if isWaterValidate == false{
+       
+       else if self.validation.costValidation(waterTextField.text!) == false{
               print("Invalide Water Cost!")
+            self.showAlert(message: "Invalide Water Cost!")
              return        }
         
-          let isOthersValidate = self.validation.costValidation(String(others))
-      
-        if isOthersValidate == false{
+    
+        else if self.validation.costValidation(othersTextField.text!) == false{
               print("Invalide Others Cost!")
-             return        }
+            self.showAlert(message: "Invalide Others Cost!")
+             return
+            
+        }
         
-        
-        if (isNameValidate == true && isAddressValidate == true && isPhoneValidate == true && isEmailValidate == true && isRentValidate == true && isNetValidate == true && isGassValidate == true && isKhalaValidate == true && isCurrentValidate == true && isWaterValidate == true && isOthersValidate == true){
+     else{
             
        if isUpdate{
             
@@ -267,4 +270,22 @@ class AddMembersViewController: UIViewController {
     
 
 
+}
+
+extension AddMembersViewController{
+    
+    
+    func showAlert(message:String){
+        
+        
+        let alert = UIAlertController(title: "Error Message!", message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
+    }
+    
+    
 }

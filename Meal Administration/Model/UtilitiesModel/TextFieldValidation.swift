@@ -44,7 +44,7 @@ class TextFieldValidation{
     
     public func costValidation(_ cost: String ) ->Bool{
         
-        let costRegEx = "^[0-9]\\d{6}$"
+        let costRegEx = "^[1-9][0-9]*$" //"^[0-9]\\d{6}$" //^[1-9]\d*$
         let costTrim = cost.trimmingCharacters(in: .whitespaces)
         let validateCost = NSPredicate(format: "SELF MATCHES %@", costRegEx)
         let isValidateCost = validateCost.evaluate(with: costTrim)
