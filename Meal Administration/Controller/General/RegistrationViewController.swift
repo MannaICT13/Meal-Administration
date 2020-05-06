@@ -33,7 +33,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var alreadyRegisterBtnOutlet: UIButton!
     
     let db = Firestore.firestore()
-    
+    var validation = TextFieldValidation()
     //MARK: - init
     
     override func viewDidLoad() {
@@ -84,8 +84,9 @@ class RegistrationViewController: UIViewController {
         guard  let password = passwordTextField.text else {return}
         guard let rePassword = rePasswordTextField.text else {return}
         guard let messName = messNameTextField.text else{return}
-        
-        registration(messName: messName, email: email, password: password, rePassword: rePassword)
+      
+        self.registration(messName: messName, email: email, password: password, rePassword: rePassword)
+            
         
     }
     
@@ -126,9 +127,11 @@ extension RegistrationViewController {
                 if let err = error{
                     
                     print(err.localizedDescription)
+                    self.alertMessage(message: err.localizedDescription)
                 }else{
                     
-                    print("Successfully send verification link.....")
+                   // print("Successfully send verification link.....")
+                    self.alertMessage(message: "Successfully send verification link.")
                 }
                 
             })
@@ -146,7 +149,8 @@ extension RegistrationViewController {
       
         
         if password != rePassword{
-            print("Password Not Match")
+           // print("Password Not Match")
+            self.alertMessage(message: "Password Not Match!")
         }
         else{
             
@@ -155,6 +159,8 @@ extension RegistrationViewController {
                 if let err = error{
                     
                     print(err.localizedDescription)
+                    self.alertMessage(message: "Error in creating user!")
+                    
                     return
                 }else{
                     
@@ -172,6 +178,7 @@ extension RegistrationViewController {
                         if let err = error{
                             
                             print(err.localizedDescription)
+                            self.alertMessage(message: "Error in creating user!")
                             return
                         }
                         
@@ -195,6 +202,23 @@ extension RegistrationViewController {
     
     
     
+    
+    
+}
+extension RegistrationViewController{
+    
+      func alertMessage(message:String){
+          
+          let alertController = UIAlertController(title: "Error Message!", message: message, preferredStyle: .alert)
+          let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+          
+          alertController.addAction(ok)
+          self.present(alertController, animated: true, completion: nil)
+          
+          
+          
+      }
+      
     
     
 }

@@ -33,7 +33,7 @@ enum MenuOption : Int,CustomStringConvertible {
         case .calculation:
             return "Calculation"
         case .logout:
-           return "Calculation"
+           return "Logout"
             
         }
     }

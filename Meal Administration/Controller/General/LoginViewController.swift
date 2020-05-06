@@ -127,14 +127,16 @@ extension LoginViewController{
             
             if let err = error{
                 
-                print(err.localizedDescription)
+               // print(err.localizedDescription)
                 ActivityIndicator.hideActivityIndicator(uiView: self.view)
+                self.alertMessage(message: err.localizedDescription)
                 
             }else{
                 
                 if result != nil && !self.authUser!.isEmailVerified{
                     
-                    print("Already send a verification link...")
+                   // print("Already send a verification link...")
+                    self.alertMessage(message: "Already send a verification link.")
                     
                     
                 }else{
@@ -171,11 +173,13 @@ extension LoginViewController{
           
             if let err = error{
                 
-                print(err.localizedDescription)
+                //print(err.localizedDescription)
+                self.alertMessage(message: err.localizedDescription)
                 
             }else{
                 
-                print("Successfully send a link to your email...")
+               // print("Successfully send a link to your email...")
+                self.alertMessage(message: "Successfully send a link to your email.")
             }
             
         }
@@ -183,6 +187,29 @@ extension LoginViewController{
         
         
     }
+    
+    
+    
+    
+    
+    
+    
+}
+extension LoginViewController{
+    
+    
+    func alertMessage(message:String){
+        
+        let alertController = UIAlertController(title: "Error Message!", message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+        
+    }
+    
     
     
     

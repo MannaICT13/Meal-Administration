@@ -238,25 +238,48 @@ extension ContainerViewController {
     
     func didSeletLogOut(){
     
+       
+        let alercontroller = UIAlertController(title: "Logout!!", message: "You want to logout?", preferredStyle: .actionSheet)
         
-           let firebaseAuth = Auth.auth()
-        do {
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alercontroller.addAction(cancel)
+        
+        let logout = UIAlertAction(title: "Logout", style: .destructive) { (action) in
             
-          try firebaseAuth.signOut()
-            
-           navigationController?.popToRootViewController(animated: false)
-            
-        } catch let signOutError as NSError {
-            
-          print ("Error signing out: %@", signOutError)
-            
+            self.logout()
         }
-          
+        alercontroller.addAction(logout)
+    
+        self.present(alercontroller, animated: true, completion: nil)
+        
+        
+      
         
        
     
            
        }
+    
+    
+    func logout(){
+        
+             let firebaseAuth = Auth.auth()
+           do {
+               
+             try firebaseAuth.signOut()
+               
+              navigationController?.popToRootViewController(animated: false)
+               
+           } catch let signOutError as NSError {
+               
+             print ("Error signing out: %@", signOutError)
+               
+           }
+             
+        
+    }
+    
+    
     
     
     
