@@ -64,7 +64,7 @@ class MemberDetailTableViewController: UITableViewController {
     func loadMemberDetails(){
         
              nameLbl.text = memberDetails?.name
-             phoneLbl.text = String(memberDetails!.phone)
+             phoneLbl.text = memberDetails?.phone
              addressLbl.text = memberDetails?.address
              emailLbl.text = memberDetails?.email
              rentLbl.text = String(memberDetails!.rent)

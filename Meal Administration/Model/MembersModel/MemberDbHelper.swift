@@ -37,7 +37,7 @@ class MemberDbHelper {
     
     
     // write member data to firebase firestore
-    func writeMember(userEmail:String,name: String,phone:Int,address:String,email:String,rent : Int,net:Int,gass:Int,khala:Int,current:Int,water:Int,others:Int){
+    func writeMember(userEmail:String,name: String,phone:String,address:String,email:String,rent : Double,net:Double,gass:Double,khala:Double,current:Double,water:Double,others:Double){
         
         let dic : [String : Any] = [
         
@@ -91,31 +91,31 @@ class MemberDbHelper {
                 
             }else{
                 
-                var sum = 0
-                var rent = 0
-                var net = 0
-                var gass = 0
-                var khala = 0
-                var current = 0
-                var water =  0
-                var others = 0
+                var sum = 0.0
+                var rent = 0.0
+                var net = 0.0
+                var gass = 0.0
+                var khala = 0.0
+                var current = 0.0
+                var water =  0.0
+                var others = 0.0
                 var arrayOfEmail = [String]()
                 
                
                 
                 for result in snapshort!.documents{
                     
-                    member.append(Member(name: result.data()["name"]! as! String, phone: result.data()["phone"]! as! Int, address: result.data()["address"]! as! String, email: result.data()["email"]! as! String, rent: result.data()["rent"]! as! Int , net: result.data()["net"]! as! Int, gass: result.data()["gass"]! as! Int, khala: result.data()["khala"]! as! Int, current: result.data()["current"]! as! Int, water: result.data()["water"]! as! Int, others: result.data()["others"]! as! Int, id: result.documentID))
+                    member.append(Member(name: result.data()["name"]! as! String, phone: result.data()["phone"]! as! String, address: result.data()["address"]! as! String, email: result.data()["email"]! as! String, rent: result.data()["rent"]! as! Double , net: result.data()["net"]! as! Double, gass: result.data()["gass"]! as! Double, khala: result.data()["khala"]! as! Double, current: result.data()["current"]! as! Double, water: result.data()["water"]! as! Double, others: result.data()["others"]! as! Double, id: result.documentID))
                    
                     
                               
-                    rent += result.data()["rent"] as! Int
-                    net += result.data()["net"] as! Int
-                    gass += result.data()["gass"] as! Int
-                    khala += result.data()["khala"] as! Int
-                    current += result.data()["current"] as! Int
-                    water += result.data()["water"] as! Int
-                    others += result.data()["others"] as! Int
+                    rent += result.data()["rent"] as! Double
+                    net += result.data()["net"] as! Double
+                    gass += result.data()["gass"] as! Double
+                    khala += result.data()["khala"] as! Double
+                    current += result.data()["current"] as! Double
+                    water += result.data()["water"] as! Double
+                    others += result.data()["others"] as! Double
                     arrayOfEmail.append(result.data()["email"] as! String)
                     
                     
@@ -150,7 +150,7 @@ class MemberDbHelper {
     
     
     
-    func updateMember(userEmail:String,name: String,phone:Int,address:String,email:String,rent : Int,net:Int,gass:Int,khala:Int,current:Int,water:Int,others:Int,id: String){
+    func updateMember(userEmail:String,name: String,phone:String,address:String,email:String,rent : Double,net:Double,gass:Double,khala:Double,current:Double,water:Double,others:Double,id: String){
         
              let dic : [String : Any] = [
                

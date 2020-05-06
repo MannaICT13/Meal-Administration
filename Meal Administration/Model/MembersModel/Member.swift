@@ -12,20 +12,20 @@ class Member {
     
    
     var name: String = ""
-    var phone: Int = 0
+    var phone: String = ""
     var address: String = ""
     var email: String = ""
-    var rent: Int = 0
-    var net: Int = 0
-    var gass: Int = 0
-    var khala: Int = 0
-    var current: Int = 0
-    var water: Int = 0
-    var others: Int = 0
+    var rent: Double = 0.0
+    var net: Double = 0.0
+    var gass: Double = 0.0
+    var khala: Double = 0.0
+    var current: Double = 0.0
+    var water: Double = 0.0
+    var others: Double = 0.0
     var id : String = ""
     
     
-    init(name: String, phone: Int, address: String, email: String, rent: Int, net: Int, gass: Int, khala: Int, current: Int, water: Int, others: Int,id : String) {
+    init(name: String, phone: String, address: String, email: String, rent: Double, net: Double, gass: Double, khala: Double, current: Double, water: Double, others: Double,id : String) {
            
            self.name = name
            self.phone = phone

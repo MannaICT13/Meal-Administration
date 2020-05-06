@@ -239,7 +239,7 @@ extension ContainerViewController {
     func didSeletLogOut(){
     
        
-        let alercontroller = UIAlertController(title: "Logout!!", message: "You want to logout?", preferredStyle: .actionSheet)
+        let alercontroller = UIAlertController(title: "LOGOUT!!", message: "You want to logout?", preferredStyle: .actionSheet)
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alercontroller.addAction(cancel)

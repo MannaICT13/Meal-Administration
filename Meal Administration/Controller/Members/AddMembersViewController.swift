@@ -95,7 +95,7 @@ class AddMembersViewController: UIViewController {
             
             
             nameTextField.text = memberDetails?.name
-            phoneTextField.text = String(memberDetails!.phone)
+            phoneTextField.text = memberDetails?.phone
             addressTextField.text = memberDetails?.address
             emailTextField.text = memberDetails?.email
             rentTextField.text = String(memberDetails!.rent)
@@ -121,16 +121,16 @@ class AddMembersViewController: UIViewController {
     @IBAction func saveBtnAction(_ sender: Any) {
         
          guard let name  = nameTextField.text else { return}
-         guard let phone  =  Int(phoneTextField.text!) else { return}
-         guard let address  =  addressTextField.text else { return}
+         guard let phone  =  phoneTextField.text else { return}
+         guard let address  = addressTextField.text else { return}
          guard let email  =  emailTextField.text else { return}
-         guard let rent  =  Int(rentTextField.text!) else { return}
-         guard let net  =  Int(netTextField.text!) else { return}
-         guard let gass  =  Int(gassTextField.text!) else { return}
-         guard let khala  =  Int(khalaTextField.text!) else { return}
-         guard let current =  Int(currentTextField.text!) else { return}
-         guard let water  =  Int(waterTextField.text!) else { return}
-         guard let others  =  Int(othersTextField.text!) else { return}
+         guard let rent  =  Double(rentTextField.text!) else { return}
+         guard let net  =  Double(netTextField.text!) else { return}
+         guard let gass  =  Double(gassTextField.text!) else { return}
+         guard let khala  =  Double(khalaTextField.text!) else { return}
+         guard let current =  Double(currentTextField.text!) else { return}
+         guard let water  =  Double(waterTextField.text!) else { return}
+         guard let others  =  Double(othersTextField.text!) else { return}
         
         
     
@@ -213,7 +213,7 @@ class AddMembersViewController: UIViewController {
             
             MemberDbHelper.instanceMemberDb.updateMember(userEmail:userEmail, name: name, phone: phone, address: address, email: email, rent: rent, net: net, gass: gass, khala: khala, current: current, water: water, others: others,id:uid)
             
-          
+
             self.navigationController?.popViewController(animated: true)
           
                
