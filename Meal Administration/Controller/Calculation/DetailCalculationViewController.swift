@@ -78,7 +78,7 @@ class DetailCalculationViewController: UITableViewController {
         }
         
         yourCostFunc()
-        totalCostFunc()
+       // totalCostFunc()
        
         yourBazarCostFunc()
         yourMealNumberFunc()
@@ -140,7 +140,7 @@ class DetailCalculationViewController: UITableViewController {
         
     }
     
-    func totalCostFunc(){
+   /* func totalCostFunc(){
         
         let totalCost = MemberDbHelper.defaults.integer(forKey: "sum")
         
@@ -150,6 +150,7 @@ class DetailCalculationViewController: UITableViewController {
         
     }
 
+*/
     
     func yourBazarCostFunc(){
         
