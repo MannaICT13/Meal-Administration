@@ -10,6 +10,7 @@ import Foundation
 
 class TextFieldValidation{
     
+    
     public func nameValidation(_ name : String) -> Bool{
         
         

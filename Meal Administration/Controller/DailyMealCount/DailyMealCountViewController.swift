@@ -87,6 +87,14 @@ class DailyMealCountViewController: UIViewController {
         guard let date = dateTextField.text else{return}
         
         DailyMealDbHelper.dailyMealDbInstance.writeMeal(userEmail: userEmail, name: name, email: email, meal: meal, date: date)
+            
+        self.showAlert(message: "Successfully saved")
+        
+        nameTextField.text?.removeAll()
+        emailTextField.text?.removeAll()
+        mealNumberTextField.text?.removeAll()
+        dateTextField.text?.removeAll()
+        
         
     }
     
@@ -300,4 +308,20 @@ extension DailyMealCountViewController : UITableViewDataSource,UITableViewDelega
     
     
     
+}
+
+extension DailyMealCountViewController{
+     
+       func showAlert(message:String){
+           
+           
+           let alert = UIAlertController(title: "Success Message", message: message, preferredStyle: .alert)
+           let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+           alert.addAction(ok)
+           
+           self.present(alert, animated: true, completion: nil)
+           
+           
+       }
+       
 }
