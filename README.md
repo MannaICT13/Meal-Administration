@@ -23,8 +23,10 @@ add Members,Add Bazar Schedule,Add Bazar Cost,Daily Meal Count and Total calcula
 #### Swift
 #### Foundation
 #### UIKit
+#### Firebase
 #### FirebaseAuth
 #### FirebaseFirestore
+#### IQKeyboardManagerSwift
 
 ## Interface
 
